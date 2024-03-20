@@ -3,6 +3,7 @@
     <title>Flipcode solutions | Services</title>
 @endsection
 @section('content')
+
     <div class="bg-image parallax">
         <div class="container">
             <div style="display: flex;justify-content: center;font-size:larger;">
@@ -16,10 +17,13 @@
         </div>
     </div>
     <!-- breadcrumb end -->
-    <div class="container py-3">
+    <div class="container py-3 service-css-sec">
         <div class="section-head col-sm-12">
             <h4><span>Services</span></h4>
         </div>
+        <style>
+            
+        </style>
         <style>
             .fade-up-container {
                 position: relative;
@@ -49,10 +53,10 @@
             <div class="col-md-12">
                 <div class="container">
                     <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 text-div align-self-center">
                             <h3>Custom Software Development</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">	Crafting bespoke software solutions tailored to your unique business needs, ensuring efficiency, scalability, and seamless integration for optimal performance and growth.																								</p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <p class="text-align">Crafting bespoke software solutions tailored to your unique business needs, ensuring efficiency, scalability, and seamless integration for optimal performance and growth.</p>
+                            {{-- <p class="text-align" style="text-align: justify;">
                                 Leverage our expertise in developing bespoke software solutions. From concept to deployment,
                                 our skilled team ensures that your software aligns seamlessly with your business objectives.
                             </p>
@@ -70,7 +74,8 @@
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
+                            
+                            <div class="fade-up-container parallax-effect w-100 p-5" style="">
                                 <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
 
                             </div>
@@ -83,11 +88,11 @@
                             <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 text-div align-self-center">
                             <h3> Web Application Development</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <p class="text-align" style="text-align: justify; ">
                             	Engineering user-centric web applications to redefine interactions, optimize workflows, and propel business expansion. Amplify your digital footprint with our customized offerings.																							</p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            {{-- <p class="text-align" style="text-align: justify;">
                                 Transform your online presence with dynamic and user-friendly web applications. We
                                 specialize in creating scalable and responsive solutions that captivate your audience.
                             </p>
@@ -107,10 +112,10 @@
                     </div>
 
                     <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 text-div align-self-center">
                             <h3> Mobile App Development</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">	Turning your ideas into innovative mobile solutions, enhancing user engagement and expanding your reach on every device.																								</p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <p class="text-align" style="text-align: justify; ">	Turning your ideas into innovative mobile solutions, enhancing user engagement and expanding your reach on every device.																								</p>
+                            {{-- <p class="text-align" style="text-align: justify;">
                                 Stay ahead in the mobile-first world with our innovative mobile app development services.
                                 Whether it's iOS, Android, or cross-platform, we bring your app ideas to life.
                             </p>
@@ -142,12 +147,12 @@
                             <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 text-div align-self-center">
                             <h3>IT Consulting</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <p class="text-align" style="text-align: justify; ">
                                 Navigating digital landscapes, we provide expert guidance and tailored strategies to optimize your IT infrastructure and drive sustainable growth.																							
                             </p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            {{-- <p class="text-align" style="text-align: justify;">
                                 Rely on our experienced consultants to provide strategic insights and recommendations. We
                                 collaborate with you to optimize your IT infrastructure, aligning technology with your
                                 business goals.
@@ -169,12 +174,12 @@
                     </div>
 
                     <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 text-div align-self-center">
                             <h3>Data Analytics and Business Intelligence</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <p class="text-align" style="text-align: justify; ">
                             	Empower your organization with actionable insights derived from raw data. Our data analytics and business intelligence solutions drive informed decision-making, foster innovation, and fuel sustainable growth in today's data-driven landscape.																							
                             </p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            {{-- <p class="text-align" style="text-align: justify;">
                                 Unlock the potential of your data with our advanced analytics and business intelligence
                                 solutions. Make informed decisions and gain a competitive edge in today's data-driven
                                 landscape.
@@ -207,12 +212,12 @@
                             <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5">
+                        <div class="col-md-6 mt-5 text-div align-self-center" >
                             <h3>E-commerce Solutions</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <p class="text-align" style="text-align: justify; ">
                                 Empowering businesses to thrive in the digital marketplace, our comprehensive e-commerce solutions offer seamless integration, user-friendly interfaces, and robust features tailored to maximize sales and customer satisfaction.																							
                             </p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            {{-- <p class="text-align" style="text-align: justify;">
                                 Boost your online presence and revenue with our tailored e-commerce solutions. We create
                                 secure, user-friendly platforms that enhance the shopping experience for your customers.
                             </p>
