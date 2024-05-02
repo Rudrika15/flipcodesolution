@@ -1,0 +1,843 @@
+@media  (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .testi-p {
+    height: 500px !important;
+  }
+
+  .wcu .item {
+    min-height: 200px !important;
+  }
+
+  .img-Sec {
+    flex-direction: column-reverse;
+  }
+
+  .slider {
+    height: 250px;
+  }
+}
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* breadcrumb css of image start */
+
+.parallax {
+  /* The image used */
+  background-image: url("../img/banner3.jpg");
+  /* Set a specific height */
+  min-height: 130px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  /* padding: 30px 0px 30px; */
+  /* background-size: cover; */
+  /* -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover; */
+  /* position: relative;      */
+  display: grid;
+  align-items: center;
+  /* text-align: center; */
+  /* z-index: 0; */
+  /* height: 20vh; */
+}
+
+
+/* breadcrumb css of image end */
+
+
+.counter-box {
+  display: block;
+  padding: 40px 20px 37px;
+  text-align: center
+}
+
+@media (max-width: 768px) {
+  .counter-box {
+    display: block;
+    padding: 40px 20px 15px;
+    text-align: center
+  }
+
+}
+.service-css-sec{
+  font-size:18px;
+line-height: 38px;
+
+}
+
+
+.counter {
+  display: inline;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 28px
+}
+.submit-org-btn{
+  background-color: #ff6600 !important;
+  color:white !important;
+}
+
+.submit-org-btn:hover{
+  background-color: #555 !important;
+  color:white !important;
+}
+
+.main-title {
+  color: #FF6600;
+  font-weight: bold;
+}
+
+/* why choose us STYLE */
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+a,
+a:active,
+a:focus {
+  text-decoration: none !important;
+  transition-timing-function: ease-in-out;
+  -ms-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-duration: .2s;
+  -ms-transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+span,
+a,
+a:hover {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-head {
+  margin-bottom: 0px;
+}
+
+.section-head h4 {
+  position: relative;
+  padding: 0;
+  color: #FF6600;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  font-size: 34px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 30px;
+}
+/* footercss */
+@media (max-width: 768px) {
+  footer{
+    padding-bottom: 90px;
+  }
+}
+
+.backimage {
+  background-image: url('../../img/fCodefooter.png');
+  background-repeat: repeat;
+  background-position: left;
+  /* height: 200px;
+  width:200px; */
+/*  
+  background-color: rgba(13, 10, 10, 0.171); */
+  /* background-size: cover; */
+}
+
+.footer-social-link-icons a {
+  color: white !important;
+
+}
+.footer-social-link-icons a:hover {
+  color: #333 !important;
+
+}
+
+.for-hover a:hover {
+  color: #df9641 !important;
+}
+
+
+
+
+
+/* -------------------------- */
+
+.section-head h4:before {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #FF6600;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  right: 0;
+  margin: 0 auto;
+}
+
+.section-head h4 span {
+  font-weight: 700;
+  padding-bottom: 5px;
+  color: #2f2f2f
+}
+
+p.service_text {
+  color: #cccccc !important;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.service-cards{
+  height: 250px;
+}
+.service-cards h6{
+  font-weight: 600;
+}
+.section-head p,
+p.awesome_line {
+  color: #818181;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.extra-text {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2f2f2f;
+  margin-bottom: 25px;
+  position: relative;
+  text-transform: none;
+}
+
+.extra-text::before {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background: #f91942;
+  position: absolute;
+  left: 0px;
+  bottom: -10px;
+  right: 0;
+  margin: 0 auto;
+}
+
+.extra-text span {
+  font-weight: 700;
+  color: #f91942;
+}
+
+.item {
+  background: #fff;
+  text-align: center;
+  padding: 30px 25px;
+  -webkit-box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 0px 25px rgba(0, 0, 0, 0.07);
+  border-radius: 20px;
+  border: 5px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 30px;
+  -webkit-transition: all .5s ease 0;
+  transition: all .5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+
+.item:hover {
+  background: #FF6600;
+  box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all .5s ease 0;
+  transition: all .5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+
+.item:hover .item,
+.item:hover span.icon {
+  background: #fff;
+  border-radius: 10px;
+  -webkit-transition: all .5s ease 0;
+  transition: all .5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+
+.item:hover h6,
+.item:hover p {
+  color: #fff;
+  -webkit-transition: all .5s ease 0;
+  transition: all .5s ease 0;
+  transition: all 0.5s ease 0s;
+}
+
+.item .icon {
+  font-size: 40px;
+  margin-bottom: 25px;
+  color: #f91942;
+  width: 90px;
+  height: 90px;
+  line-height: 96px;
+  border-radius: 50px;
+}
+
+.item .feature_box_col_one {
+  background: rgba(247, 198, 5, 0.20);
+  color: #f91942
+}
+
+.item .feature_box_col_two {
+  background: rgba(255, 77, 28, 0.15);
+  color: #f91942
+}
+
+.item .feature_box_col_three {
+  background: rgba(0, 147, 38, 0.15);
+  color: #f91942
+}
+
+.item .feature_box_col_four {
+  background: rgba(0, 108, 255, 0.15);
+  color: #f91942
+}
+
+.item .feature_box_col_five {
+  background: rgba(146, 39, 255, 0.15);
+  color: #f91942
+}
+
+.item .feature_box_col_six {
+  background: rgba(23, 39, 246, 0.15);
+  color: #f91942
+}
+
+.item p {
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.item h6 {
+  margin-bottom: 20px;
+  color: #2f2f2f;
+}
+
+.mission p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.mission i {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #f91942;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 25px;
+}
+
+.mission .small-text {
+  margin-left: 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.skills {
+  padding-top: 0px;
+}
+
+.skills .prog-item {
+  margin-bottom: 25px;
+}
+
+.skills .prog-item:last-child {
+  margin-bottom: 0;
+}
+
+.skills .prog-item p {
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.skills .prog-item .skills-progress {
+  width: 100%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  position: relative;
+}
+
+.skills .prog-item .skills-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #f91942;
+  width: 10%;
+  border-radius: 10px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.skills .prog-item .skills-progress span:after {
+  content: attr(data-value);
+  position: absolute;
+  top: -5px;
+  right: 0;
+  font-size: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3px 7px;
+  border-radius: 30px;
+}
+
+/* review section style */
+
+h1 {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+img {
+  height: 40px;
+}
+
+
+
+/* form */
+
+.usp-bg {
+  background-image: url(../img/slider-2.avif);
+}
+
+
+/* portfolio atyle */
+a.anchor {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+}
+/* navbar */
+.nav-logo{
+  height: 70px;
+}
+@media  (max-width: 768px) {
+ 
+  .nav-logo{ 
+    height: 50px;
+  }
+}
+.navbar-brand {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.navbar li {
+  text-transform: capitalize;
+}
+.pill-nav a {
+  background-color: #ff6600;
+  border-radius: 5px;
+  /* margin: 6px; */
+  color: white;
+  padding: 9px;
+}
+
+
+.pill-nav a.active {
+  color: white !important;
+  background-color: #ff6600;
+
+}
+.pill-nav a:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* ------------------------------------------------ */
+
+#splash {
+  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/home.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  margin-top: 50px;
+  padding-top: 15%;
+  padding-bottom: 50px;
+  color: #fff;
+  font-size: 3em;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#splash h1 {
+  font-size: 2em;
+}
+
+#splash a {
+  color: #fff;
+}
+
+#splash a:hover {
+  color: #e7e7e7;
+}
+
+#portfolio {
+  /* background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/portfolio.jpg); */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+#portfolio h1 {
+  font-size: 5em;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.thumbnail img {
+  min-height: 250px;
+  min-width: 300px;
+}
+
+.thumbnail-hover {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 99%;
+  width: 99%;
+  opacity: 0;
+  transition: 2s;
+}
+
+.thumbnail-hover:hover {
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  height: 99%;
+  width: 99%;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  transition: .5s;
+  opacity: 1;
+  padding-top: 30%;
+  border-radius: 5px;
+}
+
+.thumbnail-hover i {
+  text-decoration: none;
+  color: white;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* about page css start */
+
+#about {
+  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/about.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+#about h1 {
+  font-size: 5em;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+  font-size: 1.5em;
+  text-align: justify;
+}
+
+#about img {
+  padding: 10px;
+  /*max-width: 180px;*/
+}
+
+/* REVIEWW SEC CSS */
+.quote-icon {
+  color: gray;
+  font-size: 25px;
+  padding: 5px;
+}
+
+/* REVIEW SEC CSS END */
+#white-bg {
+  /*background-color: rgba(0,0,0, 0.5);
+  border-radius: 20px;
+  margin-right: 10px;*/
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+
+  padding: 6% 2%;
+}
+
+/* abput page css end */
+
+#contact {
+  background-image: url(https://raw.githubusercontent.com/hash004/freecodecamp/master/portfolioPage/images/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 50px;
+  color: #fff;
+}
+
+#contact h1 {
+  font-size: 5em;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#contact h2 {
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+    0px 8px 13px rgba(0, 0, 0, 0.5),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#contact address {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: bold;
+}
+
+#contact .fa-stack {
+  color: #333;
+}
+
+#contact .fa-stack:hover .fa-stack-1x {
+  color: #333;
+  transition: 0.5s;
+}
+
+#contact .fa-stack:hover .fa-stack-2x {
+  color: #fff;
+  transition: 0.5s;
+}
+
+#contact a {
+  text-decoration: none;
+}
+
+hr {
+  width: 25%;
+}
+
+/* greeting thanku msg css  start*/
+.typ-gradient-fill {
+  background: linear-gradient(135deg, #f9a62a 0%, #f92f2fd8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 780;
+  font-style: normal;
+  font-size: 50px;
+
+  @media (min-width: 400px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 580px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 680px) {
+    font-size: 25px;
+  }
+
+  @media (min-width: 900px) {
+    font-size: 40px;
+  }
+
+  @media (min-width: 1100px) {
+    font-size: 50px;
+  }
+
+}
+
+/* greeting thanku msg css  End*/
+
+.navbar {
+  position: sticky;
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it appears above other content */
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+/*End  portfolio atyle */
+.navbar-nav .for-active-colored a.active {
+  color: #FF6600;
+}
+
+.breadcrumb .active {
+  color: #FF6600 !important;
+}
+
+/* why choose us */
+.wcu .item {
+  min-height: 520px;
+}
+
+.square-items .item{
+min-height:350px;
+}
+
+/* blog */
+.blog-title {
+  display: none;
+}
+
+logo Slider .logo-slider {
+  margin-bottom: 50px;
+  padding: 30px 0 0 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logo-slider:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 45s slide infinite linear;
+}
+
+.logos-slide img {
+  width: 150px;
+  height: 150px;
+  margin: 0 40px;
+}
+
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* our technology style  */
+.item-for-technology img {
+  /* padding: 10px; */
+  /* margin: 10px; */
+  width: 40%;
+  height: 30%;
+  /* background-color: red; */
+}
+
+@media only screen and (max-width:  768px) {
+  .item-for-technology img {
+ width: 90%;
+ 
+  }
+}
+
+
+/* .MultiCarousel {
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+  transition: 1s ease all;
+  float: left;
+  display: flex;
+}
+
+.MultiCarousel .MultiCarousel-inner .item-1 {
+  float: left;
+  margin-left: 60px;
+}
+
+.MultiCarousel .MultiCarousel-inner .item-1>div {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  width: 60%;
+}
+
+.MultiCarousel .leftLst,
+.MultiCarousel .rightLst {
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+}
+
+.MultiCarousel .leftLst {
+  left: 0;
+}
+
+.MultiCarousel .rightLst {
+  right: 0;
+}
+
+.MultiCarousel .leftLst.over,
+.MultiCarousel .rightLst.over {
+  pointer-events: none;
+  background: #ccc;
+} */
