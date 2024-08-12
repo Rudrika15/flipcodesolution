@@ -25,52 +25,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" media="screen" href="{{ asset('css/hoverableSlider.css') }}">
+    <link rel="stylesheet" media="screen" href="{{ asset('css/header.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-    <style>
-        /* Add this to your CSS file */
-        .navbar {
-            transition: background-color 0.5s ease;
-        }
 
-        .navbar.transparent {
-            background-color: transparent;
-        }
-
-        .navbar.scrolled {
-            background-color: white;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-    </style>
 
 </head>
 
 <body>
 
 
-    <nav class="navbar navbar-expand-lg transparent">
+    <nav class="navbar navbar-expand-lg transparent navbar-primary">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" class="nav-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto ">
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('service') ? 'active' : '' }}" href="{{ route('service') }}">Services</a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('service') ? 'active' : '' }}" href="{{ route('service') }}">Services</a>
                     </li>
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}" href="{{ route('portfolio') }}">Clients</a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}" href="{{ route('portfolio') }}">Clients</a>
                     </li>
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('career') ? 'active' : '' }}" href="{{ route('career') }}">Career</a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('career') ? 'active' : '' }}" href="{{ route('career') }}">Career</a>
                     </li>
                     <li class="nav-item blog-title">
-                        <a class="nav-link {{ Route::currentRouteNamed('blog') ? 'active' : '' }}" href="{{ route('blog') }}">Blog</a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('blog') ? 'active' : '' }}" href="{{ route('blog') }}">Blog</a>
                     </li>
                     <li class="pill-nav">
                         <a class="{{ Route::currentRouteNamed('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Get In Touch</a>
@@ -220,81 +206,7 @@
 
 
 
-<!-- freeze footer -->
-<style>
-    div#mobile-freez-icon {
-        display: none;
-    }
 
-    .wp-freeze {
-        position: fixed;
-        bottom: 170px;
-        right: 30px;
-    }
-
-    .wp-freeze i.fa.fa-whatsapp {
-        font-size: 30px;
-        background-color: #33ad6b;
-        color: #fff;
-        padding: 10px;
-        border-radius: 50px;
-    }
-
-    @media(max-width: 767px) {
-        .wp-freeze {
-            display: none;
-        }
-
-        div#mobile-freez-icon {
-            display: block;
-            position: fixed;
-            width: 100%;
-            z-index: 999;
-            bottom: 0;
-        }
-
-        div#mobile-freez-icon .phone,
-        .wp-phone {
-            width: 20%;
-            font-size: 32px;
-            color: #fff;
-            border-radius: 0;
-            background: #33AD6B;
-            float: left;
-            height: 60px;
-        }
-
-        div#mobile-freez-icon i.fa.fa-phone,
-        .wp-phone i.fa.fa-whatsapp {
-            position: relative;
-            color: #fff;
-            text-align: center;
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        div.wp-phone {
-            background-color: #4e5853;
-        }
-
-        div.phone {
-            background-color: #EF7F1A !important;
-        }
-
-        a#free_quote_1 {
-            width: 60%;
-            height: 60px;
-            background: darkorange;
-            line-height: 64px;
-            font-size: 21px;
-            color: #fff;
-            text-align: center;
-            border-radius: 0;
-            cursor: pointer;
-            float: left;
-        }
-    }
-</style>
 
 {{-- mobile view footer icons --}}
 <div id="mobile-freez-icon">
@@ -329,3 +241,4 @@
         });
     });
 </script>
+

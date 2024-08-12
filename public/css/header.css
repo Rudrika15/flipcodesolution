@@ -1,0 +1,143 @@
+
+.navbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    box-shadow: none !important; 
+}
+
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        margin-top: -100px;
+    }
+
+
+    #video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: rgba(85, 85, 85, 0.5);
+    }
+
+
+    .text-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 3em;
+        text-align: center;
+    }
+
+
+    .output {
+        text-align: left;
+        color: white;
+        font-family: 'Source Code Pro', monospace;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    /* Cursor Styling */
+
+    .cursor::after {
+        content: '';
+        display: inline-block;
+        margin-left: 3px;
+        background-color: white;
+        animation-name: blink;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+    }
+
+    h1.cursor::after {
+        height: 24px;
+        width: 13px;
+    }
+
+    p.cursor::after {
+        height: 13px;
+        width: 6px;
+    }
+
+    @media (max-width: 768px) {
+        .output h1 {
+            font-size: 19px;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 35%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3em;
+            text-align: center;
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 1;
+        }
+
+        49% {
+            opacity: 1;
+        }
+
+        50% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    /* nav bar scroll css */
+
+    /* Add this to your CSS file */
+    .navbar {
+        transition: background-color 0.5s ease;
+
+    }
+
+    .navbar.transparent {
+        background-color: transparent;
+    }
+
+    .navbar.scrolled {
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .text-warning
+    {
+        color: #FF6600 !important;
+    }
+/* end */
+
+.carousel-indicators button {
+    background-color: #ff6600 !important;
+    /* Change color to orange */
+}

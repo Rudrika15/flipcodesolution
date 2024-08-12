@@ -3,12 +3,7 @@
     <title>Flipcode solutions | Home</title>
 @endsection
 @section('content')
-    <style>
-        .carousel-indicators button {
-            background-color: #ff6600 !important;
-            /* Change color to orange */
-        }
-    </style>
+
 
     {{-- slider --}}
     @include('visitor.commons.homePageSlider')
@@ -17,9 +12,9 @@
 
     <!-- about us -->
 
-    <div class="container py-3">
-        <div class="row py-2">
-            <div class="col-md-6 mt-3">
+    <div class="container pt-3">
+        <div class="row pt-2">
+            <div class="col-md-6 h-auto mt-3">
                 <h2 class="text-align pb-1">Our Story</h2>
                 <p class="text-align" style=" font-size:14px; text-align: justify; line-height: 24px;">
                     <span class="main-title">Flipcode Solutions Pvt. Ltd.</span> is a new version of a software development
@@ -44,7 +39,7 @@
         </div>
 
     </div>
-    </div>
+   
 
     <!-- end about us -->
 
