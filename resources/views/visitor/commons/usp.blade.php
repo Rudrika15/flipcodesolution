@@ -22,14 +22,14 @@
                 <div class="counter-box">
                     <i class="fa  fa-shopping-cart"></i>
                     <span class="counter">50 </span> <span class="display-6 text-white "><b>+</b></span>
-                    <p class="text-white fs-4 fw-bolder">Happy Customers</p>
+                    <p class="text-white fs-4 fw-bolder">Happy Clients</p>
                 </div>
             </div>
             <div class="four col-md-3">
                 <div class="counter-box">
                     <i class="fa  fa-user"></i>
                     <span class="counter">100 </span> <span class="display-6 text-white "><b>+</b></span>
-                    <p class="text-white fs-4 fw-bolder">Interns</p>
+                    <p class="text-white fs-4 fw-bolder">Long Term Clients</p>
                 </div>
             </div>
         </div>

@@ -103,7 +103,7 @@
 
                 <!-- Linkedin -->
                 <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.linkedin.com/in/flipcode-solutions-8521252a0/" target="_blank" role="button">
+                    href="https://www.linkedin.com/company/flipcode-solutions" target="_blank" role="button">
                     <i class="bi bi-linkedin"></i>
                 </a>
 
@@ -146,10 +146,10 @@
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h5 class="text-uppercase">Address</h5>
                         <p>
-                            FlipCode Solution Private Limited <br>
+                            Flipcode Solution Private Limited <br>
                             Nr. Panama Sales, Dalmill road <br>
                             Surendranagar ,<br>
-                            Gujrat 363001 India
+                            Gujarat 363001 India
                         </p>
                     </div>
                     <!--Grid column-->
@@ -162,7 +162,7 @@
                         <a class="text-white"
                             href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
                         <h5 class="text-uppercase mt-4">Contact No</h5>
-                        <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a>
+                        <a class="text-white" href="tel:9979404044">+91 997 940 4044</a>
                     </div>
                     <!--Grid column-->
                 </div>
