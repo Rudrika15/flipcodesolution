@@ -12,72 +12,75 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/faviconImg.png') }}">
     {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {{-- <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet"> --}}
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" media="screen" href="{{asset('css/hoverableSlider.css')}}">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" media="screen" href="{{ asset('css/hoverableSlider.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Add this to your CSS file */
+        .navbar {
+            transition: background-color 0.5s ease;
+        }
+
+        .navbar.transparent {
+            background-color: transparent;
+        }
+
+        .navbar.scrolled {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+
+
+    <nav class="navbar navbar-expand-lg transparent">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}"><img src=" {{ asset('img/logo.png') }}"  class="nav-logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
+            <a class="navbar-brand" href="{{ route('home') }}"><img src="{{ asset('img/logo.png') }}" class="nav-logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto">
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }}"
-                            href="{{ route('about') }}">About</a>
+                        <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
                     </li>
                     <li class="for-active-colored">
-                        <a class="nav-link  {{ Route::currentRouteNamed('service') ? 'active' : '' }}"
-                            href="{{ route('service') }}">Services</a>
+                        <a class="nav-link {{ Route::currentRouteNamed('service') ? 'active' : '' }}" href="{{ route('service') }}">Services</a>
                     </li>
-
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}"
-                            href="{{ route('portfolio') }}">Clients</a>
+                        <a class="nav-link {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}" href="{{ route('portfolio') }}">Clients</a>
                     </li>
-
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('career') ? 'active' : '' }}"
-                            href="{{ route('career') }}">Career</a>
+                        <a class="nav-link {{ Route::currentRouteNamed('career') ? 'active' : '' }}" href="{{ route('career') }}">Career</a>
                     </li>
-
                     <li class="nav-item blog-title">
-                        <a class="nav-link {{ Route::currentRouteNamed('blog') ? 'active' : '' }}"
-                            href="{{ route('blog') }}">
-                            Blog
-                        </a>
+                        <a class="nav-link {{ Route::currentRouteNamed('blog') ? 'active' : '' }}" href="{{ route('blog') }}">Blog</a>
                     </li>
-
                     <li class="pill-nav">
-                        <a class=" {{ Route::currentRouteNamed('contact') ? 'active' : '' }}"
-                            href="{{ route('contact') }}">Get In Touch</a>
+                        <a class="{{ Route::currentRouteNamed('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Get In Touch</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+
 
     @yield('content')
 
@@ -89,21 +92,18 @@
             <!-- Section: Social media -->
             <section class="d-flex justify-content-end mb-4 footer-social-link-icons ">
                 <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/flipcodesolutions/"
-                    target="_blank" role="button">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/flipcodesolutions/" target="_blank" role="button">
                     <i class="bi bi-instagram"></i>
                 </a>
 
                 <!-- Facebook -->
 
-                <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.facebook.com/profile.php?id=61553723550979" target="_blank" role="button">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/profile.php?id=61553723550979" target="_blank" role="button">
                     <i class="bi bi-facebook"></i>
                 </a>
 
                 <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.linkedin.com/in/flipcode-solutions-8521252a0/" target="_blank" role="button">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/flipcode-solutions-8521252a0/" target="_blank" role="button">
                     <i class="bi bi-linkedin"></i>
                 </a>
 
@@ -112,7 +112,7 @@
 
 
             <!-- Section: Links -->
-            <section class="footer-links">
+            <section class="footer-links text-start">
                 <!--Grid row-->
                 <div class="row ">
                     <!--Grid column-->
@@ -157,15 +157,13 @@
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
                         <h5 class="text-uppercase">Email</h5>
-                        <a class="text-white"
-                            href="mailto:contact@flipcodesolutions.com">contact@flipcodesolutions.com</a>
-                        <a class="text-white"
-                            href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
+                        <a class="text-white" href="mailto:contact@flipcodesolutions.com">contact@flipcodesolutions.com</a>
+                        <a class="text-white" href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
                         {{-- <h5 class="text-uppercase mt-4">Contact No</h5>
                         <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a> --}}
                     </div>
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
-                    <h5 class="text-uppercase">Contact No</h5>
+                        <h5 class="text-uppercase">Contact No</h5>
                         <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a>
                     </div>
                     <!--Grid column-->
@@ -195,8 +193,8 @@
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script> --}} 
-    
+    </script> --}}
+
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
      --}}
@@ -300,11 +298,10 @@
 
 {{-- mobile view footer icons --}}
 <div id="mobile-freez-icon">
-    <a id="free_quote_1" href="{{route('contact')}}"><i class="fa fa-envelope"></i> Get Help
+    <a id="free_quote_1" href="{{ route('contact') }}"><i class="fa fa-envelope"></i> Get Help
         Now</a>
     <div class="wp-phone">
-        <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i
-                class="bi bi-whatsapp ps-3 pt-2"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i class="bi bi-whatsapp ps-3 pt-2"></i></a>
     </div>
     <div class="phone">
         <a href="tel:+919979404044" rel="nofollow">
@@ -315,3 +312,20 @@
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
+
+
+<!-- Add this script just before the closing </body> tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.remove('transparent');
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+                navbar.classList.add('transparent');
+            }
+        });
+    });
+</script>

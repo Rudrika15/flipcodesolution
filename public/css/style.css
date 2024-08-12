@@ -1,4 +1,4 @@
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .header-nav {
     display: none;
   }
@@ -22,6 +22,9 @@
 
 body {
   font-family: 'Poppins', sans-serif !important;
+  line-height: 24px !important;
+  font-size: 14px !important;
+  top: 0 !important;
 }
 
 /* breadcrumb css of image start */
@@ -68,9 +71,10 @@ body {
   }
 
 }
-.service-css-sec{
-  font-size:18px;
-line-height: 38px;
+
+.service-css-sec {
+  font-size: 18px;
+  line-height: 38px;
 
 }
 
@@ -82,14 +86,15 @@ line-height: 38px;
   color: #fff;
   line-height: 28px
 }
-.submit-org-btn{
+
+.submit-org-btn {
   background-color: #ff6600 !important;
-  color:white !important;
+  color: white !important;
 }
 
-.submit-org-btn:hover{
+.submit-org-btn:hover {
   background-color: #555 !important;
-  color:white !important;
+  color: white !important;
 }
 
 .main-title {
@@ -157,9 +162,10 @@ a:hover {
   text-transform: none;
   margin-bottom: 30px;
 }
+
 /* footercss */
 @media (max-width: 768px) {
-  footer{
+  footer {
     padding-bottom: 90px;
   }
 }
@@ -170,7 +176,7 @@ a:hover {
   background-position: left;
   /* height: 200px;
   width:200px; */
-/*  
+  /*  
   background-color: rgba(13, 10, 10, 0.171); */
   /* background-size: cover; */
 }
@@ -179,6 +185,7 @@ a:hover {
   color: white !important;
 
 }
+
 .footer-social-link-icons a:hover {
   color: #333 !important;
 
@@ -219,12 +226,14 @@ p.service_text {
   text-align: center;
 }
 
-.service-cards{
+.service-cards {
   height: 250px;
 }
-.service-cards h6{
+
+.service-cards h6 {
   font-weight: 600;
 }
+
 .section-head p,
 p.awesome_line {
   color: #818181;
@@ -452,16 +461,19 @@ a.anchor {
   top: -50px;
   visibility: hidden;
 }
+
 /* navbar */
-.nav-logo{
-  height: 70px;
+.nav-logo {
+  height: 50px;
 }
-@media  (max-width: 768px) {
- 
-  .nav-logo{ 
+
+@media (max-width: 768px) {
+
+  .nav-logo {
     height: 50px;
   }
 }
+
 .navbar-brand {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
@@ -471,6 +483,7 @@ a.anchor {
 .navbar li {
   text-transform: capitalize;
 }
+
 .pill-nav a {
   background-color: #ff6600;
   border-radius: 5px;
@@ -485,6 +498,7 @@ a.anchor {
   background-color: #ff6600;
 
 }
+
 .pill-nav a:hover {
   background-color: #555;
   color: #fff;
@@ -716,11 +730,14 @@ hr {
 
 .navbar {
   position: sticky;
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it appears above other content */
+  top: 0;
+  /* Stick to the top of the viewport */
+  z-index: 1000;
+  /* Ensure it appears above other content */
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 /*End  portfolio atyle */
 .navbar-nav .for-active-colored a.active {
   color: #FF6600;
@@ -735,8 +752,8 @@ hr {
   min-height: 520px;
 }
 
-.square-items .item{
-min-height:350px;
+.square-items .item {
+  min-height: 350px;
 }
 
 /* blog */
@@ -787,10 +804,10 @@ logo Slider .logo-slider {
   /* background-color: red; */
 }
 
-@media only screen and (max-width:  768px) {
+@media only screen and (max-width: 768px) {
   .item-for-technology img {
- width: 90%;
- 
+    width: 90%;
+
   }
 }
 

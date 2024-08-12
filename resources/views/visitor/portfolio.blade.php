@@ -7,52 +7,90 @@
     @php
         $jsonData = [
             [
-                'image' => asset('client-logo/brand-beans-logo.png'),
+                'image' => asset('client-logo/argilgraygrp.jpg'),
+                'title' => 'Argil Gray Group',
+            ],
+            [
+                'image' => asset('client-logo/brand-beans-logo.jpg'),
                 'title' => 'Brand Beans',
             ],
             [
-                'image' =>  asset('client-logo/cu-shah-logo.jpg'),
-                'title' => ' C.U.SHAH Mahila College',
+                'image' => asset('client-logo/cu-shah-logo.jpg'),
+                'title' => 'C.U.SHAH Mahila College',
             ],
             [
-                'image' =>  asset('client-logo/alkaviva-logo.png'),
-                'title' => 'Alka Viva',
-            ],
-             [
-                'image' =>  asset('client-logo/jd-infra-logo.webp'),
-                'title' => 'JD Infra Space',
-            ],
-             [
-                'image' =>  asset('client-logo/smvs.png'),
-                'title' => 'Swaminarayan Sanstha',
+                'image' => asset('client-logo/alkaviva-logo.jpg'),
+                'title' => 'Alkaviva',
             ],
             [
-                'image' =>  asset('client-logo/ConsultantLogo.png'),
-                'title' => 'Consultant Cube',
-            ],
-           
-            [
-                'image' => asset('client-logo/argilgraygrp.png'),
-                'title' => 'Argil Group',
+                'image' => asset('client-logo/jd-infra-logo.jpg'),
+                'title' => 'JD Infra',
             ],
             [
-                'image' => asset('client-logo/Bitco_Finexpert.png'),
-                'title' => 'Bitco Finexpert',
+                'image' => asset('client-logo/smvs.jpg'),
+                'title' => 'SMVS Swaminarayan Sanstha',
             ],
             [
-                'image' => asset('client-logo/click-to-care.png'),
+                'image' => asset('client-logo/ConsultantLogo.jpg'),
+                'title' => 'Consultant',
+            ],
+
+            [
+                'image' => asset('client-logo/click-to-care.jpg'),
                 'title' => 'Click To Care',
             ],
-           
+            [
+                'image' => asset('client-logo/micro.png'),
+                'title' => 'Micro Dimonds & CBN Wheels',
+            ],
         ];
     @endphp
     <style>
-      .logo-img{
-       
-        aspect-ratio: 16/9;
-        object-fit:contain;
+        .container1 {
+            position: relative;
+            width: 90%;
+        }
 
-      }
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+            padding-bottom: 50px
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* height: 100%; */
+            height: auto;
+            width: 100%;
+            margin-bottom: 50px;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #606060;
+        }
+
+        .container1:hover .overlay {
+            opacity: 0.8;
+        }
+
+        .text {
+            color: #ff6600;
+            font-size: 20px;
+            font-weight: 700;
+            position: absolute;
+            text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
     </style>
     <div class="bg-image parallax">
         <div class="container">
@@ -85,28 +123,22 @@
                                     </div> --}}
                                     <hr />
                                     <div class="container-fluid">
-                                      <div class="row">
-   
-                                          @foreach($jsonData as $data)
-                                          <div class="col-md-4  col-sm-12 mt-5">
-                                            <div class="card p-4 h-100"
-                                                style="width: 18rem;box-shadow: 0 5px 10px rgba(0,0,0,.2);">
-                                                <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"  class="img-fluid pt-5 logo-img">
-                                                <div class="card-body">
-                                                    
-                                                  </div>
-                                                  <div class="card-footer bg-white">
-                                                    <h5 class="card-text" style="color: #2c4964;">
-                                                      {{ $data['title'] }}</h5>
-                                                  </div>
-                                                   
-                                            </div>
+                                        <div class="row">
+
+                                            @foreach ($jsonData as $data)
+                                                <div class="col-md-4">
+                                                    <div class="container1">
+                                                        <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}" class="image">
+                                                        <div class="overlay">
+                                                            <div class="text">{{ $data['title'] }}</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
                                         </div>
-                                      @endforeach
-                                        </div>
-                                      </div>
-                                     
-                                    
+                                    </div>
+
+
                                     {{-- start code --}}
                                     {{-- <div class="container-fluid">
                                         <div class="row">
@@ -287,5 +319,4 @@
             </div>
         </div>
     </div>
-    
 @endsection
