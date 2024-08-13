@@ -4,7 +4,6 @@
 @endsection
 @section('content')
 
-
     {{-- slider --}}
     @include('visitor.commons.homePageSlider')
     {{-- slider end --}}
@@ -33,8 +32,8 @@
                 </p>
                 <div><a type="button" href="{{ Route('about') }}" class=" btn submit-org-btn">Read More</a></div>
             </div>
-            <div class="col-md-6 text-center">
-                <img src="{{ asset('img/b7.svg') }}" style="height: 65%" alt="b1">
+            <div class="col-md-6">
+                <img src="{{ asset('img/b7.jpg') }}" class="img-fluid mt-4" alt="b1">
             </div>
         </div>
 
@@ -70,11 +69,11 @@
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class=" bi bi-lightbulb"></i></h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary text-center">Custom Software Development</h6>
-
+                           
                             <p class="card-text text-center">Leverage our expertise in developing bespoke software
                                 solutions. From concept to deployment, our skilled team ensures that your software aligns
                                 seamlessly with your business objectives.</p>
-
+                           
                         </div>
                     </div>
                 </div>
@@ -83,11 +82,11 @@
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash"></i></h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary text-center">Web Application Development</h6>
-
+                           
                             <p class="card-text text-center">Transform your online presence with dynamic and user-friendly
                                 web applications. We specialize in creating scalable and responsive solutions that captivate
                                 your audience.</p>
-
+                           
                         </div>
                     </div>
                 </div>
@@ -96,11 +95,11 @@
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-phone-flip"></i></h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary text-center">Mobile App Development</h6>
-
+                            
                             <p class="card-text text-center">Stay ahead in the mobile-first world with our innovative mobile
                                 app development services. Whether it's iOS, Android, or cross-platform, we bring your app
                                 ideas to life.</p>
-
+                           
                         </div>
                     </div>
                 </div>
@@ -121,11 +120,11 @@
                             <h3 class="card-title py-2 text-center"><i class="bi bi-graph-up-arrow"></i></h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary text-center">Data Analytics and Business
                                 Intelligence</h6>
-
+                           
                             <p class="card-text text-center">Unlock the potential of your data with our advanced analytics
                                 and business intelligence solutions. Make informed decisions and gain a competitive edge in
                                 today's data-driven landscape.</p>
-
+                            
                         </div>
                     </div>
                 </div>
@@ -134,11 +133,11 @@
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-gear-wide-connected"></i></h3>
                             <h6 class="card-subtitle mb-2 text-body-secondary text-center">E-commerce Solutions</h6>
-
+                            
                             <p class="card-text text-center">Boost your online presence and revenue with our tailored
                                 e-commerce solutions. We create secure, user-friendly platforms that enhance the shopping
                                 experience for your customers. </p>
-
+                            
                         </div>
                     </div>
                 </div>

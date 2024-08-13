@@ -12,7 +12,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
+    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/faviconImg.png') }}">
     {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
@@ -132,10 +132,10 @@
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h5 class="text-uppercase">Address</h5>
                         <p>
-                            FlipCode Solution Private Limited <br>
+                            Flipcode Solution Private Limited <br>
                             Nr. Panama Sales, Dalmill road <br>
                             Surendranagar ,<br>
-                            Gujrat 363001 India
+                            Gujarat 363001 India
                         </p>
                     </div>
                     <!--Grid column-->
@@ -143,14 +143,12 @@
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
                         <h5 class="text-uppercase">Email</h5>
-                        <a class="text-white" href="mailto:contact@flipcodesolutions.com">contact@flipcodesolutions.com</a>
-                        <a class="text-white" href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
-                        {{-- <h5 class="text-uppercase mt-4">Contact No</h5>
-                        <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a> --}}
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
-                        <h5 class="text-uppercase">Contact No</h5>
-                        <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a>
+                        <a class="text-white"
+                            href="mailto:contact@flipcodesolutions.com">contact@flipcodesolutions.com</a>
+                        <a class="text-white"
+                            href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
+                        <h5 class="text-uppercase mt-4">Contact No</h5>
+                        <a class="text-white" href="tel:9979404044">+91 997 940 4044</a>
                     </div>
                     <!--Grid column-->
                 </div>
@@ -175,12 +173,17 @@
         <!-- Copyright -->
     </footer>
 
-    {{-- footer  end ---------------------------------------------------------------------------------------------------------------- --}}
+    {{-- footer  start ---------------------------------------------------------------------------------------------------------------- --}}
+
+
+
+
+
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
     </script> --}}
-
+    
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
      --}}
@@ -206,14 +209,89 @@
 
 
 
+<!-- freeze footer -->
+<style>
+    div#mobile-freez-icon {
+        display: none;
+    }
 
+    .wp-freeze {
+        position: fixed;
+        bottom: 170px;
+        right: 30px;
+    }
+
+    .wp-freeze i.fa.fa-whatsapp {
+        font-size: 30px;
+        background-color: #33ad6b;
+        color: #fff;
+        padding: 10px;
+        border-radius: 50px;
+    }
+
+    @media(max-width: 767px) {
+        .wp-freeze {
+            display: none;
+        }
+
+        div#mobile-freez-icon {
+            display: block;
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            bottom: 0;
+        }
+
+        div#mobile-freez-icon .phone,
+        .wp-phone {
+            width: 20%;
+            font-size: 32px;
+            color: #fff;
+            border-radius: 0;
+            background: #33AD6B;
+            float: left;
+            height: 60px;
+        }
+
+        div#mobile-freez-icon i.fa.fa-phone,
+        .wp-phone i.fa.fa-whatsapp {
+            position: relative;
+            color: #fff;
+            text-align: center;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        div.wp-phone {
+            background-color: #4e5853;
+        }
+
+        div.phone {
+            background-color: #EF7F1A !important;
+        }
+
+        a#free_quote_1 {
+            width: 60%;
+            height: 60px;
+            background: darkorange;
+            line-height: 64px;
+            font-size: 21px;
+            color: #fff;
+            text-align: center;
+            border-radius: 0;
+            cursor: pointer;
+            float: left;
+        }
+    }
+</style>
 
 {{-- mobile view footer icons --}}
 <div id="mobile-freez-icon">
-    <a id="free_quote_1" href="{{ route('contact') }}"><i class="fa fa-envelope"></i> Get Help
+    <a id="free_quote_1" href="{{route('contact')}}"><i class="fa fa-envelope"></i> Get Help
         Now</a>
     <div class="wp-phone">
-        <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i class="bi bi-whatsapp ps-3 pt-2"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i
+                class="bi bi-whatsapp ps-3 pt-2"></i></a>
     </div>
     <div class="phone">
         <a href="tel:+919979404044" rel="nofollow">
@@ -224,21 +302,3 @@
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
-
-
-<!-- Add this script just before the closing </body> tag -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                navbar.classList.remove('transparent');
-                navbar.classList.add('sticky');
-            } else {
-                navbar.classList.remove('sticky');
-                navbar.classList.add('transparent');
-            }
-        });
-    });
-</script>
-

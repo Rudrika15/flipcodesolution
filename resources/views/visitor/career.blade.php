@@ -10,7 +10,7 @@
             <div style="display: flex;justify-content: center;font-size:larger;">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        {{-- <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li> --}}
+                        <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Career</li>
                     </ol>
                 </nav>

@@ -1,4 +1,4 @@
-<div style="width: 100%;" class="usp-bg">
+<div style="width: 100%;margin-top: 30px;" class="usp-bg">
     <div class="container">
 
         <div class="row">

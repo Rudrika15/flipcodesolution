@@ -185,7 +185,6 @@ a:hover {
   color: white !important;
 
 }
-
 .footer-social-link-icons a:hover {
   color: #333 !important;
 
@@ -483,7 +482,6 @@ a.anchor {
 .navbar li {
   text-transform: capitalize;
 }
-
 .pill-nav a {
   background-color: #ff6600;
   border-radius: 5px;
@@ -498,7 +496,6 @@ a.anchor {
   background-color: #ff6600;
 
 }
-
 .pill-nav a:hover {
   background-color: #555;
   color: #fff;

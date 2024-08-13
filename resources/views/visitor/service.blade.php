@@ -8,7 +8,7 @@
             <div style="display: flex;justify-content: center;font-size:larger;">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        {{-- <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li> --}}
+                        <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Services</li>
                     </ol>
                 </nav>
@@ -16,22 +16,11 @@
         </div>
     </div>
     <!-- breadcrumb end -->
-    <div class="container py-3 service-css-sec">
-        {{-- <div class="section-head col-sm-12">
+    <div class="container py-3">
+        <div class="section-head col-sm-12">
             <h4><span>Services</span></h4>
-        </div> --}}
+        </div>
         <style>
-            .parallax-container {
-
-                background-size: cover;
-                background-attachment: fixed;
-                background-position: center;
-                overflow: hidden;
-                height: 500px;
-                width: 500px;
-            }
-        </style>
-        {{-- <style>
             .fade-up-container {
                 position: relative;
                 overflow: hidden;
@@ -47,11 +36,10 @@
             .fade-up-container:hover .fade-up-image {
                 transform: translateY(-25px);
                 /* Move the image slightly upward on hover */
-                box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
-                /* Box shadow on right and bottom sides */
+                box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3); /* Box shadow on right and bottom sides */
 
             }
-        </style> --}}
+        </style>
 
 
         <div class="row">
@@ -61,12 +49,10 @@
             <div class="col-md-12">
                 <div class="container">
                     <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5 text-div align-self-center">
+                        <div class="col-md-6 mt-5">
                             <h3>Custom Software Development</h3>
-                            <p class="text-align">Crafting bespoke software solutions tailored to your unique business
-                                needs, ensuring efficiency, scalability, and seamless integration for optimal performance
-                                and growth.</p>
-                            {{-- <p class="text-align" style="text-align: justify;">
+                            <p class="text-align" style="text-align: justify; line-height: 30px;">	Crafting bespoke software solutions tailored to your unique business needs, ensuring efficiency, scalability, and seamless integration for optimal performance and growth.																								</p>
+                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Leverage our expertise in developing bespoke software solutions. From concept to deployment,
                                 our skilled team ensures that your software aligns seamlessly with your business objectives.
                             </p>
@@ -84,9 +70,8 @@
                             </ul>
                         </div>
                         <div class="col-md-6">
-
-                            <div class="parallax-container parallax-effect w-100 p-5" style="background-image: url('{{ url(asset('img/web.jpg')) }}');">
-                                {{-- <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1"> --}}
+                            <div class="fade-up-container w-100 p-5">
+                                <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
 
                             </div>
 
@@ -94,18 +79,15 @@
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
-                            <div class="parallax-container w-100 p-5" style=" background-image: url('{{ url(asset('img/webdev.jpg')) }}');">
-                                {{-- <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                    alt="b1"> --}}
+                            <div class="fade-up-container w-100 p-5">
+                            <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5 text-div align-self-center">
+                        <div class="col-md-6 mt-5">
                             <h3> Web Application Development</h3>
-                            <p class="text-align" style="text-align: justify; ">
-                                Engineering user-centric web applications to redefine interactions, optimize workflows, and
-                                propel business expansion. Amplify your digital footprint with our customized offerings.
-                            </p>
-                            {{-- <p class="text-align" style="text-align: justify;">
+                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            	Engineering user-centric web applications to redefine interactions, optimize workflows, and propel business expansion. Amplify your digital footprint with our customized offerings.																							</p>
+                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Transform your online presence with dynamic and user-friendly web applications. We
                                 specialize in creating scalable and responsive solutions that captivate your audience.
                             </p>
@@ -125,11 +107,10 @@
                     </div>
 
                     <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5 text-div align-self-center">
+                        <div class="col-md-6 mt-5">
                             <h3> Mobile App Development</h3>
-                            <p class="text-align" style="text-align: justify; "> Turning your ideas into innovative mobile
-                                solutions, enhancing user engagement and expanding your reach on every device. </p>
-                            {{-- <p class="text-align" style="text-align: justify;">
+                            <p class="text-align" style="text-align: justify; line-height: 30px;">	Turning your ideas into innovative mobile solutions, enhancing user engagement and expanding your reach on every device.																								</p>
+                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Stay ahead in the mobile-first world with our innovative mobile app development services.
                                 Whether it's iOS, Android, or cross-platform, we bring your app ideas to life.
                             </p>
@@ -150,26 +131,23 @@
                             </ul>
                         </div>
                         <div class="col-md-6">
-                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/mob-app.jpg')) }}');">
-                                {{-- <img src="{{ asset('img/mob-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                    alt="b1"> --}}
+                            <div class="fade-up-container w-100 p-5">
+                            <img src="{{ asset('img/mob-app.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
-                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/ITconsultimg.jpg')) }}');">
-                                {{-- <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                    alt="b1"> --}}
+                            <div class="fade-up-container w-100 p-5">
+                            <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5 text-div align-self-center">
+                        <div class="col-md-6 mt-5">
                             <h3>IT Consulting</h3>
-                            <p class="text-align" style="text-align: justify; ">
-                                Navigating digital landscapes, we provide expert guidance and tailored strategies to
-                                optimize your IT infrastructure and drive sustainable growth.
+                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                Navigating digital landscapes, we provide expert guidance and tailored strategies to optimize your IT infrastructure and drive sustainable growth.																							
                             </p>
-                            {{-- <p class="text-align" style="text-align: justify;">
+                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Rely on our experienced consultants to provide strategic insights and recommendations. We
                                 collaborate with you to optimize your IT infrastructure, aligning technology with your
                                 business goals.
@@ -191,14 +169,12 @@
                     </div>
 
                     <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5 text-div align-self-center">
+                        <div class="col-md-6 mt-5">
                             <h3>Data Analytics and Business Intelligence</h3>
-                            <p class="text-align" style="text-align: justify; ">
-                                Empower your organization with actionable insights derived from raw data. Our data analytics
-                                and business intelligence solutions drive informed decision-making, foster innovation, and
-                                fuel sustainable growth in today's data-driven landscape.
+                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            	Empower your organization with actionable insights derived from raw data. Our data analytics and business intelligence solutions drive informed decision-making, foster innovation, and fuel sustainable growth in today's data-driven landscape.																							
                             </p>
-                            {{-- <p class="text-align" style="text-align: justify;">
+                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Unlock the potential of your data with our advanced analytics and business intelligence
                                 solutions. Make informed decisions and gain a competitive edge in today's data-driven
                                 landscape.
@@ -220,27 +196,23 @@
                                 descriptive, predictive, and prescriptive.</p> --}}
                         </div>
                         <div class="col-md-6">
-                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/data-app.jpg')) }}');">
-                                {{-- <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                    alt="b1"> --}}
+                            <div class="fade-up-container w-100 p-5">
+                            <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
-
-                            <div class="w-100 p-5  parallax-container" style=" background-image: url('{{ url(asset('img/ecom.jpg')) }}');">
-                                {{-- <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1"> --}}
+                            <div class="fade-up-container w-100 p-5">
+                            <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
                             </div>
                         </div>
-                        <div class="col-md-6 mt-5 text-div align-self-center">
+                        <div class="col-md-6 mt-5">
                             <h3>E-commerce Solutions</h3>
-                            <p class="text-align" style="text-align: justify; ">
-                                Empowering businesses to thrive in the digital marketplace, our comprehensive e-commerce
-                                solutions offer seamless integration, user-friendly interfaces, and robust features tailored
-                                to maximize sales and customer satisfaction.
+                            <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                Empowering businesses to thrive in the digital marketplace, our comprehensive e-commerce solutions offer seamless integration, user-friendly interfaces, and robust features tailored to maximize sales and customer satisfaction.																							
                             </p>
-                            {{-- <p class="text-align" style="text-align: justify;">
+                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Boost your online presence and revenue with our tailored e-commerce solutions. We create
                                 secure, user-friendly platforms that enhance the shopping experience for your customers.
                             </p>
@@ -259,11 +231,6 @@
                                 for the retail sector.</p> --}}
                         </div>
                     </div>
-                    {{-- end --}}
-
-
-
-                    {{-- edn --}}
                 </div>
             </div>
         </div>
@@ -291,7 +258,8 @@
         if($count%2 == 0){
         ?>
             <div class="col-md-4">
-                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top" alt="{{ $service->title }}">
+                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
+                    alt="{{ $service->title }}">
             </div>
             <div class="col-md-8">
                 <h1>{{ $service->title }} </h1>
@@ -306,19 +274,11 @@
                 <p>{!! $service->detail !!}</p>
             </div>
             <div class="col-md-4">
-                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top" alt="{{ $service->title }}">
+                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
+                    alt="{{ $service->title }}">
             </div>
             <?php } ?>
         </div>
     @endforeach
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                var scrollTop = $(this).scrollTop();
-                $('.parallax-container').css('background-position', 'center ' + -(scrollTop / 2) + 'px');
-            });
-        });
-    </script>
 @endsection

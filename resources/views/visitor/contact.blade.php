@@ -10,8 +10,8 @@
             <div style="display: flex;justify-content: center;font-size:larger;">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        {{-- <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li> --}}
-                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                        <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact</li>
                     </ol>
                 </nav>
             </div>
@@ -19,11 +19,11 @@
     </div>
     <!-- breadcrumb end -->
     <div class="container py-3">
-        {{-- <div class="row py-3">
+        <div class="row py-3">
             <div class="section-head col-sm-12">
                 <h4><span>Contact</span> Us</h4>
             </div>
-        </div> --}}
+        </div>
         <!--contact form start  -->
         <div class="row py-2">
             <div class="col-md-4">
