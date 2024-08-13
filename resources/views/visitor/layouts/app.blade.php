@@ -302,3 +302,17 @@
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
+\<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                navbar.classList.remove('transparent');
+                navbar.classList.add('sticky');
+            } else {
+                navbar.classList.remove('sticky');
+                navbar.classList.add('transparent');
+            }
+        });
+    });
+</script>
