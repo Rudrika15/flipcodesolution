@@ -113,7 +113,8 @@
 
                 <!-- Linkedin -->
                 <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.linkedin.com/in/flipcode-solutions-8521252a0/" target="_blank" role="button">
+                    href="https://www.linkedin.com/company/flipcode-solutions-private-limited/mycompany/"
+                    target="_blank" role="button">
                     <i class="bi bi-linkedin"></i>
                 </a>
 
@@ -223,6 +224,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{ asset('js/counter.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         // Initialize CKEditor on the textarea element
         CKEDITOR.replace('editor', {

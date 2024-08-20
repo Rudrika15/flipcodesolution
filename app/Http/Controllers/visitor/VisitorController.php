@@ -19,7 +19,7 @@ class VisitorController extends Controller
 {
     public function homePage()
     {
-        $sliders = Slider:: all();
+        $sliders = Slider::all();
         return view('visitor.home', ['sliders' => $sliders]);
     }
 
@@ -55,49 +55,50 @@ class VisitorController extends Controller
     }
     public function contactPage(Request $request)
     {
-       
+
         return view('visitor.contact');
     }
-   
+
 
     public function contact_mail_send(Request $request)
     {
         $request->validate([
-            'name' => 'required',
-            'email' =>'required',
-            'subject' => 'required',
-            'message' => 'required',
+            'name' => 'required|regex:/^[a-zA-Z\s]+$/u',
+            'email' => 'required|email',
+            'contact' => 'required|max:10|min:10|regex:/^[0-9]+$/u',
+            'message' => 'required|max:250',
         ]);
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->email = $request->email;
-        $contact->subject = $request->subject;
+        $contact->contact = $request->contact;
         $contact->message = $request->message;
         $contact->save();
 
         $email = $request->email;
-        Mail::to($email)->send(new ContactMail( $request));
+        Mail::to($email)->send(new ContactMail($request));
 
-        $url = $request->currentURL;    
-        if ($url === url('/contact')){
-             return redirect('GreetingPage');
-        }
-        else{
-            return redirect()->back()->with('success', 'Mail sent to your Gmail ThankYou for Contacting Us!');
+        $url = $request->currentURL;
+        if ($url === url('/contact')) {
+            return redirect('GreetingPage');
+        } else {
+            return redirect()->back()->with('success', 'Thank you for contacting us!');
         }
     }
 
-    public function portfolioPage(Request $request){
+    public function portfolioPage(Request $request)
+    {
         return view('visitor.portfolio');
     }
 
-    
-    public function careerPage(Request $request){
+
+    public function careerPage(Request $request)
+    {
         return view('visitor.career');
     }
     public function career_send_mail(Request $request)
     {
-            $request->validate([
+        $request->validate([
             'fullname' => 'required',
             'email' => 'required',
             'address' => 'required',
@@ -106,7 +107,7 @@ class VisitorController extends Controller
             'phoneNo' => 'required|min:10|max:10',
             'file' => 'required'
         ]);
-       
+
         $career = new Career();
         $career->fullname = $request->fullname;
         $career->email = $request->email;
@@ -120,10 +121,10 @@ class VisitorController extends Controller
         $email = $request->email;
         Mail::to($email)->send(new CareerMail($request));
         return redirect('GreetingPage')->with('success', 'Mail sent to your Gmail ThankYou for Contacting Us!');
-     }
-    
-    public function GreetingPage(){
-        return view('visitor.GreetingPage');
-    }    
+    }
 
+    public function GreetingPage()
+    {
+        return view('visitor.GreetingPage');
+    }
 }

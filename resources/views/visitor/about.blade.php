@@ -13,8 +13,8 @@
             <div style="display: flex; justify-content: center;font-size:larger;">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/" style="color: #606060" >Home</a></li>
-                        <li class="breadcrumb-item active"  aria-current="page">About Us</li>
+                        <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
                     </ol>
                 </nav>
             </div>
@@ -25,59 +25,59 @@
 
 
     <!--
-        
-        <div class="container py-3">
-        <div class="row py-2">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>Professional Services.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                            veritatis
-                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>Advice and Guides.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                            veritatis
-                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-        <div class="container py-3">
-        <div class="row py-2">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>Live Support.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                            veritatis
-                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h2>Super Growth.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                            veritatis
-                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div> -->
+                                    
+                                    <div class="container py-3">
+                                    <div class="row py-2">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h2>Professional Services.</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
+                                                        veritatis
+                                                        illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
+                                                        deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h2>Advice and Guides.</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
+                                                        veritatis
+                                                        illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
+                                                        deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <div class="container py-3">
+                                    <div class="row py-2">
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h2>Live Support.</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
+                                                        veritatis
+                                                        illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
+                                                        deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <h2>Super Growth.</h2>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
+                                                        veritatis
+                                                        illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
+                                                        deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div> -->
     <div class="container py-3">
         <div class="section-head col-sm-12">
             <h4><span>About</span> Us</h4>
@@ -98,7 +98,8 @@
 
             </div>
             <div class="col-md-6">
-                <img src="{{ asset('img/b7.jpg') }}" class="img-fluid mt-2" style="max-height: 340px" alt="b1">
+                <img src="{{ asset('img/about.png') }}" class="img-fluid " style="max-height: 440px; width:500px;"
+                    alt="b1">
             </div>
         </div>
         <div class="row">
