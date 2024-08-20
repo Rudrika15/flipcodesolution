@@ -82,7 +82,7 @@ class VisitorController extends Controller
         if ($url === url('/contact')) {
             return redirect('GreetingPage');
         } else {
-            return redirect()->back()->with('success', 'Thank you for contacting us!');
+            return redirect()->back()->with('success', 'We will get back to you!');
         }
     }
 

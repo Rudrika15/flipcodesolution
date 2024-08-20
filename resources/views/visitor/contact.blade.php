@@ -127,7 +127,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
-                    title: 'Good job!',
+                    title: 'Thank You!',
                     text: '{{ Session::get('success') }}',
                     icon: 'success'
                 });

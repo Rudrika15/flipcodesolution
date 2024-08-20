@@ -187,13 +187,13 @@
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
 
-            <span>&copy;</span><span id="demo"></span><span>Copyright</span>
+            <span>&copy;</span><span id="demo"></span> <span>Copyright </span>
             <script>
                 const d = new Date();
                 let year = d.getFullYear();
                 document.getElementById("demo").innerHTML = year;
             </script>
-            <a class="text-white" href="#">flipcodesolutions</a>
+            <a class="text-white" href="#"> Flipcodesolution Private Limited</a>
         </div>
         <!-- Copyright -->
     </footer>
