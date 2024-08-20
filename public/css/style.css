@@ -21,6 +21,7 @@
 }
 
 body {
+  /* background-image: linear-gradient(rgba(242, 203, 164, 0.5), rgba(232, 229, 228, 0.5)); */
   font-family: 'Poppins', sans-serif !important;
   line-height: 24px !important;
   font-size: 14px !important;
@@ -135,7 +136,7 @@ ul {
 
 img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 span,
@@ -185,6 +186,7 @@ a:hover {
   color: white !important;
 
 }
+
 .footer-social-link-icons a:hover {
   color: #333 !important;
 
@@ -440,9 +442,9 @@ h1 {
   margin-bottom: 24px;
 }
 
-img {
+/* img {
   height: 40px;
-}
+} */
 
 
 
@@ -464,6 +466,12 @@ a.anchor {
 /* navbar */
 .nav-logo {
   height: 50px;
+
+}
+
+.filter {
+  filter: grayscale(15%);
+
 }
 
 @media (max-width: 768px) {
@@ -482,6 +490,7 @@ a.anchor {
 .navbar li {
   text-transform: capitalize;
 }
+
 .pill-nav a {
   background-color: #ff6600;
   border-radius: 5px;
@@ -496,6 +505,7 @@ a.anchor {
   background-color: #ff6600;
 
 }
+
 .pill-nav a:hover {
   background-color: #555;
   color: #fff;
@@ -731,14 +741,25 @@ hr {
   /* Stick to the top of the viewport */
   z-index: 1000;
   /* Ensure it appears above other content */
-  background-color: white;
+  /* background-color: rgba(235, 226, 226, 0.2); */
+  /* background-color: rgba(236, 149, 56, 0.2); */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #555 !important;
 }
 
 /*End  portfolio atyle */
 .navbar-nav .for-active-colored a.active {
   color: #FF6600;
 }
+
 
 .breadcrumb .active {
   color: #FF6600 !important;
@@ -862,75 +883,75 @@ logo Slider .logo-slider {
 
 /*  freeze footer  */
 
-    div#mobile-freez-icon {
-        display: none;
-    }
+div#mobile-freez-icon {
+  display: none;
+}
 
-    .wp-freeze {
-        position: fixed;
-        bottom: 170px;
-        right: 30px;
-    }
+.wp-freeze {
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+}
 
-    .wp-freeze i.fa.fa-whatsapp {
-        font-size: 30px;
-        background-color: #33ad6b;
-        color: #fff;
-        padding: 10px;
-        border-radius: 50px;
-    }
+.wp-freeze i.fa.fa-whatsapp {
+  font-size: 30px;
+  background-color: #33ad6b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+}
 
-    @media(max-width: 767px) {
-        .wp-freeze {
-            display: none;
-        }
+@media(max-width: 767px) {
+  .wp-freeze {
+    display: none;
+  }
 
-        div#mobile-freez-icon {
-            display: block;
-            position: fixed;
-            width: 100%;
-            z-index: 999;
-            bottom: 0;
-        }
+  div#mobile-freez-icon {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+  }
 
-        div#mobile-freez-icon .phone,
-        .wp-phone {
-            width: 20%;
-            font-size: 32px;
-            color: #fff;
-            border-radius: 0;
-            background: #33AD6B;
-            float: left;
-            height: 60px;
-        }
+  div#mobile-freez-icon .phone,
+  .wp-phone {
+    width: 20%;
+    font-size: 32px;
+    color: #fff;
+    border-radius: 0;
+    background: #33AD6B;
+    float: left;
+    height: 60px;
+  }
 
-        div#mobile-freez-icon i.fa.fa-phone,
-        .wp-phone i.fa.fa-whatsapp {
-            position: relative;
-            color: #fff;
-            text-align: center;
-            width: 100%;
-            margin-top: 15px;
-        }
+  div#mobile-freez-icon i.fa.fa-phone,
+  .wp-phone i.fa.fa-whatsapp {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+  }
 
-        div.wp-phone {
-            background-color: #4e5853;
-        }
+  div.wp-phone {
+    background-color: #4e5853;
+  }
 
-        div.phone {
-            background-color: #EF7F1A !important;
-        }
+  div.phone {
+    background-color: #EF7F1A !important;
+  }
 
-        a#free_quote_1 {
-            width: 60%;
-            height: 60px;
-            background: darkorange;
-            line-height: 64px;
-            font-size: 21px;
-            color: #fff;
-            text-align: center;
-            border-radius: 0;
-            cursor: pointer;
-            float: left;
-        }
-    }
+  a#free_quote_1 {
+    width: 60%;
+    height: 60px;
+    background: darkorange;
+    line-height: 64px;
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0;
+    cursor: pointer;
+    float: left;
+  }
+}
