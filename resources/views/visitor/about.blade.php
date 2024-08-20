@@ -8,18 +8,18 @@
     </style>
 @endsection
 @section('content')
-    <div class="bg-image parallax">
-        <div class="container">
-            <div style="display: flex; justify-content: center;font-size:larger;">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
-                    </ol>
-                </nav>
-            </div>
+<div class="container-fluid ">
+    <div class="image-fluid header-career">
+        <div class="headercontent">
+            <h1 class="display-4 fw-light">Do What You Love Everyday</h1>
+            <p class="lead">Want to join the Flipcode team? If you have a passion & want to work for a rapidly growing
+                IT company, check out the listings below or send your resume to
+                <span>career@flipcodesolutions.com</span>
+            </p>
+            <a href="#joblistings" class="btn btn-success btn-lg">View Job Openings</a>
         </div>
     </div>
+
     <!-- breadcrumb end -->
 
 

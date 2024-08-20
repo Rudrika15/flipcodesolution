@@ -314,3 +314,6 @@
   .row {
     margin-right: 0 !important;
   }
+  .active { 
+    color: #555 !important;
+  }

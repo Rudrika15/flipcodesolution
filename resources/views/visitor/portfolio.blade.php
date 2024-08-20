@@ -92,55 +92,55 @@
             text-align: center;
         }
     </style>
-    <div class="bg-image parallax">
-        <div class="container">
-            <div style="display: flex;justify-content: center; font-size:larger;">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        {{-- <li class="breadcrumb-item"><a href="/" style="color: #606060;">Home</a></li> --}}
-                        <li class="breadcrumb-item active" aria-current="page">Our Clients</li>
-                    </ol>
-                </nav>
-
+    <div class="container-fluid ">
+        <div class="image-fluid header-career">
+            <div class="headercontent">
+                <h1 class="display-4 fw-light">Do What You Love Everyday</h1>
+                <p class="lead">Want to join the Flipcode team? If you have a passion & want to work for a rapidly growing
+                    IT company, check out the listings below or send your resume to
+                    <span>career@flipcodesolutions.com</span>
+                </p>
+                <a href="#joblistings" class="btn btn-success btn-lg">View Job Openings</a>
             </div>
         </div>
-    </div>
-    <!-- breadcrumb end -->
 
-    <!-- portfolio design  -->
-    <div class="container-fluid py-3 bg-light">
-        <div class="container py-3">
-            <div class="row py-2 bg-light">
-                <div class="col-md-12">
-                    <!-- Start portfolio Section  -->
-                    <div class="mt-5">
-                        <a class="anchor" id="portfolio-link"></a>
-                        <div id="portfolio" class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-12 text-center">
-                                    {{-- <div class="section-head col-sm-12 ">
+        <!-- breadcrumb end -->
+
+        <!-- portfolio design  -->
+        <div class="container-fluid py-3 bg-light">
+            <div class="container py-3">
+                <div class="row py-2 bg-light">
+                    <div class="col-md-12">
+                        <!-- Start portfolio Section  -->
+                        <div class="mt-5">
+                            <a class="anchor" id="portfolio-link"></a>
+                            <div id="portfolio" class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        {{-- <div class="section-head col-sm-12 ">
                                         <h4><span>Our Clients</span></h4>
                                     </div> --}}
-                                    <hr />
-                                    <div class="container-fluid">
-                                        <div class="row">
+                                        <hr />
+                                        <div class="container-fluid">
+                                            <div class="row">
 
-                                            @foreach ($jsonData as $data)
-                                                <div class="col-md-4">
-                                                    <div class="container1">
-                                                        <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}" class="image">
-                                                        <div class="overlay">
-                                                            <div class="text">{{ $data['title'] }}</div>
+                                                @foreach ($jsonData as $data)
+                                                    <div class="col-md-4">
+                                                        <div class="container1">
+                                                            <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"
+                                                                class="image">
+                                                            <div class="overlay">
+                                                                <div class="text">{{ $data['title'] }}</div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            @endforeach
+                                                @endforeach
+                                            </div>
                                         </div>
-                                    </div>
 
 
-                                    {{-- start code --}}
-                                    {{-- <div class="container-fluid">
+                                        {{-- start code --}}
+                                        {{-- <div class="container-fluid">
                                         <div class="row">
 
                                             <div class="col-md-4  col-sm-12 mt-5">
@@ -310,7 +310,8 @@
 
                                         </div>
                                     </div> --}}
-                                    {{-- end old code --}}
+                                        {{-- end old code --}}
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -318,5 +319,4 @@
                 </div>
             </div>
         </div>
-    </div>
-@endsection
+    @endsection
