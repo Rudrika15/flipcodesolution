@@ -1,40 +1,46 @@
 <?php
-
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class CareerAdminMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $user;
     public $ccAddresses;
+    public $attachmentPath;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($user, $ccAddresses = [])
+    public function __construct($user, $ccAddresses = [], $attachmentPath = null)
     {
         $this->user = $user;
         $this->ccAddresses = $ccAddresses;
+        $this->attachmentPath = $attachmentPath;
     }
 
     public function build()
     {
-        $email =  $this->markdown('visitor.emails.contacts')->subject(config('app.name') . ', 
-        Contact us');
+        $email = $this->markdown('visitor.emails.careerAdmin')
+                      ->subject(config('app.name') . ', Contact us');
+        
         if (!empty($this->ccAddresses)) {
             $email->cc($this->ccAddresses);
         }
 
-        return $email;
+        if ($this->attachmentPath) {
+            $email->attach($this->attachmentPath);
+        }
 
+        return $email;
     }
 
     /**
@@ -43,7 +49,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Received a new contact message from ' . config('app.name'),
+            subject: 'Application from ' . $this->user->fullname . ' - ' . config('app.name'),
         );
     }
 
@@ -53,7 +59,7 @@ class ContactMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'visitor.emails.careerAdmin',  // Ensure this view path is correct
         );
     }
 
@@ -64,6 +70,8 @@ class ContactMail extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return $this->attachmentPath
+            ? [Attachment::fromPath($this->attachmentPath)]
+            : [];
     }
 }

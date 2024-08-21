@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\visitor;
 
 use App\Http\Controllers\Controller;
+use App\Mail\CareerAdminMail;
 use App\Mail\ContactMail;
 use App\Models\Blog;
 use App\Models\About;
@@ -12,6 +13,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\CareerMail;
+use App\Mail\ContactMailUser;
 use App\Models\Career;
 use App\Models\Contact;
 
@@ -62,12 +64,15 @@ class VisitorController extends Controller
 
     public function contact_mail_send(Request $request)
     {
+        // Validate the request
         $request->validate([
             'name' => 'required|regex:/^[a-zA-Z\s]+$/u',
             'email' => 'required|email',
-            'contact' => 'required|max:10|min:10|regex:/^[0-9]+$/u',
+            'contact' => 'required|digits:10|regex:/^[0-9]+$/u',
             'message' => 'required|max:250',
         ]);
+
+        // Save contact information
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->email = $request->email;
@@ -75,16 +80,26 @@ class VisitorController extends Controller
         $contact->message = $request->message;
         $contact->save();
 
-        $email = $request->email;
-        Mail::to($email)->send(new ContactMail($request));
+        // Send email
+        $ccAddress = ['ravirajsinh.m.gohil@gmail.com', 'parmarjigardhirajlal@gmail.com']; // Replace with the actual CC email address
 
-        $url = $request->currentURL;
-        if ($url === url('/contact')) {
-            return redirect('GreetingPage');
+        // Send email
+        Mail::to('flipcodesolutions@gmail.com')
+            ->send(new ContactMail($request, $ccAddress));
+
+        Mail::to($request->email)
+            ->send(new ContactMailUser($request));
+
+        // Redirect based on current URL
+        $currentURL = $request->input('currentURL', url('/contact')); // Fallback to default URL
+        if ($currentURL === url('/contact')) {
+            return redirect()->route('GreetingPage'); // Assuming 'GreetingPage' is a named route
         } else {
             return redirect()->back()->with('success', 'We will get back to you!');
         }
     }
+
+
 
     public function portfolioPage(Request $request)
     {
@@ -98,30 +113,53 @@ class VisitorController extends Controller
     }
     public function career_send_mail(Request $request)
     {
+        // Validate the request data
         $request->validate([
-            'fullname' => 'required',
-            'email' => 'required',
-            'address' => 'required',
-            'city' => 'required',
-            'zip' => 'required',
-            'phoneNo' => 'required|min:10|max:10',
-            'file' => 'required'
+            'fullname' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phoneNo' => 'required|digits:10',
+            // 'file' => 'required|file|mimes:pdf,doc,docx|max:2048' // Adjust file types and size as needed
+            'file' => 'required' // Adjust file types and size as needed
         ]);
 
+        // Handle file upload
+
+        // Create a new Career record
+        // Handle file upload
         $career = new Career();
         $career->fullname = $request->fullname;
         $career->email = $request->email;
         $career->address = $request->address;
         $career->city = $request->city;
-        $career->zip = $request->zip;
-        $career->phoneNo =  $request->input('code') . $request->input('phoneNo');
-        $career->file = $request->file;
+        $career->phoneNo = $request->phoneNo;
+        $career->file = time() . '-' . $request->file->getClientOriginalName();
+        $request->file->move(storage_path('uploads'), $career->file);
         $career->save();
 
-        $email = $request->email;
-        Mail::to($email)->send(new CareerMail($request));
-        return redirect('GreetingPage')->with('success', 'Mail sent to your Gmail ThankYou for Contacting Us!');
+        // Prepare attachment path
+        $attachmentPath = storage_path('uploads/' . $career->file);
+
+
+        $userData = [
+            'name' => $request->fullName,
+            'email' => $request->email,
+            'phoneNo' => $request->phoneNo,
+            'address' => $request->address,
+            'city' => $request->city,
+            'jobTitle' => $request->position,
+        ];
+        // Send email to the user
+        $email = $career->email;  // Make sure you use the email from the saved record
+        Mail::to($email)->send(new CareerMail($userData));
+
+        // Send email to the admin with CC and attachment
+        $ccAddresses = ['ravirajsinh.m.gohil@gmail.com', 'parmarjigardhirajlal@gmail.com'];
+        Mail::to('flipcodesolutions@gmail.com')->send(new CareerAdminMail($career, $ccAddresses, $attachmentPath));
+
+        // Redirect with success message
+        return redirect('GreetingPage')->with('success', 'Mail sent successfully! Thank you for contacting us.');
     }
+
 
     public function GreetingPage()
     {

@@ -9,29 +9,24 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class ContactMailUser extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $user;
-    public $ccAddresses;
-
+ 
     /**
      * Create a new message instance.
      */
-    public function __construct($user, $ccAddresses = [])
+    public function __construct($user)
     {
         $this->user = $user;
-        $this->ccAddresses = $ccAddresses;
     }
 
     public function build()
     {
-        $email =  $this->markdown('visitor.emails.contacts')->subject(config('app.name') . ', 
+        $email =  $this->markdown('visitor.emails.thankyoucontact')->subject(config('app.name') . ', 
         Contact us');
-        if (!empty($this->ccAddresses)) {
-            $email->cc($this->ccAddresses);
-        }
 
         return $email;
 
@@ -43,7 +38,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Received a new contact message from ' . config('app.name'),
+            subject: 'Thank you for Contacting us - ' . config('app.name'),
         );
     }
 
