@@ -29,7 +29,7 @@
                     IT company, check out the listings below or send your resume to
                     <span>career@flipcodesolutions.com</span>
                 </p>
-                <a href="#joblistings" class="btn btn-success btn-lg">View Job Openings</a>
+                <a href="#joblistings" class="btn btn-dark btn-lg">View Job Openings</a>
             </div>
         </div>
 
@@ -64,7 +64,7 @@
         <!-- Job Openings Section -->
 
         <div class="current-openings my-5" id="joblistings">
-            <h2 class="display-3 text-center" style="color:#ff6600">Current Openings</h2>
+            <h2 class="display-6 text-center" style="color:#ff6600">Current Openings</h2>
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -171,6 +171,31 @@
                 </div>
             </div>
         </div>
-
+        <script>
+            function toggleDescription(descriptionId) {
+                var description = document.getElementById(descriptionId);
+                if (description.style.display === "none" || description.style.display === "") {
+                    description.style.display = "block";
+                } else {
+                    description.style.display = "none";
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                var applyModal = document.getElementById('applyModal');
+                applyModal.addEventListener('show.bs.modal', function(event) {
+                    var button = event.relatedTarget;
+                    var position = button.getAttribute('data-position');
+                    var modalTitle = applyModal.querySelector('.modal-title');
+                    var positionSelect = applyModal.querySelector('#position');
+                    modalTitle.textContent = 'Apply for Position: ' + position;
+                    for (var i = 0; i < positionSelect.options.length; i++) {
+                        if (positionSelect.options[i].value === position) {
+                            positionSelect.value = position;
+                            break;
+                        }
+                    }
+                });
+            });
+        </script>
         <!-- portfolio design  -->
     @endsection

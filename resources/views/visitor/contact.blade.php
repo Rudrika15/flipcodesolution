@@ -9,10 +9,10 @@
                 <h1 class="display-4 fw-light">Let's discuss your next project</h1>
                 <p class="lead">Are you ready to turn your idea into reality? At Flipcode Solutions, <br>
                     we specialize in delivering high-quality IT solutions tailored to your needs. Whether you
-                    have a project in mind or need guidance on how to start, we’re here to help. reach out to us
+                    have a project in mind or need guidance on how to start, we’re here to help. reach out to us at
                     <span>contact@flipcodesolutions.com</span>
                 </p>
-                <a href="#contactus"class="btn btn-success btn-lg">Contact Us</a>
+                <a href="#contactus"class="btn btn-dark btn-lg">Contact Us</a>
             </div>
         </div>
 
@@ -31,9 +31,7 @@
                 </div>
                 <div class="col-md-7 my-5 ps-5 d-flex justify-content-center">
 
-                    <div class="card pt-5 px-3  shadow-sm"
-                        style= "  background-image: linear-gradient(rgb(244, 238, 223), rgb(220, 217, 212));
- width: 35rem;">
+                    <div class="card pt-5 px-3  shadow-sm" style=" width: 35rem;">
                         <form action="{{ route('contact_mail_send') }}" method="POST">
                             @csrf
                             <div class="form-floating mb-3">
@@ -69,7 +67,7 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn text-white mt-5" style="background-color:#ff6600">
-                                Get Started
+                                Get Started &nbsp;<i class="bi bi-rocket-takeoff text-white fs-5"></i>
                             </button>
                             <div class="form-text mt-3 text-muted">✓ 100% Guaranteed Security of Your Information</div>
                         </form>
@@ -87,7 +85,7 @@
                 <li class="col-md-4">
                     <i class="bi bi-geo-alt" style="font-size:3rem; color: #ff6600;"></i>
                     <h3 class="h5 text-uppercase">Our Location</h3>
-                    <p>FlipCode Solution Private Limited <br>
+                    <p>Flipcode Solution Private Limited <br>
                         Nr. Panama Sales, Dalmill road <br>
                         Surendranagar,<br>
                         Gujrat 363001 India</p>
