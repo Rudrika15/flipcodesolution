@@ -41,10 +41,17 @@
         <p class="lead">You have received a new inquiry from the contact form:</p>
 
         <ul class="list-group">
-            <li class="list-group-item"><strong>Name:</strong> {{ $user->name }}</li>
+            <li class="list-group-item"><strong>Full Name:</strong> {{ $user->fullname }}</li>
             <li class="list-group-item"><strong>Email:</strong> {{ $user->email }}</li>
-            <li class="list-group-item"><strong>Contact Number:</strong> {{ $user->contact }}</li>
-            <li class="list-group-item"><strong>Message:</strong> {{ $user->message }}</li>
+            <li class="list-group-item"><strong>Contact Number:</strong> {{ $user->phoneNo }}</li>
+            <li class="list-group-item"><strong>Address:</strong> {{ $user->address }}</li>
+            <li class="list-group-item"><strong>City:</strong> {{ $user->city }}</li>
+
+            {{-- attacthment --}}
+            @if ($user->file)
+                <li class="list-group-item"><strong>Attachment:</strong> <a
+                        href="{{ $user->file }}">{{ $user->file }}</a></li>
+            @endif
         </ul>
     </div>
 

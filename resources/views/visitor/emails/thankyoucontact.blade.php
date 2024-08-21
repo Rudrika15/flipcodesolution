@@ -1,29 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title>ItsolutionStuff.com</title>
-</head>
-<body>
-    <h1>{{ $mailData['title'] }}</h1>
-    <p>{{ $mailData['body'] }}</p>
-    <p>{!! $mailData['url'] !!}</p>
-    
-    <p>Test Mail</p>
-    <br>
-
-    {{-- <form action="{{ route('veryfiedEmail', ['partner_id' => $mailData['partner_id']]) }}" method="POST">
-        @csrf
-        <button type="submit">Verified</button>
-    </form> --}}
-    
-
-     {{-- <a href="" style="background-color:green;padding:10px;text-decoration:none;color:white"> <b>Verified You Email Address </b></a> --}}
-    <p>Thank you</p>
-</body>
-</html>
-
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -96,14 +71,14 @@
                                                             <td style="padding-top: 8px;padding-bottom: 10px; padding-right: 20px;padding-left: 20px;">
                                                                 <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
-                                                                    Hello, {{$data['name']}}
+                                                                    Hello, {{$user['name']}}
                                                                 </p>
                                                                 <p style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
-Thank you for reaching out to us. We appreciate your interest . I'd be happy to assist you with any questions you have.
+Thank you for reaching out to us. we appreciate your interest . we will be happy to assist you with any questions you have.
 </p>
                                                             <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
-Please feel free to share your specific inquiries, and I'll do my best to provide the information you need.</p>
+Please feel free to share your specific inquiries, and we'll do our best to provide information you need.</p>
                                                             <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
 

@@ -76,26 +76,27 @@
         ],
     ];
 @endphp
+
 @section('content')
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="image-fluid header-career">
             <div class="headercontent">
                 <h1 class="display-4 fw-light">Do What You Love Everyday</h1>
-                <p class="lead">Want to join the Flipcode team? If you have a passion & want to work for a rapidly growing
-                    IT company, check out the listings below or send your resume to
-                    <span>career@flipcodesolutions.com</span>
+                <p class="lead">
+                    Want to join the Flipcode team? If you have a passion & want to work for a rapidly growing IT company,
+                    check out the listings below or send your resume to <span>career@flipcodesolutions.com</span>
                 </p>
                 <a href="#joblistings" class="btn btn-dark btn-lg">View Job Openings</a>
             </div>
         </div>
 
         <!-- Benefits Section -->
-        <div class="benefitscontainer container my-5 text-center"  data-aos="zoom-in">
+        <div class="benefitscontainer container my-5 text-center" data-aos="zoom-in">
             <h2 class="display-3">Benefits Joining Us</h2>
-            <ul class="list-unstyled row ">
+            <ul class="list-unstyled row">
                 <li class="col-md-3">
                     <i class="bi bi-cup-hot" style="font-size:3rem; color: #ff6600;"></i>
-                    <h3 class="h5 text-uppercase">Coffee & Tea </h3>
+                    <h3 class="h5 text-uppercase">Coffee & Tea</h3>
                     <p>Get the juices flowing every morning with complimentary coffee and tea.</p>
                 </li>
                 <li class="col-md-3">
@@ -118,15 +119,13 @@
         </div>
 
         <!-- Job Openings Section -->
-
         <div class="current-openings my-5" id="joblistings">
             <h2 class="display-6 text-center" style="color:#ff6600">Current Openings</h2>
             <div class="container">
                 <div class="row">
-                    <!-- Web Developer Job Card -->
                     @foreach ($jsonData as $index => $data)
-                    <div class="col-md-12"  data-aos="zoom-in">
-                            @if ($data['status'] == 'Open')
+                        @if ($data['status'] === 'Open')
+                            <div class="col-md-12" data-aos="zoom-in">
                                 <div class="job-card">
                                     <div class="row">
                                         <div class="col-md-8">
@@ -134,7 +133,7 @@
                                         </div>
                                         <div class="col-md-4 text-end">
                                             <button class="btn btn-danger rounded-pill"
-                                                onclick="toggleDescription('job-description-{{ $index }}')">View
+                                            data-title="{{ $data['title'] }}" onclick="toggleDescription('job-description-{{ $index }}')">View
                                                 More</button>
                                             <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
                                                 data-bs-target="#applyModal" data-position="{{ $data['title'] }}">Apply
@@ -145,8 +144,6 @@
                                         style="display: none;">
                                         <div class="row">
                                             <div class="col-md-10">
-
-
                                                 <ul>
                                                     <li>
                                                         <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
@@ -165,97 +162,143 @@
                                                         <p><strong>Status:</strong> {{ $data['status'] }}</p>
                                                     </li>
                                                 </ul>
-
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
-                            @endif
-                        </div>
-                        @endforeach
-
-                        <!-- Graphic Designer Job Card -->
-
-
-
-                   
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
-        </div> <!-- Modal -->
+        </div>
+
+        <!-- Modal -->
         <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="applyModalLabel">Apply for Position</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
-                            <div class="mb-3">
+                        <form id="applicationForm" enctype="multipart/form-data" method="POST" action="{{ route('career_send_mail') }}">
+                            @csrf
+                            <!-- Form Fields -->
+                            <div class="mb-1">
                                 <label for="fullName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="fullName">
+                                <input type="text" name="fullname" class="form-control" id="fullName">
+                                <span class="text-danger" id="fullnameError"></span>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-1">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="email">
+                                <input type="email" name="email" class="form-control" id="email">
+                                <span class="text-danger" id="emailError"></span>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-1">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone">
+                                <input type="tel" name="phoneNo" class="form-control" id="phone">
+                                <span class="text-danger" id="phoneError"></span>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-1">
+                                <label for="city" class="form-label">City</label>
+                                <input type="tel" name="city" class="form-control" id="city">
+                                <span class="text-danger" id="cityError"></span>
+                            </div>
+                            <div class="mb-1">
                                 <label for="position" class="form-label">Position Applied For</label>
-                                <select class="form-select" id="position">
+                                <select class="form-select" id="position" name="position">
                                     <option value="">Select Position</option>
-                                    <option value="Web Developer">Web Developer</option>
-                                    <option value="Graphic Designer">Graphic Designer</option>
-                                    <option value="Software Tester">Software Tester</option>
-                                    <option value="Java Developer">Java Developer</option>
+                                    @foreach ($jsonData as $data)
+                                        @if ($data['status'] === 'Open')
+                                            <option value="{{ $data['title'] }}">{{ $data['title'] }}</option>
+                                        @endif
+                                    @endforeach
                                 </select>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-1">
                                 <label for="resume" class="form-label">Upload Resume</label>
-                                <input type="file" class="form-control" id="resume">
-                            </div>
-                            <div class="mb-3">
-                                <label for="coverLetter" class="form-label">Cover Letter</label>
-                                <textarea class="form-control" id="coverLetter" rows="3"></textarea>
+                                <input type="file" name="file" class="form-control" id="resume">
+                                <span class="text-danger" id="resumeError"></span>
                             </div>
                             <button type="submit" class="btn btn-dark">Submit Application</button>
                         </form>
-                        <div id="successMessage" class="alert alert-success d-none mt-3">
-                            Thanks for applying! We will contact you soon...
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
+</div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-            function toggleDescription(descriptionId) {
-                var description = document.getElementById(descriptionId);
-                if (description.style.display === "none" || description.style.display === "") {
-                    description.style.display = "block";
-                } else {
-                    description.style.display = "none";
-                }
-            }
-            document.addEventListener('DOMContentLoaded', function() {
-                var applyModal = document.getElementById('applyModal');
-                applyModal.addEventListener('show.bs.modal', function(event) {
-                    var button = event.relatedTarget;
-                    var position = button.getAttribute('data-position');
-                    var modalTitle = applyModal.querySelector('.modal-title');
-                    var positionSelect = applyModal.querySelector('#position');
-                    modalTitle.textContent = 'Apply for Position: ' + position;
-                    for (var i = 0; i < positionSelect.options.length; i++) {
-                        if (positionSelect.options[i].value === position) {
-                            positionSelect.value = position;
-                            break;
+            $(document).ready(function() {
+                // Initialize jQuery Validation
+                $('#applicationForm').on('submit', function(event) {
+                    event.preventDefault();
+        
+                    // Clear previous errors
+                    $('.text-danger').text('');
+        
+                    // Select the submit button and store its original text
+                    var submitButton = $(this).find('button[type="submit"]');
+                    var originalButtonText = submitButton.html();  // Use .html() to preserve any HTML content in the button
+        
+                    // Disable the submit button and change its text
+                    submitButton.prop('disabled', true).html('Sending...');
+        
+                    var formData = new FormData(this);
+        
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        success: function(response) {
+                            Swal.fire({
+                                title: 'Success!',
+                                text: 'Thanks for applying! We will contact you soon...',
+                                icon: 'success',
+                                confirmButtonText: 'OK'
+                            }).then(() => {
+                                $('#applicationForm')[0].reset();
+                                $('#applyModal').modal('hide');
+                            });
+                        },
+                        error: function(xhr) {
+                            if (xhr.status === 422) { // Validation error
+                                var errors = xhr.responseJSON.errors;
+        
+                                // Loop through each error and display it below the respective input field
+                                $.each(errors, function(key, value) {
+                                    $('#' + key + 'Error').text(value[0]);
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Error!',
+                                    text: 'An error occurred while submitting the form. Please try again.',
+                                    icon: 'error',
+                                    confirmButtonText: 'OK'
+                                });
+                            }
+                        },
+                        complete: function() {
+                            // Re-enable the submit button and restore its original text
+                            submitButton.prop('disabled', false).html(originalButtonText);
                         }
-                    }
+                    });
                 });
+        
+                // Toggle job description visibility
+                function toggleDescription(descriptionId) {
+                    var description = document.getElementById(descriptionId);
+                    description.style.display = description.style.display === "none" || description.style.display === "" ? "block" : "none";
+                }
+        
+                // Set modal title and position value on modal show
+        
             });
         </script>
-        <!-- portfolio design  -->
-    @endsection
+        
+        
+    
+@endsection

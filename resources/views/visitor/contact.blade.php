@@ -132,4 +132,64 @@
             });
         </script>
     @endif
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Handle form submission via AJAX
+            $('form').on('submit', function(event) {
+                event.preventDefault();
+    
+                // Clear previous errors
+                $('.text-danger').text('');
+    
+                // Disable the submit button and change its text
+                var submitButton = $(this).find('button[type="submit"]');
+                var originalButtonText = submitButton.html(); // Preserve the original button text
+    
+                submitButton.prop('disabled', true).html('Sending...');
+    
+                var formData = new FormData(this);
+    
+                $.ajax({
+                    url: $(this).attr('action'), // Use the form's action attribute
+                    type: $(this).attr('method'), // Use the form's method attribute
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Your message has been sent successfully!',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then(() => {
+                            $('form')[0].reset(); // Reset the form
+                        });
+                    },
+                    error: function(xhr) {
+                        if (xhr.status === 422) { // Validation error
+                            var errors = xhr.responseJSON.errors;
+    
+                            // Loop through each error and display it below the respective input field
+                            $.each(errors, function(key, value) {
+                                $('input[name="' + key + '"], textarea[name="' + key + '"]').siblings('.text-danger').text(value[0]);
+                            });
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'An error occurred while submitting the form. Please try again.',
+                                icon: 'error',
+                                confirmButtonText: 'OK'
+                            });
+                        }
+                    },
+                    complete: function() {
+                        // Re-enable the submit button and restore its original text
+                        submitButton.prop('disabled', false).html(originalButtonText);
+                    }
+                });
+            });
+        });
+    </script>
+    
 @endsection
