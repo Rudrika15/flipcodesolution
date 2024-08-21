@@ -3,56 +3,63 @@
     <title>Flipcode solutions | Services</title>
 @endsection
 @section('content')
-    <div class="bg-image parallax">
-        <div class="container">
-            <div style="display: flex;justify-content: center;font-size:larger;">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/" style="color: #606060">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Services</li>
-                    </ol>
-                </nav>
+    <div class="container-fluid ">
+        <div class="image-fluid header-career">
+            <div class="headercontent">
+                <h1 class="display-4 fw-light">innovative It solutions</h1>
+                <p class="lead">We offer a full spectrum of bespoke IT services designed to advance your business through
+                    enhanced efficiency, fortified security, and professional expertise. For exceptional service and to
+                    discuss how we can support your needs, please reach out to us at
+                    <span>contact@flipcodesolutions.com</span>
+
+                </p>
+                <a href="#service" class="btn btn-dark btn-lg">Services</a>
             </div>
         </div>
-    </div>
-    <!-- breadcrumb end -->
-    <div class="container py-3">
-        <div class="section-head col-sm-12">
-            <h4><span>Services</span></h4>
-        </div>
-        <style>
-            .fade-up-container {
-                position: relative;
-                overflow: hidden;
-                /* Optional: Ensures the image doesn't overflow the container */
-            }
 
-            .fade-up-image {
-                opacity: 1;
-                transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-                /* Add smooth transitions for transform and box-shadow changes */
-            }
+        <!-- breadcrumb end -->
+        <div class="container py-3">
+            <div class="section-head col-sm-12" id="service">
+                <h4><span>Services</span></h4>
+            </div>
+            <style>
+                .fade-up-container {
+                    position: relative;
+                    overflow: hidden;
+                    /* Optional: Ensures the image doesn't overflow the container */
+                }
 
-            .fade-up-container:hover .fade-up-image {
-                transform: translateY(-25px);
-                /* Move the image slightly upward on hover */
-                box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3); /* Box shadow on right and bottom sides */
+                .fade-up-image {
+                    opacity: 1;
+                    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+                    /* Add smooth transitions for transform and box-shadow changes */
+                }
 
-            }
-        </style>
+                .fade-up-container:hover .fade-up-image {
+                    transform: translateY(-25px);
+                    /* Move the image slightly upward on hover */
+                    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+                    /* Box shadow on right and bottom sides */
+
+                }
+            </style>
 
 
-        <div class="row">
-            <p>Welcome to Flipcode Solutions, where innovation meets expertise. Our IT services and solutions are designed
-                to empower your business, enhance efficiency, and drive digital transformation. With a commitment to
-                excellence, we deliver cutting-edge solutions tailored to meet the unique needs of your organization.</p>
-            <div class="col-md-12">
-                <div class="container">
-                    <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5">
-                            <h3>Custom Software Development</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">	Crafting bespoke software solutions tailored to your unique business needs, ensuring efficiency, scalability, and seamless integration for optimal performance and growth.																								</p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+            <div class="row">
+                <p>Welcome to Flipcode Solutions, where innovation meets expertise. Our IT services and solutions are
+                    designed
+                    to empower your business, enhance efficiency, and drive digital transformation. With a commitment to
+                    excellence, we deliver cutting-edge solutions tailored to meet the unique needs of your organization.
+                </p>
+                <div class="col-md-12">
+                    <div class="container">
+                        <div class="row py-2 img-Sec">
+                            <div class="col-md-6 mt-5">
+                                <h3>Custom Software Development</h3>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;"> Crafting bespoke
+                                    software solutions tailored to your unique business needs, ensuring efficiency,
+                                    scalability, and seamless integration for optimal performance and growth. </p>
+                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Leverage our expertise in developing bespoke software solutions. From concept to deployment,
                                 our skilled team ensures that your software aligns seamlessly with your business objectives.
                             </p>
@@ -60,34 +67,38 @@
                                 specific needs of an individual or a company. Unlike commercial off-the-shelf (COTS)
                                 software, custom options are usually targeting specific problems. They are also meant for
                                 in-house use, not resale.</p> --}}
-                            <h4>Advantagess</h4>
-                            <ul class="mob ms-3">
-                                <li>Targeted Solutions</li>
-                                <li>Greater Scalability</li>
-                                <li>Software Integration</li>
-                                <li>Hardware Costs</li>
-                                <li>Increased Reliability</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
-                                <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
+                                <h4>Advantagess</h4>
+                                <ul class="mob ms-3">
+                                    <li>Targeted Solutions</li>
+                                    <li>Greater Scalability</li>
+                                    <li>Software Integration</li>
+                                    <li>Hardware Costs</li>
+                                    <li>Increased Reliability</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="fade-up-container w-100 p-5">
+                                    <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image"
+                                        alt="b1">
+
+                                </div>
 
                             </div>
-
                         </div>
-                    </div>
-                    <div class="row py-2">
-                        <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
-                            <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
+                        <div class="row py-2">
+                            <div class="col-md-6">
+                                <div class="fade-up-container w-100 p-5">
+                                    <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image"
+                                        alt="b1">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 mt-5">
-                            <h3> Web Application Development</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
-                            	Engineering user-centric web applications to redefine interactions, optimize workflows, and propel business expansion. Amplify your digital footprint with our customized offerings.																							</p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <div class="col-md-6 mt-5">
+                                <h3> Web Application Development</h3>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                    Engineering user-centric web applications to redefine interactions, optimize workflows,
+                                    and propel business expansion. Amplify your digital footprint with our customized
+                                    offerings. </p>
+                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Transform your online presence with dynamic and user-friendly web applications. We
                                 specialize in creating scalable and responsive solutions that captivate your audience.
                             </p>
@@ -103,14 +114,16 @@
                                 functionality deployment. Keeping your core business requirement in mind, we strategize
                                 precisely and add life to your design with each element that we augment to the UI structure
                                 and design.</p> --}}
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5">
-                            <h3> Mobile App Development</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">	Turning your ideas into innovative mobile solutions, enhancing user engagement and expanding your reach on every device.																								</p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                        <div class="row py-2 img-Sec">
+                            <div class="col-md-6 mt-5">
+                                <h3> Mobile App Development</h3>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;"> Turning your ideas
+                                    into innovative mobile solutions, enhancing user engagement and expanding your reach on
+                                    every device. </p>
+                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Stay ahead in the mobile-first world with our innovative mobile app development services.
                                 Whether it's iOS, Android, or cross-platform, we bring your app ideas to life.
                             </p>
@@ -120,34 +133,37 @@
                                 Enterprise Mobility adds liquidity to stationary enterprise processes, thus enhancing the
                                 global reach. Developing enterprise mobile apps is now an essential component of every
                                 enterprise strategy.</p> --}}
-                            <h4>Our Mobile Api Development Services Include :</h4>
-                            <ul class="mob ms-3">
-                                <li>Android App Development</li>
-                                <li>App Prototype Development</li>
-                                <li>iPad App Development</li>
-                                <li>iphone App Development</li>
-                                <li>IOS App Development</li>
-                                <li>Smart Watch App Development</li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
-                            <img src="{{ asset('img/mob-app.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
+                                <h4>Our Mobile Api Development Services Include :</h4>
+                                <ul class="mob ms-3">
+                                    <li>Android App Development</li>
+                                    <li>App Prototype Development</li>
+                                    <li>iPad App Development</li>
+                                    <li>iphone App Development</li>
+                                    <li>IOS App Development</li>
+                                    <li>Smart Watch App Development</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="fade-up-container w-100 p-5">
+                                    <img src="{{ asset('img/mob-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
+                                        alt="b1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row py-2">
-                        <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
-                            <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
+                        <div class="row py-2">
+                            <div class="col-md-6">
+                                <div class="fade-up-container w-100 p-5">
+                                    <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image"
+                                        alt="b1">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 mt-5">
-                            <h3>IT Consulting</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Navigating digital landscapes, we provide expert guidance and tailored strategies to optimize your IT infrastructure and drive sustainable growth.																							
-                            </p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <div class="col-md-6 mt-5">
+                                <h3>IT Consulting</h3>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                    Navigating digital landscapes, we provide expert guidance and tailored strategies to
+                                    optimize your IT infrastructure and drive sustainable growth.
+                                </p>
+                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Rely on our experienced consultants to provide strategic insights and recommendations. We
                                 collaborate with you to optimize your IT infrastructure, aligning technology with your
                                 business goals.
@@ -158,23 +174,25 @@
                             <p>An IT consultant might also perform repairs on IT systems and technological devices that
                                 companies need to conduct business.</p>
                             <h4>How to become an IT consultant</h4> --}}
-                            <p>Here's how you can start your career as an IT consultant:</p>
-                            <ul class="mob ms-3">
-                                <li>Earn a degree</li>
-                                <li>Gain professional experience</li>
-                                <li>Obtain certification</li>
-                                <li>Apply for work as an IT consultant</li>
-                            </ul>
+                                <p>Here's how you can start your career as an IT consultant:</p>
+                                <ul class="mob ms-3">
+                                    <li>Earn a degree</li>
+                                    <li>Gain professional experience</li>
+                                    <li>Obtain certification</li>
+                                    <li>Apply for work as an IT consultant</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row py-2 img-Sec">
-                        <div class="col-md-6 mt-5">
-                            <h3>Data Analytics and Business Intelligence</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
-                            	Empower your organization with actionable insights derived from raw data. Our data analytics and business intelligence solutions drive informed decision-making, foster innovation, and fuel sustainable growth in today's data-driven landscape.																							
-                            </p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                        <div class="row py-2 img-Sec">
+                            <div class="col-md-6 mt-5">
+                                <h3>Data Analytics and Business Intelligence</h3>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                    Empower your organization with actionable insights derived from raw data. Our data
+                                    analytics and business intelligence solutions drive informed decision-making, foster
+                                    innovation, and fuel sustainable growth in today's data-driven landscape.
+                                </p>
+                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Unlock the potential of your data with our advanced analytics and business intelligence
                                 solutions. Make informed decisions and gain a competitive edge in today's data-driven
                                 landscape.
@@ -194,25 +212,29 @@
                             <p>To draw the line between business intelligence and data analytics, we think it's more useful
                                 to talk about what we want to accomplish. We can divide analytics into three categories:
                                 descriptive, predictive, and prescriptive.</p> --}}
-                        </div>
-                        <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
-                            <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
+                            </div>
+                            <div class="col-md-6">
+                                <div class="fade-up-container w-100 p-5">
+                                    <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
+                                        alt="b1">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row py-2">
-                        <div class="col-md-6">
-                            <div class="fade-up-container w-100 p-5">
-                            <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1">
+                        <div class="row py-2">
+                            <div class="col-md-6">
+                                <div class="fade-up-container w-100 p-5">
+                                    <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image"
+                                        alt="b1">
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 mt-5">
-                            <h3>E-commerce Solutions</h3>
-                            <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Empowering businesses to thrive in the digital marketplace, our comprehensive e-commerce solutions offer seamless integration, user-friendly interfaces, and robust features tailored to maximize sales and customer satisfaction.																							
-                            </p>
-                            {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
+                            <div class="col-md-6 mt-5">
+                                <h3>E-commerce Solutions</h3>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                    Empowering businesses to thrive in the digital marketplace, our comprehensive e-commerce
+                                    solutions offer seamless integration, user-friendly interfaces, and robust features
+                                    tailored to maximize sales and customer satisfaction.
+                                </p>
+                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
                                 Boost your online presence and revenue with our tailored e-commerce solutions. We create
                                 secure, user-friendly platforms that enhance the shopping experience for your customers.
                             </p>
@@ -229,57 +251,56 @@
                                 industry is approximately 23% according to BigCommerce. eMarketer forecasted that global
                                 eCommerce sales are expected to cross $4 trillion in 2020 and these are just the statistics
                                 for the retail sector.</p> --}}
+                            </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <!-- our technology -->
+        <!-- our technology -->
 
-    @include('visitor.commons.technology')
+        @include('visitor.commons.technology')
 
 
-    <!-- End our technology -->
+        <!-- End our technology -->
 
-    <?php
-    $count = 0;
-    ?>
-    @foreach ($services as $service)
         <?php
-        $count = $count + 1;
-        
+        $count = 0;
         ?>
-        <div class="row py-5">
+        @foreach ($services as $service)
             <?php
+            $count = $count + 1;
+            
+            ?>
+            <div class="row py-5">
+                <?php
         if($count%2 == 0){
         ?>
-            <div class="col-md-4">
-                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
-                    alt="{{ $service->title }}">
-            </div>
-            <div class="col-md-8">
-                <h1>{{ $service->title }} </h1>
-                <p>{!! $service->detail !!}</p>
-            </div>
+                <div class="col-md-4">
+                    <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
+                        alt="{{ $service->title }}">
+                </div>
+                <div class="col-md-8">
+                    <h1>{{ $service->title }} </h1>
+                    <p>{!! $service->detail !!}</p>
+                </div>
 
 
-            <?php } else {?>
+                <?php } else {?>
 
-            <div class="col-md-8">
-                <h1>{{ $service->title }}</h1>
-                <p>{!! $service->detail !!}</p>
+                <div class="col-md-8">
+                    <h1>{{ $service->title }}</h1>
+                    <p>{!! $service->detail !!}</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
+                        alt="{{ $service->title }}">
+                </div>
+                <?php } ?>
             </div>
-            <div class="col-md-4">
-                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
-                    alt="{{ $service->title }}">
-            </div>
-            <?php } ?>
-        </div>
-    @endforeach
+        @endforeach
     </div>
 @endsection

@@ -1,4 +1,4 @@
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   .header-nav {
     display: none;
   }
@@ -21,7 +21,11 @@
 }
 
 body {
+  /* background-image: linear-gradient(rgba(242, 203, 164, 0.5), rgba(232, 229, 228, 0.5)); */
   font-family: 'Poppins', sans-serif !important;
+  line-height: 24px !important;
+  font-size: 14px !important;
+  top: 0 !important;
 }
 
 /* breadcrumb css of image start */
@@ -30,7 +34,7 @@ body {
   /* The image used */
   background-image: url("../img/banner3.jpg");
   /* Set a specific height */
-  min-height: 100px;
+  min-height: 130px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -53,7 +57,9 @@ body {
 
 /* breadcrumb css of image end */
 
-
+.active{
+  color: #555 !important;
+}
 .counter-box {
   display: block;
   padding: 40px 20px 37px;
@@ -69,6 +75,11 @@ body {
 
 }
 
+.service-css-sec {
+  font-size: 18px;
+  line-height: 38px;
+
+}
 
 
 .counter {
@@ -78,14 +89,15 @@ body {
   color: #fff;
   line-height: 28px
 }
-.submit-org-btn{
+
+.submit-org-btn {
   background-color: #ff6600 !important;
-  color:white !important;
+  color: white !important;
 }
 
-.submit-org-btn:hover{
+.submit-org-btn:hover {
   background-color: #555 !important;
-  color:white !important;
+  color: white !important;
 }
 
 .main-title {
@@ -126,7 +138,7 @@ ul {
 
 img {
   max-width: 100%;
-  height: auto;
+  /* height: auto; */
 }
 
 span,
@@ -153,24 +165,30 @@ a:hover {
   text-transform: none;
   margin-bottom: 30px;
 }
+
 /* footercss */
 @media (max-width: 768px) {
-  footer{
+  footer {
     padding-bottom: 90px;
   }
 }
 
 .backimage {
-  background-image: url('../../img/footerflipcode.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../../img/fCodefooter.png');
+  background-repeat: repeat;
   background-position: left;
-  background-color: rgba(13, 10, 10, 0.171);
+  /* height: 200px;
+  width:200px; */
+  /*  
+  background-color: rgba(13, 10, 10, 0.171); */
   /* background-size: cover; */
 }
+
 .footer-social-link-icons a {
   color: white !important;
 
 }
+
 .footer-social-link-icons a:hover {
   color: #333 !important;
 
@@ -211,12 +229,14 @@ p.service_text {
   text-align: center;
 }
 
-.service-cards{
+.service-cards {
   height: 250px;
 }
-.service-cards h6{
+
+.service-cards h6 {
   font-weight: 600;
 }
+
 .section-head p,
 p.awesome_line {
   color: #818181;
@@ -424,9 +444,9 @@ h1 {
   margin-bottom: 24px;
 }
 
-img {
+/* img {
   height: 40px;
-}
+} */
 
 
 
@@ -444,16 +464,25 @@ a.anchor {
   top: -50px;
   visibility: hidden;
 }
+
 /* navbar */
-.nav-logo{
-  height: 70px;
+.nav-logo {
+  height: 50px;
+
 }
-@media  (max-width: 768px) {
- 
-  .nav-logo{ 
+
+.filter {
+  filter: grayscale(15%);
+
+}
+
+@media (max-width: 768px) {
+
+  .nav-logo {
     height: 50px;
   }
 }
+
 .navbar-brand {
   font-family: "Dancing Script", cursive;
   font-weight: 700;
@@ -463,6 +492,7 @@ a.anchor {
 .navbar li {
   text-transform: capitalize;
 }
+
 .pill-nav a {
   background-color: #ff6600;
   border-radius: 5px;
@@ -477,6 +507,7 @@ a.anchor {
   background-color: #ff6600;
 
 }
+
 .pill-nav a:hover {
   background-color: #555;
   color: #fff;
@@ -708,15 +739,29 @@ hr {
 
 .navbar {
   position: sticky;
-  top: 0; /* Stick to the top of the viewport */
-  z-index: 1000; /* Ensure it appears above other content */
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  top: 0;
+  /* Stick to the top of the viewport */
+  z-index: 1000;
+  /* Ensure it appears above other content */
+  /* background-color: rgba(235, 226, 226, 0.2); */
+  /* background-color: rgba(236, 149, 56, 0.2); */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #555 !important;
+}
+
 /*End  portfolio atyle */
 .navbar-nav .for-active-colored a.active {
   color: #FF6600;
 }
+
 
 .breadcrumb .active {
   color: #FF6600 !important;
@@ -727,8 +772,8 @@ hr {
   min-height: 520px;
 }
 
-.square-items .item{
-min-height:350px;
+.square-items .item {
+  min-height: 350px;
 }
 
 /* blog */
@@ -779,10 +824,10 @@ logo Slider .logo-slider {
   /* background-color: red; */
 }
 
-@media only screen and (max-width:  768px) {
+@media only screen and (max-width: 768px) {
   .item-for-technology img {
- width: 90%;
- 
+    width: 90%;
+
   }
 }
 
@@ -833,3 +878,104 @@ logo Slider .logo-slider {
   pointer-events: none;
   background: #ccc;
 } */
+
+
+
+
+
+/*  freeze footer  */
+
+div#mobile-freez-icon {
+  display: none;
+}
+
+.wp-freeze {
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+}
+
+.wp-freeze i.fa.fa-whatsapp {
+  font-size: 30px;
+  background-color: #33ad6b;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+@media(max-width: 767px) {
+  .wp-freeze {
+    display: none;
+  }
+
+  div#mobile-freez-icon {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+  }
+
+  div#mobile-freez-icon .phone,
+  .wp-phone {
+    width: 20%;
+    font-size: 32px;
+    color: #fff;
+    border-radius: 0;
+    background: #33AD6B;
+    float: left;
+    height: 60px;
+  }
+
+  div#mobile-freez-icon i.fa.fa-phone,
+  .wp-phone i.fa.fa-whatsapp {
+    position: relative;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  div.wp-phone {
+    background-color: #4e5853;
+  }
+
+  div.phone {
+    background-color: #EF7F1A !important;
+  }
+
+  a#free_quote_1 {
+    width: 60%;
+    height: 60px;
+    background: darkorange;
+    line-height: 64px;
+    font-size: 21px;
+    color: #fff;
+    text-align: center;
+    border-radius: 0;
+    cursor: pointer;
+    float: left;
+  }
+}
+
+/* .form input css */
+.form-control:focus {
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0) !important;
+}
+
+.form-control {
+  background-color: transparent !important;
+}
+
+.border-bottom {
+  border: none;
+  border-bottom: 1px solid #8e8c8b !important;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.375rem 0.75rem;
+}
+
+.form-floating .form-control:focus {
+  box-shadow: none;
+  border-color: #ff6600 !important;
+}
