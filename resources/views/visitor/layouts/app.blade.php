@@ -58,14 +58,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto ">
 
-                    
+
                     <li class="for-active-colored">
                         <a class="nav-link text-warning {{ Route::is('about') ? 'active' : '' }}"
-                           href="{{ route('about') }}">About</a>
+                            href="{{ route('about') }}">About</a>
                     </li>
-                    
-                    
-                    
+
+
+
                     <li class="for-active-colored">
                         <a class="nav-link text-warning {{ Route::currentRouteNamed('service') ? 'active' : '' }}"
                             href="{{ route('service') }}">Services</a>
@@ -317,7 +317,7 @@
             float: left;
         }
     }
-</>
+</style>
 
 {{-- mobile view footer icons --}}
 <div id="mobile-freez-icon">

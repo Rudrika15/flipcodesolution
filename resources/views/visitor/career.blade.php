@@ -269,6 +269,31 @@
                 </div>
             </div>
         </div>
-
+        <script>
+            function toggleDescription(descriptionId) {
+                var description = document.getElementById(descriptionId);
+                if (description.style.display === "none" || description.style.display === "") {
+                    description.style.display = "block";
+                } else {
+                    description.style.display = "none";
+                }
+            }
+            document.addEventListener('DOMContentLoaded', function() {
+                var applyModal = document.getElementById('applyModal');
+                applyModal.addEventListener('show.bs.modal', function(event) {
+                    var button = event.relatedTarget;
+                    var position = button.getAttribute('data-position');
+                    var modalTitle = applyModal.querySelector('.modal-title');
+                    var positionSelect = applyModal.querySelector('#position');
+                    modalTitle.textContent = 'Apply for Position: ' + position;
+                    for (var i = 0; i < positionSelect.options.length; i++) {
+                        if (positionSelect.options[i].value === position) {
+                            positionSelect.value = position;
+                            break;
+                        }
+                    }
+                });
+            });
+        </script>
         <!-- portfolio design  -->
     @endsection
