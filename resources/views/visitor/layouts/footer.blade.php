@@ -89,11 +89,12 @@
 <footer id="picassoFooter">
     <div class="footer-content">
         <div class="footer-section footer-logo">
-            {{-- <svg class="logo" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"> --}}
-            <circle cx="50" cy="50" r="45" fill="#ff6600" stroke="#ff6600" stroke-width="5" />
+            <img src="img/newLogo.png" style="width: 70px; height: 70px;">
+            {{-- <svg class="logo" width="100" height="100" viewBox="0 0 100 100" src="img/newLogo.png"> --}}
+            {{-- <circle cx="50" cy="50" r="45" fill="#ff6600" stroke="#ff6600" stroke-width="5" />
             <path d="M30 70 Q 50 20 70 70" stroke="#AFEEEE" stroke-width="5" fill="none" />
             <circle cx="50" cy="50" r="10" fill="#ff6600" />
-            </svg>
+            </svg> --}}
             <h2>Flipcode Solutions</h2>
             <p>Innovating the future, one brushstroke at a time.</p>
         </div>
@@ -103,7 +104,7 @@
                 <li><a href="{{ route('home') }}" class="hover-effect">Home</a></li>
                 <li><a href="{{ route('about') }}" class="hover-effect">About Us</a></li>
                 <li><a href="{{ route('service') }}"class="hover-effect">Services</a></li>
-                <li><a href="#portfolio" class="hover-effect">Portfolio</a></li>
+                <li><a href="{{ route('portfolio') }}" class="hover-effect">Clients</a></li>
                 <li><a href="{{ route('contact') }}" class="hover-effect">Contact</a></li>
             </ul>
         </div>
@@ -111,16 +112,17 @@
             <h3>Contact Us</h3>
             <p><i class="fas fa-envelope"></i> contact@flipcodesolutions.com</p>
             <p><i class="fas fa-phone"></i> +91 997 940 4044</p>
-			<div>
-				
-			</div>
-            <p>
-                <i class="fas fa-map-marker-alt" style="vertical-align: middle; margin-right: 8px;"></i>
-                Flipcode Solution Private Limited<br>
-                Nr. Panama Sales, Dalmill Road<br>
-                Surendranagar,<br>
-                Gujarat 363001 India
-            </p>
+            <div class="d-flex align-items-start">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <p>Flipcode Solution Private Limited<br>
+                        Nr. Panama Sales, Dalmill Road<br>
+                        Surendranagar,<br>
+                        Gujarat 363001 India
+                    </p>
+                </div>
+            </div>
+
 
         </div>
         <div class="footer-section footer-cta">
@@ -135,9 +137,9 @@
             </div>
         </div>
     </div>
-    <div class="footer-art">
+    {{-- <div class="footer-art">
         <canvas id="picassoCanvas"></canvas>
-    </div>
+    </div> --}}
     <div class="footer-bottom text-center p-3">
 
         <span>&copy;</span><span id="demo"></span> <span>Copyright </span>

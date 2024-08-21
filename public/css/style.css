@@ -964,6 +964,7 @@ div#mobile-freez-icon {
 
 .footer-section {
   margin: 20px;
+  margin-right: 50px;
   flex: 1;
   min-width: 200px;
 }
@@ -1065,7 +1066,7 @@ div#mobile-freez-icon {
   font-family: 'Playfair Display', serif;
   margin-top: 10px;
   font-size: 1.8em;
-  background-color: #ff6600;
+  background-color: #f1f0ef;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1085,20 +1086,20 @@ div#mobile-freez-icon {
 
 .footer-contact i {
   margin-right: 10px;
-  color: #AFEEEE;
+  color: #8c8f8f;
 }
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 25px;
 }
 
 .social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   color: #ffffff;
