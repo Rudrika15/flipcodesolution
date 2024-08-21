@@ -2,6 +2,80 @@
 @section('title')
     <title>Flipcode solutions | Career</title>
 @endsection
+@php
+    $jsonData = [
+        [
+            'title' => 'React.js Intern',
+            'detail' =>
+                'We are looking for a passionate intern to join our front-end development team. The ideal candidate should have a strong interest in building responsive and dynamic web applications.',
+            'role' => 'Frontend Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Develop and maintain user-facing features using React.js, Collaborate with back-end developers and designers to implement user interfaces, Write reusable and efficient code, Troubleshoot and debug issues, Stay updated with the latest trends in front-end development.',
+            'experience' =>
+                'Basic understanding of JavaScript, HTML, and CSS. Experience with React.js is a plus but not required. Eagerness to learn and grow in a fast-paced environment.',
+            'qualification' =>
+                'Pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong analytical and problem-solving skills. Excellent communication and teamwork abilities.',
+            'status' => 'Open',
+        ],
+        [
+            'title' => 'Laravel Intern',
+            'detail' =>
+                'We are seeking a motivated intern to join our back-end development team. The ideal candidate should have a strong interest in building scalable and robust web applications using the Laravel framework.',
+            'role' => 'Backend Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in developing and maintaining back-end components of web applications using Laravel, Collaborate with front-end developers to integrate user-facing elements, Write clean, secure, and well-documented code, Debug and resolve technical issues, Participate in code reviews and team meetings.',
+            'experience' =>
+                'Basic understanding of PHP, MySQL, and RESTful APIs. Experience with Laravel is a plus but not required. Willingness to learn and take on challenges in a dynamic work environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong logical thinking and problem-solving skills. Good communication and collaboration abilities.',
+            'status' => 'Open',
+        ],
+        [
+            'title' => 'Flutter Intern',
+            'detail' =>
+                'We are looking for a passionate intern to join our mobile development team. The ideal candidate should have a strong interest in building high-performance mobile applications using the Flutter framework.',
+            'role' => 'Mobile Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in the development and maintenance of mobile applications using Flutter, Collaborate with designers and backend developers to create seamless user experiences, Write clean and efficient code, Troubleshoot and debug issues across different devices and platforms, Stay updated with the latest trends in mobile app development.',
+            'experience' =>
+                'Basic understanding of Dart programming language and Flutter framework. Experience with mobile development (iOS/Android) is a plus but not required. Eagerness to learn and adapt in a fast-paced environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong analytical and problem-solving skills. Excellent communication and teamwork abilities.',
+            'status' => 'Open',
+        ],
+        [
+            'title' => 'Node.js Backend Intern',
+            'detail' =>
+                'We are looking for a passionate intern to join our backend development team. The ideal candidate should have a strong interest in building scalable and efficient server-side applications using Node.js.',
+            'role' => 'Backend Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in the development and maintenance of server-side logic using Node.js, Collaborate with front-end developers to integrate user-facing elements with server-side logic, Write clean, efficient, and reusable code, Implement security and data protection measures, Troubleshoot and debug server-side issues, Stay updated with the latest trends in backend development.',
+            'experience' =>
+                'Basic understanding of JavaScript, Node.js, and RESTful APIs. Experience with databases such as MongoDB or MySQL is a plus but not required. Willingness to learn and grow in a fast-paced environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong problem-solving and analytical skills. Good communication and collaboration abilities.',
+            'status' => 'Open',
+        ],
+        [
+            'title' => 'React Native Intern',
+            'detail' =>
+                'We are seeking a motivated intern to join our mobile app development team. The ideal candidate should have a strong interest in building responsive and dynamic mobile applications using React Native.',
+            'role' => 'Mobile Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in the development and maintenance of mobile applications using React Native, Collaborate with designers and backend developers to create seamless user experiences, Write clean, efficient, and reusable code, Debug and troubleshoot issues on different mobile platforms (iOS/Android), Stay updated with the latest trends in mobile development.',
+            'experience' =>
+                'Basic understanding of JavaScript, React, and React Native. Familiarity with mobile development is a plus but not required. Eagerness to learn and adapt in a fast-paced environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong problem-solving and analytical skills. Good communication and teamwork abilities.',
+            'status' => 'Open',
+        ],
+    ];
+@endphp
 @section('content')
     <div class="container-fluid ">
         <div class="image-fluid header-career">
@@ -51,172 +125,59 @@
                 <div class="row">
                     <div class="col-md-12">
                         <!-- Web Developer Job Card -->
-                        <div class="job-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Web Developer</h3>
-                                    <p><strong>Experience:</strong> 3+ years</p>
-                                    <p><strong>Available Position:</strong> 5</p>
+                        @foreach ($jsonData as $index => $data)
+                            @if ($data['status'] == 'Open')
+                                <div class="job-card">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h3>{{ $data['title'] }}</h3>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <button class="btn btn-danger rounded-pill"
+                                                onclick="toggleDescription('job-description-{{ $index }}')">View
+                                                More</button>
+                                            <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
+                                                data-bs-target="#applyModal" data-position="{{ $data['title'] }}">Apply
+                                                Now</a>
+                                        </div>
+                                    </div>
+                                    <div id="job-description-{{ $index }}" class="job-description mt-3"
+                                        style="display: none;">
+                                        <div class="row">
+                                            <div class="col-md-10">
+
+
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Responsibility:</strong> {{ $data['responsibility'] }}
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Mode:</strong> {{ $data['mode'] }}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Status:</strong> {{ $data['status'] }}</p>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('web-developer-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Web Developer">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="web-developer-description" class="job-description mt-3">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Develop and maintain web applications.</li>
-                                    <li>Collaborate with design and development teams.</li>
-                                    <li>Write clean, scalable code.</li>
-                                    <li>Test and debug web applications.</li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
+                            @endif
+                        @endforeach
+
                         <!-- Graphic Designer Job Card -->
-                        <div class="job-card mt-4">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Graphic Designer</h3>
-                                    <p><strong>Experience:</strong> Interns</p>
-                                    <p><strong>Available Position:</strong> 2</p>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('graphic-designer-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Graphic Designer">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="graphic-designer-description" class="job-description mt-3">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Create visual concepts and designs.</li>
-                                    <li>Work with clients to determine design requirements.</li>
-                                    <li>Develop graphics for websites, advertisements, and other media.</li>
-                                    <li>Ensure all designs meet brand guidelines.</li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="job-card mt-4">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Software Tester</h3>
-                                    <p><strong>Experience:</strong> 1+ years</p>
-                                    <p><strong>Available Position:</strong> 1</p>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('software-tester-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Software Tester">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="software-tester-description" class="job-description mt-3">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Conduct manual and automated testing.</li>
-                                    <li>Identify, record, and track bugs.</li>
-                                    <li>Collaborate with developers to ensure quality standards.</li>
-                                    <li>Prepare and present test reports.</li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="job-card mt-4">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Java Developer</h3>
-                                    <p><strong>Experience:</strong> 4+ years</p>
-                                    <p><strong>Available Position:</strong> 2</p>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('java-developer-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Java Developer">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="java-developer-description" class="job-description ">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Design and implement Java applications.</li>
-                                    <li>Write reusable, testable, and efficient code.</li>
-                                    <li>Participate in code reviews and maintain code quality.</li>
-                                    <li>Collaborate with cross-functional teams to define and achieve project goals.
-                                    </li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
+
+
+
                     </div>
                 </div>
             </div>
