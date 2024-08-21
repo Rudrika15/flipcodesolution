@@ -6,18 +6,20 @@
     <div class="container-fluid ">
         <div class="image-fluid header-career">
             <div class="headercontent">
-                <h1 class="display-4 fw-light">Do What You Love Everyday</h1>
-                <p class="lead">Want to join the Flipcode team? If you have a passion & want to work for a rapidly growing
-                    IT company, check out the listings below or send your resume to
-                    <span>career@flipcodesolutions.com</span>
+                <h1 class="display-4 fw-light">innovative It solutions</h1>
+                <p class="lead">We offer a full spectrum of bespoke IT services designed to advance your business through
+                    enhanced efficiency, fortified security, and professional expertise. For exceptional service and to
+                    discuss how we can support your needs, please reach out to us at
+                    <span>contact@flipcodesolutions.com</span>
+
                 </p>
-                <a href="#joblistings" class="btn btn-success btn-lg">View Job Openings</a>
+                <a href="#service" class="btn btn-dark btn-lg">Services</a>
             </div>
         </div>
 
         <!-- breadcrumb end -->
         <div class="container py-3">
-            <div class="section-head col-sm-12">
+            <div class="section-head col-sm-12" id="service">
                 <h4><span>Services</span></h4>
             </div>
             <style>
