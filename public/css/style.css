@@ -57,7 +57,9 @@ body {
 
 /* breadcrumb css of image end */
 
-
+.active{
+  color: #555 !important;
+}
 .counter-box {
   display: block;
   padding: 40px 20px 37px;

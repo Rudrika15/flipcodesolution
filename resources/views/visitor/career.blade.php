@@ -16,7 +16,7 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="benefitscontainer container-fluid my-5 text-center">
+        <div class="benefitscontainer container my-5 text-center">
             <h2 class="display-3">Benefits Joining Us</h2>
             <ul class="list-unstyled row ">
                 <li class="col-md-3">
