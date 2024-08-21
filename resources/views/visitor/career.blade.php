@@ -18,6 +18,48 @@
                 'Pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong analytical and problem-solving skills. Excellent communication and teamwork abilities.',
             'status' => 'Open',
         ],
+        [
+            'title' => 'Laravel Intern',
+            'detail' =>
+                'We are seeking a motivated intern to join our back-end development team. The ideal candidate should have a strong interest in building scalable and robust web applications using the Laravel framework.',
+            'role' => 'Backend Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in developing and maintaining back-end components of web applications using Laravel, Collaborate with front-end developers to integrate user-facing elements, Write clean, secure, and well-documented code, Debug and resolve technical issues, Participate in code reviews and team meetings.',
+            'experience' =>
+                'Basic understanding of PHP, MySQL, and RESTful APIs. Experience with Laravel is a plus but not required. Willingness to learn and take on challenges in a dynamic work environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong logical thinking and problem-solving skills. Good communication and collaboration abilities.',
+            'status' => 'Open',
+        ],
+        [
+            'title' => 'Flutter Intern',
+            'detail' =>
+                'We are looking for a passionate intern to join our mobile development team. The ideal candidate should have a strong interest in building high-performance mobile applications using the Flutter framework.',
+            'role' => 'Mobile Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in the development and maintenance of mobile applications using Flutter, Collaborate with designers and backend developers to create seamless user experiences, Write clean and efficient code, Troubleshoot and debug issues across different devices and platforms, Stay updated with the latest trends in mobile app development.',
+            'experience' =>
+                'Basic understanding of Dart programming language and Flutter framework. Experience with mobile development (iOS/Android) is a plus but not required. Eagerness to learn and adapt in a fast-paced environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong analytical and problem-solving skills. Excellent communication and teamwork abilities.',
+            'status' => 'Open',
+        ],
+        [
+            'title' => 'Node.js Backend Intern',
+            'detail' =>
+                'We are looking for a passionate intern to join our backend development team. The ideal candidate should have a strong interest in building scalable and efficient server-side applications using Node.js.',
+            'role' => 'Backend Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in the development and maintenance of server-side logic using Node.js, Collaborate with front-end developers to integrate user-facing elements with server-side logic, Write clean, efficient, and reusable code, Implement security and data protection measures, Troubleshoot and debug server-side issues, Stay updated with the latest trends in backend development.',
+            'experience' =>
+                'Basic understanding of JavaScript, Node.js, and RESTful APIs. Experience with databases such as MongoDB or MySQL is a plus but not required. Willingness to learn and grow in a fast-paced environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong problem-solving and analytical skills. Good communication and collaboration abilities.',
+            'status' => 'Open',
+        ],
     ];
 @endphp
 @section('content')
@@ -69,52 +111,46 @@
                 <div class="row">
                     <div class="col-md-12">
                         <!-- Web Developer Job Card -->
-                        @foreach ($jsonData as $data)
-                            <div class="job-card">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <h3>{{ $data['title'] }}</h3>
-                                        <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
-                                        <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
-                                        <p><strong>Responsibility:</strong> {{ $data['responsibility'] }}</p>
-                                        <p><strong>Mode:</strong> {{ $data['mode'] }}</p>
-                                        <p><strong>Status:</strong> {{ $data['status'] }}</p>
+                        @foreach ($jsonData as $index => $data)
+                            @if ($data['status'] == 'Open')
+                                <div class="job-card">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <h3>{{ $data['title'] }}</h3>
+                                        </div>
+                                        <div class="col-md-4 text-end">
+                                            <button class="btn btn-danger rounded-pill"
+                                                onclick="toggleDescription('job-description-{{ $index }}')">View
+                                                More</button>
+                                            <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
+                                                data-bs-target="#applyModal" data-position="{{ $data['title'] }}">Apply
+                                                Now</a>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 text-end">
-                                        <button class="btn btn-danger rounded-pill"
-                                            onclick="toggleDescription('web-developer-description')">View More</button>
-                                        <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                            data-bs-target="#applyModal" data-position="Web Developer">Apply Now</a>
+                                    <div id="job-description-{{ $index }}" class="job-description mt-3"
+                                        style="display: none;">
+                                        <ul>
+                                            <li>
+                                                <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Responsibility:</strong> {{ $data['responsibility'] }}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Mode:</strong> {{ $data['mode'] }}</p>
+                                            </li>
+                                            <li>
+                                                <p><strong>Status:</strong> {{ $data['status'] }}</p>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
-                                <div id="web-developer-description" class="job-description mt-3">
-                                    <p><strong>Roles and Responsibilities:</strong></p>
-                                    <ul>
-                                        <li>Develop and maintain web applications.</li>
-                                        <li>Collaborate with design and development teams.</li>
-                                        <li>Write clean, scalable code.</li>
-                                        <li>Test and debug web applications.</li>
-                                    </ul>
-                                    <p><strong>Requirements:</strong></p>
-                                    <ul>
-                                        <li>Proficiency in Java and Springboot.</li>
-                                        <li>Strong Understanding of Software Development..</li>
-                                    </ul>
-                                    <p><strong>Qualifications:</strong></p>
-                                    <ul>
-                                        <li>Master degree in computer field</li>
-                                    </ul>
-                                    <p><strong>Job Type:</strong></p>
-                                    <ul>
-                                        <li>Full-Time , Permenant</li>
-                                    </ul>
-                                    <p><strong>Timing:</strong></p>
-                                    <ul>
-                                        <li>Flexible timing.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            @endif
                         @endforeach
+
                         <!-- Graphic Designer Job Card -->
 
 
