@@ -60,6 +60,20 @@
                 'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong problem-solving and analytical skills. Good communication and collaboration abilities.',
             'status' => 'Open',
         ],
+        [
+            'title' => 'React Native Intern',
+            'detail' =>
+                'We are seeking a motivated intern to join our mobile app development team. The ideal candidate should have a strong interest in building responsive and dynamic mobile applications using React Native.',
+            'role' => 'Mobile Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Assist in the development and maintenance of mobile applications using React Native, Collaborate with designers and backend developers to create seamless user experiences, Write clean, efficient, and reusable code, Debug and troubleshoot issues on different mobile platforms (iOS/Android), Stay updated with the latest trends in mobile development.',
+            'experience' =>
+                'Basic understanding of JavaScript, React, and React Native. Familiarity with mobile development is a plus but not required. Eagerness to learn and adapt in a fast-paced environment.',
+            'qualification' =>
+                'Currently pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong problem-solving and analytical skills. Good communication and teamwork abilities.',
+            'status' => 'Open',
+        ],
     ];
 @endphp
 @section('content')
@@ -129,23 +143,32 @@
                                     </div>
                                     <div id="job-description-{{ $index }}" class="job-description mt-3"
                                         style="display: none;">
-                                        <ul>
-                                            <li>
-                                                <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Responsibility:</strong> {{ $data['responsibility'] }}</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Mode:</strong> {{ $data['mode'] }}</p>
-                                            </li>
-                                            <li>
-                                                <p><strong>Status:</strong> {{ $data['status'] }}</p>
-                                            </li>
-                                        </ul>
+                                        <div class="row">
+                                            <div class="col-md-10">
+
+
+                                                <ul>
+                                                    <li>
+                                                        <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Responsibility:</strong> {{ $data['responsibility'] }}
+                                                        </p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Mode:</strong> {{ $data['mode'] }}</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Status:</strong> {{ $data['status'] }}</p>
+                                                    </li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
                                     </div>
                                 </div>
                             @endif
