@@ -12,7 +12,8 @@
 
     <div class="container pt-3">
         <div class="row pt-2">
-            <div class="col-md-6 h-auto mt-3">
+
+            <div data-aos="fade-right" class="col-md-6  h-auto mt-3">
                 <h2 class="text-align pb-1">Our Story</h2>
                 <p class="text-align" style=" font-size:14px; text-align: justify; line-height: 24px;">
                     <span class="main-title">Flipcode Solutions Pvt. Ltd.</span> is a new version of a software development
@@ -31,7 +32,7 @@
                 </p>
                 <div><a type="button" href="{{ Route('about') }}" class=" btn submit-org-btn">Read More</a></div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" data-aos="fade-left">
                 <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" style="max-height: 440px; width:500px;"
                     alt="b1">
             </div>
@@ -64,7 +65,7 @@
                     organization.</p>
             </div>
             <div class="row py-5">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class=" bi bi-lightbulb"></i></h3>
@@ -77,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash"></i></h3>
@@ -90,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-phone-flip"></i></h3>
@@ -103,7 +104,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-tv-fill"></i></h3>
@@ -114,7 +115,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-graph-up-arrow"></i></h3>
@@ -128,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 mb-4" data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-gear-wide-connected"></i></h3>

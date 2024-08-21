@@ -90,7 +90,7 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="benefitscontainer container my-5 text-center">
+        <div class="benefitscontainer container my-5 text-center"  data-aos="zoom-in">
             <h2 class="display-3">Benefits Joining Us</h2>
             <ul class="list-unstyled row ">
                 <li class="col-md-3">
@@ -123,14 +123,14 @@
             <h2 class="display-6 text-center" style="color:#ff6600">Current Openings</h2>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
-                        <!-- Web Developer Job Card -->
-                        @foreach ($jsonData as $index => $data)
+                    <!-- Web Developer Job Card -->
+                    @foreach ($jsonData as $index => $data)
+                    <div class="col-md-12"  data-aos="zoom-in">
                             @if ($data['status'] == 'Open')
                                 <div class="job-card">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <h3>{{ $data['title'] }}</h3>
+                                            <h4>{{ $data['title'] }}</h4>
                                         </div>
                                         <div class="col-md-4 text-end">
                                             <button class="btn btn-danger rounded-pill"
@@ -172,13 +172,14 @@
                                     </div>
                                 </div>
                             @endif
+                        </div>
                         @endforeach
 
                         <!-- Graphic Designer Job Card -->
 
 
 
-                    </div>
+                   
                 </div>
             </div>
         </div> <!-- Modal -->

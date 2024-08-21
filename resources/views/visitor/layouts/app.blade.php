@@ -40,6 +40,8 @@
     {{-- custom css for carrer page  --}}
 
     <link rel="stylesheet" href="{{ asset('css/career.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 
 </head>
 
@@ -126,12 +128,16 @@
     <script src="{{ asset('js/counter.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>
         // Initialize CKEditor on the textarea element
         CKEDITOR.replace('editor', {
             // Optional configuration options can be added here
         });
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 
