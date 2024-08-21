@@ -2,6 +2,24 @@
 @section('title')
     <title>Flipcode solutions | Career</title>
 @endsection
+@php
+    $jsonData = [
+        [
+            'title' => 'React.js Intern',
+            'detail' =>
+                'We are looking for a passionate intern to join our front-end development team. The ideal candidate should have a strong interest in building responsive and dynamic web applications.',
+            'role' => 'Frontend Developer',
+            'mode' => 'Full Time',
+            'responsibility' =>
+                'Develop and maintain user-facing features using React.js, Collaborate with back-end developers and designers to implement user interfaces, Write reusable and efficient code, Troubleshoot and debug issues, Stay updated with the latest trends in front-end development.',
+            'experience' =>
+                'Basic understanding of JavaScript, HTML, and CSS. Experience with React.js is a plus but not required. Eagerness to learn and grow in a fast-paced environment.',
+            'qualification' =>
+                'Pursuing or recently completed a degree in Computer Science, Software Engineering, or a related field. Strong analytical and problem-solving skills. Excellent communication and teamwork abilities.',
+            'status' => 'Open',
+        ],
+    ];
+@endphp
 @section('content')
     <div class="container-fluid ">
         <div class="image-fluid header-career">
@@ -51,172 +69,56 @@
                 <div class="row">
                     <div class="col-md-12">
                         <!-- Web Developer Job Card -->
-                        <div class="job-card">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Web Developer</h3>
-                                    <p><strong>Experience:</strong> 3+ years</p>
-                                    <p><strong>Available Position:</strong> 5</p>
+                        @foreach ($jsonData as $data)
+                            <div class="job-card">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <h3>{{ $data['title'] }}</h3>
+                                        <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
+                                        <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
+                                        <p><strong>Responsibility:</strong> {{ $data['responsibility'] }}</p>
+                                        <p><strong>Mode:</strong> {{ $data['mode'] }}</p>
+                                        <p><strong>Status:</strong> {{ $data['status'] }}</p>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <button class="btn btn-danger rounded-pill"
+                                            onclick="toggleDescription('web-developer-description')">View More</button>
+                                        <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
+                                            data-bs-target="#applyModal" data-position="Web Developer">Apply Now</a>
+                                    </div>
                                 </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('web-developer-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Web Developer">Apply Now</a>
+                                <div id="web-developer-description" class="job-description mt-3">
+                                    <p><strong>Roles and Responsibilities:</strong></p>
+                                    <ul>
+                                        <li>Develop and maintain web applications.</li>
+                                        <li>Collaborate with design and development teams.</li>
+                                        <li>Write clean, scalable code.</li>
+                                        <li>Test and debug web applications.</li>
+                                    </ul>
+                                    <p><strong>Requirements:</strong></p>
+                                    <ul>
+                                        <li>Proficiency in Java and Springboot.</li>
+                                        <li>Strong Understanding of Software Development..</li>
+                                    </ul>
+                                    <p><strong>Qualifications:</strong></p>
+                                    <ul>
+                                        <li>Master degree in computer field</li>
+                                    </ul>
+                                    <p><strong>Job Type:</strong></p>
+                                    <ul>
+                                        <li>Full-Time , Permenant</li>
+                                    </ul>
+                                    <p><strong>Timing:</strong></p>
+                                    <ul>
+                                        <li>Flexible timing.</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div id="web-developer-description" class="job-description mt-3">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Develop and maintain web applications.</li>
-                                    <li>Collaborate with design and development teams.</li>
-                                    <li>Write clean, scalable code.</li>
-                                    <li>Test and debug web applications.</li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
                         <!-- Graphic Designer Job Card -->
-                        <div class="job-card mt-4">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Graphic Designer</h3>
-                                    <p><strong>Experience:</strong> Interns</p>
-                                    <p><strong>Available Position:</strong> 2</p>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('graphic-designer-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Graphic Designer">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="graphic-designer-description" class="job-description mt-3">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Create visual concepts and designs.</li>
-                                    <li>Work with clients to determine design requirements.</li>
-                                    <li>Develop graphics for websites, advertisements, and other media.</li>
-                                    <li>Ensure all designs meet brand guidelines.</li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="job-card mt-4">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Software Tester</h3>
-                                    <p><strong>Experience:</strong> 1+ years</p>
-                                    <p><strong>Available Position:</strong> 1</p>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('software-tester-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Software Tester">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="software-tester-description" class="job-description mt-3">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Conduct manual and automated testing.</li>
-                                    <li>Identify, record, and track bugs.</li>
-                                    <li>Collaborate with developers to ensure quality standards.</li>
-                                    <li>Prepare and present test reports.</li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="job-card mt-4">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3>Java Developer</h3>
-                                    <p><strong>Experience:</strong> 4+ years</p>
-                                    <p><strong>Available Position:</strong> 2</p>
-                                </div>
-                                <div class="col-md-4 text-end">
-                                    <button class="btn btn-danger rounded-pill"
-                                        onclick="toggleDescription('java-developer-description')">View More</button>
-                                    <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
-                                        data-bs-target="#applyModal" data-position="Java Developer">Apply Now</a>
-                                </div>
-                            </div>
-                            <div id="java-developer-description" class="job-description ">
-                                <p><strong>Roles and Responsibilities:</strong></p>
-                                <ul>
-                                    <li>Design and implement Java applications.</li>
-                                    <li>Write reusable, testable, and efficient code.</li>
-                                    <li>Participate in code reviews and maintain code quality.</li>
-                                    <li>Collaborate with cross-functional teams to define and achieve project goals.
-                                    </li>
-                                </ul>
-                                <p><strong>Requirements:</strong></p>
-                                <ul>
-                                    <li>Proficiency in Java and Springboot.</li>
-                                    <li>Strong Understanding of Software Development..</li>
-                                </ul>
-                                <p><strong>Qualifications:</strong></p>
-                                <ul>
-                                    <li>Master degree in computer field</li>
-                                </ul>
-                                <p><strong>Job Type:</strong></p>
-                                <ul>
-                                    <li>Full-Time , Permenant</li>
-                                </ul>
-                                <p><strong>Timing:</strong></p>
-                                <ul>
-                                    <li>Flexible timing.</li>
-                                </ul>
-                            </div>
-                        </div>
+
+
+
                     </div>
                 </div>
             </div>
