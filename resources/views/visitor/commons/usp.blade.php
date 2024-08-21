@@ -14,7 +14,6 @@
                 <div class="counter-box">
                     <i class="fa fa-group"></i>
                     <span class="counter">20 </span> <span class="display-6 text-white "><b>+</b></span>
-                    {{-- <p class="text-white fs-4 fw-bolder">Total staff</p> --}}
                     <p class="text-white fs-4 fw-bolder">Teams</p>
                 </div>
             </div>

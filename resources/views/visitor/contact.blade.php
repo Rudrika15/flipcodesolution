@@ -30,6 +30,7 @@
 
                 </div>
                 <div class="col-md-7 my-5 ps-5 d-flex justify-content-center">
+                                    <span class="text-danger">{{ $message }}</span>
 
                     <div class="card pt-5 px-3  shadow-sm" style=" width: 35rem;">
                         <form action="{{ route('contact_mail_send') }}" method="POST">
@@ -39,7 +40,6 @@
                                     id="floatingInputPassword" value="{{ old('name') }}" placeholder="Name">
                                 <label for="floatingInputPassword">Name</label>
                                 @error('name')
-                                    <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                             <div class="form-floating mb-3">

@@ -1,100 +1,7 @@
-{{-- <footer class=" bg-dark text-center text-white ">
-   
-    <div class="container p-4">
-      
-        <section class="d-flex justify-content-end mb-4 footer-social-link-icons ">
-           
-            <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/flipcodesolutions/"
-                target="_blank" role="button">
-                <i class="bi bi-instagram"></i>
-            </a>
-
-            
-            <a class="btn btn-outline-light btn-floating m-1"
-                href="https://www.facebook.com/profile.php?id=61553723550979" target="_blank" role="button">
-                <i class="bi bi-facebook"></i>
-            </a>
-
-          
-            <a class="btn btn-outline-light btn-floating m-1"
-                href="https://www.linkedin.com/company/flipcode-solutions-private-limited/mycompany/" target="_blank"
-                role="button">
-                <i class="bi bi-linkedin"></i>
-            </a>
-
-        </section>
-        
-        <section class="footer-links text-start">
-           
-            <div class="row ">
-                
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ps-5">
-                    <h5 class="text-uppercase">Quick links</h5>
-
-                    <ul class="list-unstyled mb-0 for-hover">
-                        <li>
-                            <a class="text-white" aria-current="page" href="{{ route('home') }}">Home</a>
-                        </li>
-                        <li>
-                            <a class="text-white" href="{{ route('about') }}">About</a>
-                        </li>
-                        <li>
-                            <a class="text-white" href="{{ route('service') }}">Services</a>
-                        </li>
-                        <li>
-                            <a class="text-white" href="{{ route('contact') }}">Get in Touch</a>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Address</h5>
-                    <p>
-                        Flipcode Solution Private Limited <br>
-                        Nr. Panama Sales, Dalmill road <br>
-                        Surendranagar ,<br>
-                        Gujarat 363001 India
-                    </p>
-                </div>
-               
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
-                    <h5 class="text-uppercase">Email</h5>
-                    <a class="text-white" href="mailto:contact@flipcodesolutions.com">contact@flipcodesolutions.com</a>
-                    <a class="text-white" href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
-                    <h5 class="text-uppercase mt-4">Contact No</h5>
-                    <a class="text-white" href="tel:9979404044">+91 997 940 4044</a>
-                </div>
-               
-            </div>
-            
-        </section>
-       
-    </div>
-
-  
-
- 
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-
-        <span>&copy;</span><span id="demo"></span> <span>Copyright </span>
-        <script>
-            const d = new Date();
-            let year = d.getFullYear();
-            document.getElementById("demo").innerHTML = year;
-        </script>
-        <a class="text-white" href="#"> Flipcodesolution Private Limited</a>
-    </div>
-   
-</footer> --}}
 <footer id="picassoFooter">
     <div class="footer-content">
         <div class="footer-section footer-logo">
-            <img src="img/newLogo.png" style="width: 70px; height: 70px;">
-            {{-- <svg class="logo" width="100" height="100" viewBox="0 0 100 100" src="img/newLogo.png"> --}}
-            {{-- <circle cx="50" cy="50" r="45" fill="#ff6600" stroke="#ff6600" stroke-width="5" />
-            <path d="M30 70 Q 50 20 70 70" stroke="#AFEEEE" stroke-width="5" fill="none" />
-            <circle cx="50" cy="50" r="10" fill="#ff6600" />
-            </svg> --}}
+            <img src="img/newLogo.png" alt="logo"style="width: 70px; height: 70px;">
             <h2>Flipcode Solutions</h2>
             <p>Innovating the future, one brushstroke at a time.</p>
         </div>
@@ -137,9 +44,7 @@
             </div>
         </div>
     </div>
-    {{-- <div class="footer-art">
-        <canvas id="picassoCanvas"></canvas>
-    </div> --}}
+
     <div class="footer-bottom text-center p-3">
 
         <span>&copy;</span><span id="demo"></span> <span>Copyright </span>
