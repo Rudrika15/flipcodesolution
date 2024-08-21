@@ -84,7 +84,7 @@
                 <h4><span>About</span> Us</h4>
             </div>
             <div class="row py-2">
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right">
                     <p class="text-align" style="text-align: justify; line-height: 35px;">
                         <span class="main-title">Flipcode Solutions Pvt. Ltd.</span> is a new version of a software
                         development
@@ -103,13 +103,13 @@
                     </p>
 
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-left">
                     <img src="{{ asset('img/about.png') }}" class="img-fluid " style="max-height: 440px; width:500px;"
                         alt="b1">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12"  data-aos="zoom-in">
                     <p class="text-align" style="text-align: justify; line-height: 35px;">
                         In the ever-evolving landscape of technology, Perfetto Solutions emerges as a trailblazer, marking a
                         significant milestone in its journey by transitioning into a private limited company in 2023. With a

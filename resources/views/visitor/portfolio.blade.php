@@ -127,7 +127,7 @@
                                             <div class="row">
 
                                                 @foreach ($jsonData as $data)
-                                                    <div class="col-md-4">
+                                                    <div class="col-md-4"    >
                                                         <div class="container1">
                                                             <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"
                                                                 class="image">
