@@ -12,7 +12,7 @@
                     have a project in mind or need guidance on how to start, we’re here to help. reach out to us
                     <span>contact@flipcodesolutions.com</span>
                 </p>
-                <a href="#contactus"class="btn btn-success btn-lg">Contact Us</a>
+                <a href="#contactus"class="btn btn-dark btn-lg">Contact Us</a>
             </div>
         </div>
 
@@ -69,7 +69,7 @@
                                 @enderror
                             </div>
                             <button type="submit" class="btn text-white mt-5" style="background-color:#ff6600">
-                                Get Started
+                                Get Started &nbsp;<i class="bi bi-rocket-takeoff text-white fs-5"></i>
                             </button>
                             <div class="form-text mt-3 text-muted">✓ 100% Guaranteed Security of Your Information</div>
                         </form>
