@@ -81,7 +81,7 @@
     <div class="container-fluid">
         <div class="image-fluid header-career">
             <div class="headercontent">
-                <h1 class="display-4 fw-light">Do What You Love Everyday</h1>
+                <h1 class="display-4 fw-light">Do What inspires you everyday</h1>
                 <p class="lead">
                     Want to join the Flipcode team? If you have a passion & want to work for a rapidly growing IT company,
                     check out the listings below or send your resume to <span>career@flipcodesolutions.com</span>
@@ -92,7 +92,10 @@
 
         <!-- Benefits Section -->
         <div class="benefitscontainer container my-5 text-center" data-aos="zoom-in">
-            <h2 class="display-3">Benefits Joining Us</h2>
+            <div class="section-head col-sm-12">
+                <h4><span>Benefits Of Joining Us</span></h4>
+            </div>
+
             <ul class="list-unstyled row">
                 <li class="col-md-3">
                     <i class="bi bi-cup-hot" style="font-size:3rem; color: #ff6600;"></i>
@@ -132,8 +135,8 @@
                                             <h4>{{ $data['title'] }}</h4>
                                         </div>
                                         <div class="col-md-4 text-end">
-                                            <button class="btn btn-danger rounded-pill"
-                                            data-title="{{ $data['title'] }}" onclick="toggleDescription('job-description-{{ $index }}')">View
+                                            <button class="btn btn-danger rounded-pill" data-title="{{ $data['title'] }}"
+                                                onclick="toggleDescription('job-description-{{ $index }}')">View
                                                 More</button>
                                             <a href="#" class="btn btn-dark rounded-pill" data-bs-toggle="modal"
                                                 data-bs-target="#applyModal" data-position="{{ $data['title'] }}">Apply
@@ -182,7 +185,8 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form id="applicationForm" enctype="multipart/form-data" method="POST" action="{{ route('career_send_mail') }}">
+                        <form id="applicationForm" enctype="multipart/form-data" method="POST"
+                            action="{{ route('career_send_mail') }}">
                             @csrf
                             <!-- Form Fields -->
                             <div class="mb-1">
@@ -227,78 +231,77 @@
                 </div>
             </div>
         </div>
-</div>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function() {
-                // Initialize jQuery Validation
-                $('#applicationForm').on('submit', function(event) {
-                    event.preventDefault();
-        
-                    // Clear previous errors
-                    $('.text-danger').text('');
-        
-                    // Select the submit button and store its original text
-                    var submitButton = $(this).find('button[type="submit"]');
-                    var originalButtonText = submitButton.html();  // Use .html() to preserve any HTML content in the button
-        
-                    // Disable the submit button and change its text
-                    submitButton.prop('disabled', true).html('Sending...');
-        
-                    var formData = new FormData(this);
-        
-                    $.ajax({
-                        url: $(this).attr('action'),
-                        type: 'POST',
-                        data: formData,
-                        processData: false,
-                        contentType: false,
-                        success: function(response) {
-                            Swal.fire({
-                                title: 'Success!',
-                                text: 'Thanks for applying! We will contact you soon...',
-                                icon: 'success',
-                                confirmButtonText: 'OK'
-                            }).then(() => {
-                                $('#applicationForm')[0].reset();
-                                $('#applyModal').modal('hide');
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize jQuery Validation
+            $('#applicationForm').on('submit', function(event) {
+                event.preventDefault();
+
+                // Clear previous errors
+                $('.text-danger').text('');
+
+                // Select the submit button and store its original text
+                var submitButton = $(this).find('button[type="submit"]');
+                var originalButtonText = submitButton
+                    .html(); // Use .html() to preserve any HTML content in the button
+
+                // Disable the submit button and change its text
+                submitButton.prop('disabled', true).html('Sending...');
+
+                var formData = new FormData(this);
+
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    processData: false,
+                    contentType: false,
+                    success: function(response) {
+                        Swal.fire({
+                            title: 'Thank You!',
+                            text: 'Thanks for Applying! We will contact you soon...',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        }).then(() => {
+                            $('#applicationForm')[0].reset();
+                            $('#applyModal').modal('hide');
+                        });
+                    },
+                    error: function(xhr) {
+                        if (xhr.status === 422) { // Validation error
+                            var errors = xhr.responseJSON.errors;
+
+                            // Loop through each error and display it below the respective input field
+                            $.each(errors, function(key, value) {
+                                $('#' + key + 'Error').text(value[0]);
                             });
-                        },
-                        error: function(xhr) {
-                            if (xhr.status === 422) { // Validation error
-                                var errors = xhr.responseJSON.errors;
-        
-                                // Loop through each error and display it below the respective input field
-                                $.each(errors, function(key, value) {
-                                    $('#' + key + 'Error').text(value[0]);
-                                });
-                            } else {
-                                Swal.fire({
-                                    title: 'Error!',
-                                    text: 'An error occurred while submitting the form. Please try again.',
-                                    icon: 'error',
-                                    confirmButtonText: 'OK'
-                                });
-                            }
-                        },
-                        complete: function() {
-                            // Re-enable the submit button and restore its original text
-                            submitButton.prop('disabled', false).html(originalButtonText);
+                        } else {
+                            Swal.fire({
+                                title: 'Error!',
+                                text: 'An error occurred while submitting the form. Please try again.',
+                                icon: 'error',
+                                confirmButtonText: 'OK'
+                            });
                         }
-                    });
+                    },
+                    complete: function() {
+                        // Re-enable the submit button and restore its original text
+                        submitButton.prop('disabled', false).html(originalButtonText);
+                    }
                 });
-        
-                // Toggle job description visibility
-                function toggleDescription(descriptionId) {
-                    var description = document.getElementById(descriptionId);
-                    description.style.display = description.style.display === "none" || description.style.display === "" ? "block" : "none";
-                }
-        
-                // Set modal title and position value on modal show
-        
             });
-        </script>
-        
-        
-    
+
+            // Toggle job description visibility
+            function toggleDescription(descriptionId) {
+                var description = document.getElementById(descriptionId);
+                description.style.display = description.style.display === "none" || description.style.display ===
+                    "" ? "block" : "none";
+            }
+
+            // Set modal title and position value on modal show
+
+        });
+    </script>
 @endsection

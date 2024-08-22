@@ -53,7 +53,7 @@
                 'image' => asset('client-logo/ConsultantLogo.jpg'),
                 'title' => 'Consultant',
                 'technology' => 'Laravel',
-                'industry' => 'Construction Industry',
+                'industry' => 'Consultancy',
             ],
 
             [
@@ -66,7 +66,7 @@
                 'image' => asset('client-logo/micro.png'),
                 'title' => 'Micro Dimonds & CBN Wheels',
                 'technology' => 'Laravel',
-                'industry' => 'Construction',
+                'industry' => ' Abrasives Industry',
             ],
         ];
     @endphp
@@ -81,7 +81,7 @@
                     Discover how we can support your business success—reach out to us at
                     <span>contact@flipcodesolutions.com</span>
                 </p>
-                <a href="#clients" class="btn btn-dark btn-lg">Our Clients</a>
+                <a href="#porfolio" class="btn btn-dark btn-lg">Portfolio</a>
             </div>
         </div>
 
@@ -90,7 +90,7 @@
         <!-- portfolio design  -->
         <div class="container-fluid py-3 bg-light">
             <div class="container py-3" id="clients">
-                <div class="section-head col-sm-12" id="service">
+                <div class="section-head col-sm-12" id="porfolio">
                     <h4><span>Portfolio</span></h4>
                 </div>
                 <div class="row py-2 bg-light">
@@ -156,41 +156,4 @@
 
             </div>
         </div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const searchTechnology = document.getElementById('searchTechnology');
-                const searchIndustry = document.getElementById('searchIndustry');
-                const resetButton = document.getElementById('resetButton');
-                const portfolioItems = document.querySelectorAll('#portfolioItems .card');
-
-                function filterCards() {
-                    const techQuery = searchTechnology.value.toLowerCase();
-                    const indQuery = searchIndustry.value.toLowerCase();
-
-                    portfolioItems.forEach(item => {
-                        const techText = item.getAttribute('data-technology').toLowerCase();
-                        const indText = item.getAttribute('data-industry').toLowerCase();
-
-                        if ((techQuery === '' || techText.includes(techQuery)) &&
-                            (indQuery === '' || indText.includes(indQuery))) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                }
-
-                searchTechnology.addEventListener('input', filterCards);
-                searchIndustry.addEventListener('input', filterCards);
-
-                resetButton.addEventListener('click', function() {
-                    searchTechnology.value = '';
-                    searchIndustry.value = '';
-                    filterCards();
-                });
-
-                // Initial filtering to show all cards
-                filterCards();
-            });
-        </script>
     @endsection

@@ -82,7 +82,7 @@
                     </li>
                     <li class="for-active-colored">
                         <a class="nav-link text-warning {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}"
-                            href="{{ route('portfolio') }}">Clients</a>
+                            href="{{ route('portfolio') }}">Portfolio</a>
                     </li>
                     <li class="for-active-colored">
                         <a class="nav-link text-warning {{ Route::currentRouteNamed('career') ? 'active' : '' }}"

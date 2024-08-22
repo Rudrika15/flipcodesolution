@@ -11,7 +11,7 @@
                 <li><a href="{{ route('home') }}" class="hover-effect">Home</a></li>
                 <li><a href="{{ route('about') }}" class="hover-effect">About Us</a></li>
                 <li><a href="{{ route('service') }}"class="hover-effect">Services</a></li>
-                <li><a href="{{ route('portfolio') }}" class="hover-effect">Clients</a></li>
+                <li><a href="{{ route('portfolio') }}" class="hover-effect">Portfolio</a></li>
                 <li><a href="{{ route('contact') }}" class="hover-effect">Contact</a></li>
             </ul>
         </div>
@@ -23,8 +23,8 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
                     <p>Flipcode Solution Private Limited<br>
-                        Nr. Panama Sales, Dalmill Road<br>
-                        Surendranagar,<br>
+                       Nr. Panama Sales, Dalmill Road<br>
+                       Surendranagar,<br>
                         Gujarat 363001 India
                     </p>
                 </div>
