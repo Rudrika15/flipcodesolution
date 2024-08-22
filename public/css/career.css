@@ -156,9 +156,9 @@
     color: black;
   }
 
-  .benefitscontainer span {
+  /* .benefitscontainer span {
     font-size: .75rem;
-  }
+  } */
 
   .benefitscontainer li {
     width: 20%;

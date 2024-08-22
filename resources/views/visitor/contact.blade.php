@@ -73,7 +73,9 @@
         </div>
         <!-- contact Section -->
         <div class="benefitscontainer container-fluid my-5 text-center" id="contactus">
-            <h2 class="display-3">Contact Us</h2>
+            <div class="section-head col-sm-12">
+                <h4><span>Contact Us</span></h4>
+            </div>
             <ul class="list-unstyled row ">
                 <li class="col-md-4">
                     <i class="bi bi-geo-alt" style="font-size:3rem; color: #ff6600;"></i>

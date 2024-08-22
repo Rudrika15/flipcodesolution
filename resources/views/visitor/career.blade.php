@@ -93,7 +93,7 @@
         <!-- Benefits Section -->
         <div class="benefitscontainer container my-5 text-center" data-aos="zoom-in">
             <div class="section-head col-sm-12">
-                <h4><span>Benefits Of Joining Us</span></h4>
+                <h4><span>Perks Of</span> Joining </h4>
             </div>
 
             <ul class="list-unstyled row">
@@ -123,7 +123,9 @@
 
         <!-- Job Openings Section -->
         <div class="current-openings my-5" id="joblistings">
-            <h2 class="display-6 text-center" style="color:#ff6600">Current Openings</h2>
+            <div class="section-head col-sm-12">
+                <h4><span>Open Positions</h4>
+            </div>
             <div class="container">
                 <div class="row">
                     @foreach ($jsonData as $index => $data)

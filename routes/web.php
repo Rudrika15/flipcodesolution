@@ -36,7 +36,7 @@ Route::get('/blog', [VisitorController::class, 'blogPage'])->name('blog');
 Route::get('/blog-detail/{id?}', [VisitorController::class, 'blogDetailPage'])->name('blog.detail');
 Route::get('/service', [VisitorController::class, 'servicePage'])->name('service');
 Route::get('/contact', [VisitorController::class, 'contactPage'])->name('contact');
-Route::get('/GreetingPage',[VisitorController::class,'GreetingPage'])->name('GreetingPage');
+Route::get('/GreetingPage', [VisitorController::class, 'GreetingPage'])->name('GreetingPage');
 Route::get('/Clients', [VisitorController::class, 'portfolioPage'])->name('portfolio');
 Route::get('/career', [VisitorController::class, 'careerPage'])->name('career');
 Route::post('/career/mailSent', [VisitorController::class, 'career_send_mail'])->name('career_send_mail');

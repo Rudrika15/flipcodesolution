@@ -154,6 +154,7 @@ a:hover {
   text-align: center;
   text-transform: none;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 /* footercss */
@@ -167,11 +168,7 @@ a:hover {
   background-image: url('../../img/fCodefooter.png');
   background-repeat: repeat;
   background-position: left;
-  /* height: 200px;
-  width:200px; */
-  /*  
-  background-color: rgba(13, 10, 10, 0.171); */
-  /* background-size: cover; */
+
 }
 
 .footer-social-link-icons a {
@@ -198,7 +195,8 @@ a:hover {
   content: '';
   width: 60px;
   height: 3px;
-  background: #FF6600;
+  background: linear-gradient(90deg, #ff6600, #f19934);
+  transition: width 0.3s ease;
   position: absolute;
   left: 0px;
   bottom: -10px;
@@ -206,10 +204,15 @@ a:hover {
   margin: 0 auto;
 }
 
+.section-head h4:hover:before {
+  width: 150px;
+}
+
 .section-head h4 span {
   font-weight: 700;
   padding-bottom: 5px;
-  color: #2f2f2f
+  color: #2f2f2f;
+
 }
 
 p.service_text {
@@ -631,9 +634,7 @@ a.anchor {
 
 /* REVIEW SEC CSS END */
 #white-bg {
-  /*background-color: rgba(0,0,0, 0.5);
-  border-radius: 20px;
-  margin-right: 10px;*/
+
   float: left;
   display: inline-block;
   vertical-align: middle;
@@ -823,102 +824,6 @@ logo Slider .logo-slider {
 
 
 
-/*  freeze footer  */
-
-div#mobile-freez-icon {
-  display: none;
-}
-
-.wp-freeze {
-  position: fixed;
-  bottom: 170px;
-  right: 30px;
-}
-
-.wp-freeze i.fa.fa-whatsapp {
-  font-size: 30px;
-  background-color: #33ad6b;
-  color: #fff;
-  padding: 10px;
-  border-radius: 50px;
-}
-
-@media(max-width: 767px) {
-  .wp-freeze {
-    display: none;
-  }
-
-  div#mobile-freez-icon {
-    display: block;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    bottom: 0;
-  }
-
-  div#mobile-freez-icon .phone,
-  .wp-phone {
-    width: 20%;
-    font-size: 32px;
-    color: #fff;
-    border-radius: 0;
-    background: #33AD6B;
-    float: left;
-    height: 60px;
-  }
-
-  div#mobile-freez-icon i.fa.fa-phone,
-  .wp-phone i.fa.fa-whatsapp {
-    position: relative;
-    color: #fff;
-    text-align: center;
-    width: 100%;
-    margin-top: 15px;
-  }
-
-  div.wp-phone {
-    background-color: #4e5853;
-  }
-
-  div.phone {
-    background-color: #EF7F1A !important;
-  }
-
-  a#free_quote_1 {
-    width: 60%;
-    height: 60px;
-    background: darkorange;
-    line-height: 64px;
-    font-size: 21px;
-    color: #fff;
-    text-align: center;
-    border-radius: 0;
-    cursor: pointer;
-    float: left;
-  }
-}
-
-/* .form input css */
-.form-control:focus {
-  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0) !important;
-}
-
-.form-control {
-  background-color: transparent !important;
-}
-
-.border-bottom {
-  border: none;
-  border-bottom: 1px solid #8e8c8b !important;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0.375rem 0.75rem;
-}
-
-.form-floating .form-control:focus {
-  box-shadow: none;
-  border-color: #ff6600 !important;
-}
 
 /* footer */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
@@ -955,6 +860,7 @@ div#mobile-freez-icon {
   font-weight: 600;
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
 .footer-section h3::after {
@@ -1110,7 +1016,7 @@ div#mobile-freez-icon {
   z-index: 2;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
@@ -1140,6 +1046,10 @@ div#mobile-freez-icon {
   #picassoCanvas {
     width: 100%;
     height: 100%;
+  }
+
+  .search-input {
+    width: 200px !important;
   }
 }
 
