@@ -30,7 +30,6 @@
 
                 </div>
                 <div class="col-md-7 my-5 ps-5 d-flex justify-content-center">
-                                    <span class="text-danger">{{ $message }}</span>
 
                     <div class="card pt-5 px-3  shadow-sm" style=" width: 35rem;">
                         <form action="{{ route('contact_mail_send') }}" method="POST">
@@ -39,32 +38,26 @@
                                 <input type="text" class="form-control border-bottom" name="name"
                                     id="floatingInputPassword" value="{{ old('name') }}" placeholder="Name">
                                 <label for="floatingInputPassword">Name</label>
-                                @error('name')
-                                @enderror
+                                <span class="text-danger"></span>
+
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="email" name="email" value="{{ old('email') }}"
                                     class="form-control border-bottom" id="floatingInputEmail"
                                     placeholder="name@example.com" autocomplete="email">
                                 <label for="floatingInputEmail">Email address</label>
-                                @error('email')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <span class="text-danger"></span>
                             </div>
                             <div class="form-floating mb-3">
                                 <input type="tel" value="{{ old('contact') }}" class="form-control border-bottom"
                                     id="floatingInputPhone" name="contact" placeholder="Phone Number">
                                 <label for="floatingInputPhone">Contact Number</label>
-                                @error('contact')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <span class="text-danger"></span>
                             </div>
                             <div class="form-floating mb-3">
                                 <textarea class="form-control border-bottom" name="message" id="floatingMessage" placeholder="Message">{{ old('message') }}</textarea>
                                 <label for="floatingMessage">Message</label>
-                                @error('message')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
+                                <span class="text-danger"></span>
                             </div>
                             <button type="submit" class="btn text-white mt-5" style="background-color:#ff6600">
                                 Get Started &nbsp;<i class="bi bi-rocket-takeoff text-white fs-5"></i>
@@ -138,18 +131,18 @@
             // Handle form submission via AJAX
             $('form').on('submit', function(event) {
                 event.preventDefault();
-    
+
                 // Clear previous errors
                 $('.text-danger').text('');
-    
+
                 // Disable the submit button and change its text
                 var submitButton = $(this).find('button[type="submit"]');
                 var originalButtonText = submitButton.html(); // Preserve the original button text
-    
+
                 submitButton.prop('disabled', true).html('Sending...');
-    
+
                 var formData = new FormData(this);
-    
+
                 $.ajax({
                     url: $(this).attr('action'), // Use the form's action attribute
                     type: $(this).attr('method'), // Use the form's method attribute
@@ -169,10 +162,11 @@
                     error: function(xhr) {
                         if (xhr.status === 422) { // Validation error
                             var errors = xhr.responseJSON.errors;
-    
+
                             // Loop through each error and display it below the respective input field
                             $.each(errors, function(key, value) {
-                                $('input[name="' + key + '"], textarea[name="' + key + '"]').siblings('.text-danger').text(value[0]);
+                                $('input[name="' + key + '"], textarea[name="' + key +
+                                    '"]').siblings('.text-danger').text(value[0]);
                             });
                         } else {
                             Swal.fire({
@@ -191,5 +185,4 @@
             });
         });
     </script>
-    
 @endsection

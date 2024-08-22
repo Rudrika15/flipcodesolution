@@ -57,7 +57,6 @@ class VisitorController extends Controller
     }
     public function contactPage(Request $request)
     {
-
         return view('visitor.contact');
     }
 
@@ -95,7 +94,7 @@ class VisitorController extends Controller
         if ($currentURL === url('/contact')) {
             return redirect()->route('GreetingPage'); // Assuming 'GreetingPage' is a named route
         } else {
-            return redirect()->back()->with('success', 'We will get back to you!');
+            return redirect()->back()->with('message', 'We will get back to you!');
         }
     }
 
