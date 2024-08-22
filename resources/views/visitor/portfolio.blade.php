@@ -14,8 +14,8 @@
             ],
             [
                 'image' => asset('client-logo/smvs.jpg'),
-                'title' => 'SMVS Swaminarayan Sanstha mobile application',
-                'technology' => 'React native',
+                'title' => 'SMVS Swaminarayan Sanstha mobile app',
+                'technology' => 'Native',
                 'industry' => 'Religious and Spiritual Industry',
             ],
             [
@@ -123,20 +123,24 @@
                                             <div class="row">
 
                                                 @foreach ($jsonData as $data)
-                                                    <div class="col-md-4 py-4">
+                                                    <div class="col-md-4 py-4 "  data-aos="zoom-in">
 
-                                                        <div class=" card">
+                                                        <div class=" card " style="width: 25rem" >
                                                             <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"
                                                                 class="card-img-top" />
                                                             <div class="card-body">
-                                                                <h5 class="card-title">{{ $data['title'] }}</h5>
-                                                                <p class="card-text ">
-                                                                    {{ $data['technology'] }}
-                                                                </p>
-                                                                <p class="card-text ">
-                                                                    {{ $data['industry'] }}
-                                                                </p>
+                                                                <h5 class="card-title fs-6 fw-bold">{{ $data['title'] }}</h5>
+                                                                
+                                                                <div class="container mt-3">
+                                                                    
+                                                                    <div
+                                                                        class="d-flex justify-content-between mb-3">
+                                                                        <div class="pe-1 fs-6">{{ $data['technology'] }}</div>
+                                                                        
+                                                                        <div class=" fs-6"> {{ $data['industry'] }}</div>
+                                                                    </div>
 
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
