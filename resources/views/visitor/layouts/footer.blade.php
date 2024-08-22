@@ -22,9 +22,9 @@
             <div class="d-flex align-items-start">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
-                    <p>Flipcode Solution Private Limited<br>
-                       Nr. Panama Sales, Dalmill Road<br>
-                       Surendranagar,<br>
+                    <p>Flipcode Solutions Private Limited<br>
+                        Nr. Panama Sales, Dalmill Road<br>
+                        Surendranagar,<br>
                         Gujarat 363001 India
                     </p>
                 </div>

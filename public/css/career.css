@@ -156,9 +156,7 @@
     color: black;
   }
 
-  /* .benefitscontainer span {
-    font-size: .75rem;
-  } */
+
 
   .benefitscontainer li {
     width: 20%;
@@ -166,10 +164,7 @@
     list-style: none;
   }
 
-  /* .benefitscontainer img {
-    width: 30%;
-  } */
-
+  
   .variable-width button {
     display: none !important;
   }
