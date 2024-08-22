@@ -22,7 +22,7 @@
                 'image' => asset('client-logo/brand-beans-logo.jpg'),
                 'title' => 'Brand Beans',
                 'technology' => 'Laravel',
-                'industry' => 'Construction Industry',
+                'industry' => 'Marketing & advertising Industry',
             ],
             [
                 'image' => asset('client-logo/cu-shah-logo.jpg'),
@@ -123,20 +123,21 @@
                                             <div class="row">
 
                                                 @foreach ($jsonData as $data)
-                                                    <div class="col-md-4 py-4 "  data-aos="zoom-in">
+                                                    <div class="col-md-4 py-4 " data-aos="zoom-in" data-aos-duration="1000">
 
-                                                        <div class=" card " style="width: 25rem" >
+                                                        <div class=" card " style="width: 25rem">
                                                             <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"
                                                                 class="card-img-top" />
                                                             <div class="card-body">
-                                                                <h5 class="card-title fs-6 fw-bold">{{ $data['title'] }}</h5>
-                                                                
+                                                                <h5 class="card-title fs-6 fw-bold">{{ $data['title'] }}
+                                                                </h5>
+
                                                                 <div class="container mt-3">
-                                                                    
-                                                                    <div
-                                                                        class="d-flex justify-content-between mb-3">
-                                                                        <div class="pe-1 fs-6">{{ $data['technology'] }}</div>
-                                                                        
+
+                                                                    <div class="d-flex justify-content-between mb-3">
+                                                                        <div class="pe-1 fs-6">{{ $data['technology'] }}
+                                                                        </div>
+
                                                                         <div class=" fs-6"> {{ $data['industry'] }}</div>
                                                                     </div>
 

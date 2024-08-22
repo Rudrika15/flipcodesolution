@@ -91,7 +91,7 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="benefitscontainer container my-5 text-center" data-aos="zoom-in">
+        <div class="benefitscontainer container my-5 text-center" data-aos="flip-up" data-aos-duration="1000">
             <div class="section-head col-sm-12">
                 <h4><span>Perks Of</span> Joining </h4>
             </div>
@@ -130,7 +130,7 @@
                 <div class="row">
                     @foreach ($jsonData as $index => $data)
                         @if ($data['status'] === 'Open')
-                            <div class="col-md-12" data-aos="zoom-in">
+                            <div class="col-md-12" data-aos="zoom-in" data-aos-duration="1000">
                                 <div class="job-card">
                                     <div class="row">
                                         <div class="col-md-8">

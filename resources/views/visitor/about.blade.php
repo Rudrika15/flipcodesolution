@@ -23,68 +23,12 @@
 
         <!-- breadcrumb end -->
 
-
-
-        <!--
-                                                        
-                                                        <div class="container py-3">
-                                                        <div class="row py-2">
-                                                            <div class="col-md-6">
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <h2>Professional Services.</h2>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                                                                            veritatis
-                                                                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                                                                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <h2>Advice and Guides.</h2>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                                                                            veritatis
-                                                                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                                                                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                        <div class="container py-3">
-                                                        <div class="row py-2">
-                                                            <div class="col-md-6">
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <h2>Live Support.</h2>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                                                                            veritatis
-                                                                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                                                                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-6">
-                                                                <div class="card">
-                                                                    <div class="card-body">
-                                                                        <h2>Super Growth.</h2>
-                                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis, nostrum aspernatur
-                                                                            veritatis
-                                                                            illo rerum quaerat excepturi accusantium ut temporibus, aliquid voluptatum doloribus
-                                                                            deleniti iure tenetur culpa incidunt explicabo, beatae et.</p>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        </div> -->
         <div class="container py-3">
             <div class="section-head col-sm-12" id="aboutus">
                 <h4><span>About</span> Us</h4>
             </div>
             <div class="row py-2">
-                <div class="col-md-6" data-aos="fade-right">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
                     <p class="text-align" style="text-align: justify; line-height: 35px;">
                         <span class="main-title">Flipcode Solutions Pvt. Ltd.</span> is a new version of a software
                         development
@@ -109,7 +53,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12" data-aos="zoom-in">
+                <div class="col-md-12" data-aos="zoom-in" data-aos-duration="1000">
                     <p class="text-align" style="text-align: justify; line-height: 35px;">
                         In the ever-evolving landscape of technology, Perfetto Solutions emerges as a trailblazer, marking a
                         significant milestone in its journey by transitioning into a private limited company in 2023. With a

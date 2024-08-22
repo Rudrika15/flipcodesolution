@@ -17,7 +17,7 @@
         </div>
 
         <!-- Get in Touch Section -->
-        <div class="container text-center fs-4 mt-5" data-aos="zoom-in">
+        <div class="container text-center fs-4 mt-5" data-aos="zoom-in" data-aos-duration="1500">
             <span>Ready to bring your project ? Contact us today for on-time, bug-free solutions.<br><br>
                 Let’s create something remarkable together!</span>
 
@@ -25,11 +25,12 @@
         <div class="container ">
 
             <div class="row">
-                <div class="col-md-5 " data-aos="fade-right">
-                    <img src="img/contactus.png" class="w-100" height="600px" alt="contact">
+                <div class="col-md-5 ">
+                    <img src="img/contactus.png" class="w-100" height="600px" alt="contact" data-aos="fade-right"
+                        data-aos-duration="1000">
 
                 </div>
-                <div class="col-md-7 my-5 ps-5 d-flex justify-content-center" data-aos="fade-left">
+                <div class="col-md-7 my-5 ps-5 d-flex justify-content-center" data-aos="fade-left" data-aos-duration="1000">
 
                     <div class="card pt-5 px-3  shadow-sm" style=" width: 35rem;">
                         <form action="{{ route('contact_mail_send') }}" method="POST">
@@ -65,26 +66,17 @@
                             <div class="form-text mt-3 text-muted">✓ 100% Guaranteed Security of Your Information</div>
                         </form>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
         <!-- contact Section -->
-<<<<<<< HEAD
-        <div class="benefitscontainer container-fluid my-5 text-center" id="contactus">
+        <div class="benefitscontainer container-fluid my-5 text-center" id="contactus" data-aos="flip-up"
+            data-aos-duration="1000">
             <div class="section-head col-sm-12">
                 <h4><span>Contact Us</span></h4>
             </div>
             <ul class="list-unstyled row ">
                 <li class="col-md-4">
-=======
-        <div class="benefitscontainer container-fluid my-5 text-center" id="contactus" >
-            <h2 class="display-3">Contact Us</h2>
-            <ul class="list-unstyled row " data-aos="zoom-in">
-                <li class="col-md-4" >
->>>>>>> f41c90ec4ec4aaa8d247c21cafa3b099c6d515b1
                     <i class="bi bi-geo-alt" style="font-size:3rem; color: #ff6600;"></i>
                     <h3 class="h5 text-uppercase">Our Location</h3>
                     <p>Flipcode Solution Private Limited <br>
