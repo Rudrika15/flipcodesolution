@@ -101,7 +101,7 @@
                             <div id="portfolio" class="container-fluid">
                                 <div class="row" id="portfolioItems">
                                     <div class="col-lg-12 text-center">
-                                        <div class="search-container justify-content-center">
+                                        {{-- <div class="search-container justify-content-center">
                                             <div>
 
                                                 <input type="text" id="searchTechnology" class="search-input"
@@ -115,7 +115,7 @@
                                             <button class="reset-button" id="resetButton">
                                                 <i class="fa fa-refresh"></i>
                                             </button>
-                                        </div>
+                                        </div> --}}
 
 
                                         <hr />
@@ -125,7 +125,7 @@
                                                 @foreach ($jsonData as $data)
                                                     <div class="col-md-4 py-4 " data-aos="zoom-in" data-aos-duration="1000">
 
-                                                        <div class=" card " style="width: 25rem">
+                                                        <div class=" card ">
                                                             <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"
                                                                 class="card-img-top" />
                                                             <div class="card-body">

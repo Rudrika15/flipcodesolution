@@ -129,7 +129,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="col-md-4 " data-aos="flip-left">
                     <div class="card">
                         <div class="card-body service-cards">
                             <h3 class="card-title py-2 text-center"><i class="bi bi-gear-wide-connected"></i></h3>
