@@ -53,20 +53,13 @@
                 </p>
                 <div class="col-md-12">
                     <div class="container">
-                        <div class="row py-2 img-Sec">
+                        <div class="row py-2 ">
                             <div class="col-md-6 mt-5">
                                 <h3>Custom Software Development</h3>
-                                <p class="text-align" style="text-align: justify; line-height: 30px;"> Crafting bespoke
-                                    software solutions tailored to your unique business needs, ensuring efficiency,
-                                    scalability, and seamless integration for optimal performance and growth. </p>
-                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Leverage our expertise in developing bespoke software solutions. From concept to deployment,
-                                our skilled team ensures that your software aligns seamlessly with your business objectives.
-                            </p>
-                            <p>Custom software development is the process of designing software applications that meet the
-                                specific needs of an individual or a company. Unlike commercial off-the-shelf (COTS)
-                                software, custom options are usually targeting specific problems. They are also meant for
-                                in-house use, not resale.</p> --}}
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">Custom Software Development is the process of designing, creating, deploying, and maintaining software tailored to meet the unique needs and requirements of a specific business or organization. Unlike off-the-shelf solutions, which are designed for mass markets, custom software is built to address the precise challenges and goals of a company, delivering a solution that fits seamlessly with its processes and objectives.
+
+                                </p>
+
                                 <h4>Advantagess</h4>
                                 <ul class="mob ms-3">
                                     <li>Targeted Solutions</li>
@@ -77,7 +70,7 @@
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <div class="fade-up-container w-100 p-5">
+                                <div class=" w-100 p-5">
                                     <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                         alt="b1">
 
@@ -87,7 +80,7 @@
                         </div>
                         <div class="row py-2">
                             <div class="col-md-6">
-                                <div class="fade-up-container w-100 p-5">
+                                <div class=" w-100 p-5">
                                     <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                         alt="b1">
                                 </div>
@@ -95,56 +88,80 @@
                             <div class="col-md-6 mt-5">
                                 <h3> Web Application Development</h3>
                                 <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                    Engineering user-centric web applications to redefine interactions, optimize workflows,
-                                    and propel business expansion. Amplify your digital footprint with our customized
-                                    offerings. </p>
-                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Transform your online presence with dynamic and user-friendly web applications. We
-                                specialize in creating scalable and responsive solutions that captivate your audience.
-                            </p>
-                            <p>Front-end of the web or application is the part that users can interact and see. If your
-                                website looks great, loads quickly, and work well without any glitches, then you can assume
-                                the front-end development of your site works well.</p>
-                            <p>If you look behind website development, there is a clean code in the back-end that powers up
-                                all the mighty functionality. However, smooth and intuitive navigation only supports the
-                                back-end code. With front-end development, you can craft a look and feel that compliments
-                                the code and creates an impact on your users.</p>
-                            <p>At Flipcode Solutions, we provide front-end development services that guarantee better
-                                usability with intuitive UI that reflects the business data well and support smooth
-                                functionality deployment. Keeping your core business requirement in mind, we strategize
-                                precisely and add life to your design with each element that we augment to the UI structure
-                                and design.</p> --}}
+                                    we specialize in delivering cutting-edge web development solutions that cater to
+                                    businesses of all sizes. Our team of expert developers builds dynamic, responsive, and
+                                    high-performing websites tailored to meet your business goals. Whether you need a simple
+                                    landing page or a complex web application, we provide robust solutions that are both
+                                    visually appealing and technically sound. </p>
+                                <h4>Our web Application Development Services Include :</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="mob ms-3">
+                                            <li>React </li>
+                                            <li>Angular</li>
+                                            <li>Vue js</li>
+                                            <li>Next js</li>
+                                            <li>PHP</li>
+                                            <ol>
+                                                <li>Laravel</li>
+                                                <li>Codeigniter</li>
+                                                <li>Cake php</li>
+                                            </ol>
+
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul>
+                                            <li>CMS</li>
+                                            <ol>
+                                                <li>Wordpress</li>
+                                                <li>Shopify</li>
+                                                <li>Joomla</li>
+                                                <li>Magento</li>
+                                                <li>Drupal</li>
+                                            </ol>
+                                        </ul>
+                                    </div>
+
+                                </div>
+
+
                             </div>
                         </div>
 
-                        <div class="row py-2 img-Sec">
+                        <div class="row py-2 ">
                             <div class="col-md-6 mt-5">
                                 <h3> Mobile App Development</h3>
-                                <p class="text-align" style="text-align: justify; line-height: 30px;"> Turning your ideas
-                                    into innovative mobile solutions, enhancing user engagement and expanding your reach on
-                                    every device. </p>
-                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Stay ahead in the mobile-first world with our innovative mobile app development services.
-                                Whether it's iOS, Android, or cross-platform, we bring your app ideas to life.
-                            </p>
-                            <p>Mobile technology has changed everybody’s life to a great extent. For companies, it
-                                facilitates wider and unparalleled reach to the target audience, enhances the service
-                                standards, better cooperation and communication among employees.
-                                Enterprise Mobility adds liquidity to stationary enterprise processes, thus enhancing the
-                                global reach. Developing enterprise mobile apps is now an essential component of every
-                                enterprise strategy.</p> --}}
-                                <h4>Our Mobile Api Development Services Include :</h4>
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">
+                                    we excel in building powerful mobile applications tailored to businesses of all
+                                    sizes. Our top-rated mobile app development services are focused on driving results,
+                                    whether you need an Android, iOS, hybrid, or cross-platform solution. With expertise in
+                                    the latest technologies, we create apps that not only meet your business needs but also
+                                    engage your target audience. Trust flipcode solutions, a leading mobile app development
+                                    company, to transform your ideas into innovative, high-performing mobile applications.
+
+                                </p>
+
+                                <h4>Our Mobile App Development Services Include :</h4>
                                 <ul class="mob ms-3">
-                                    <li>Android App Development</li>
-                                    <li>App Prototype Development</li>
-                                    <li>iPad App Development</li>
-                                    <li>iphone App Development</li>
-                                    <li>IOS App Development</li>
-                                    <li>Smart Watch App Development</li>
+                                    <li>React Native</li>
+                                    <li>Flutter</li>
+                                    <li>Ionic </li>
+                                    <li>Android</li>
+                                    <ol>
+                                        <li>Java</li>
+                                        <li>Kotlin</li>
+                                    </ol>
+                                    <li>IOS</li>
+                                    <ol>
+                                        <li>Swift</li>
+                                        <li>Objective C</li>
+                                    </ol>
+
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <div class="fade-up-container w-100 p-5">
+                                <div class=" w-100 p-5">
                                     <img src="{{ asset('img/mob-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                         alt="b1">
                                 </div>
@@ -152,69 +169,59 @@
                         </div>
                         <div class="row py-2">
                             <div class="col-md-6">
-                                <div class="fade-up-container w-100 p-5">
+                                <div class=" w-100 p-5">
                                     <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                         alt="b1">
                                 </div>
                             </div>
                             <div class="col-md-6 mt-5">
-                                <h3>IT Consulting</h3>
+                                <h3>UI/UX Designer</h3>
                                 <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                    Navigating digital landscapes, we provide expert guidance and tailored strategies to
-                                    optimize your IT infrastructure and drive sustainable growth.
+                                    we understand that exceptional user experience is at the heart of every successful
+                                    digital product. Our UI/UX design services are focused on creating intuitive, engaging,
+                                    and visually compelling designs that resonate with your users and elevate your brand. We
+                                    take a user-centric approach to design, ensuring that every interaction with your
+                                    digital product is seamless and delightful.
+
+
                                 </p>
-                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Rely on our experienced consultants to provide strategic insights and recommendations. We
-                                collaborate with you to optimize your IT infrastructure, aligning technology with your
-                                business goals.
-                            </p>
-                            <p>An IT consultant is a technology professional who supports clients during technological
-                                projects. Many IT consultants work for companies or businesses that need guidance when
-                                making decisions about the technology they use.</p>
-                            <p>An IT consultant might also perform repairs on IT systems and technological devices that
-                                companies need to conduct business.</p>
-                            <h4>How to become an IT consultant</h4> --}}
-                                <p>Here's how you can start your career as an IT consultant:</p>
+
+                                <h4>Our UI/UX Development Services Include :</h4>
                                 <ul class="mob ms-3">
-                                    <li>Earn a degree</li>
-                                    <li>Gain professional experience</li>
-                                    <li>Obtain certification</li>
-                                    <li>Apply for work as an IT consultant</li>
+                                    <li>Wireframes Designing</li>
+                                    <li>Strategic Design Consulting</li>
+                                    <li>High/Low fidelity Prototype</li>
+                                    <li>Mobile App Design</li>
+                                    <li>Responsive Web Design</li>
+                                    <li>Information Architecture</li>
+                                    <li>UX Analysis</li>
+                                    <li>UI Design</li>
+
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="row py-2 img-Sec">
+                        <div class="row py-2 ">
                             <div class="col-md-6 mt-5">
-                                <h3>Data Analytics and Business Intelligence</h3>
+                                <h3>Backend Development</h3>
                                 <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                    Empower your organization with actionable insights derived from raw data. Our data
-                                    analytics and business intelligence solutions drive informed decision-making, foster
-                                    innovation, and fuel sustainable growth in today's data-driven landscape.
+                                    At Flipcode Solutions, our backend development services are designed to provide the
+                                    robust and scalable infrastructure necessary to power your applications and websites. We
+                                    specialize in building secure, high-performance backend systems that ensure smooth
+                                    operations, fast data processing, and seamless integration of APIs and databases.
+                                    Whether you’re building an e-commerce platform, a mobile app, or a complex web
+                                    application, our backend solutions are tailored to meet your business needs.
                                 </p>
-                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Unlock the potential of your data with our advanced analytics and business intelligence
-                                solutions. Make informed decisions and gain a competitive edge in today's data-driven
-                                landscape.
-                            </p>
-                            <p>Data-driven organizations often use the terms "business intelligence" (BI) and "data
-                                analytics" interchangeably. They're not the same thing, but if someone asked you to explain
-                                the difference, what would you say?</p>
-                            <p>Some people distinguish between the two by saying that business intelligence looks backward
-                                at historical data to describe things that have happened, while data analytics uses data
-                                science techniques to predict what will or should happen in the future. We think that's
-                                close, but there's more to it.</p>
-                            <p>Business intelligence involves the use of data to help make business decisions, or as
-                                OLAP.com puts it, BI "refers to technologies, applications, and practices for the
-                                collection, integration, analysis, and presentation of business information. The purpose of
-                                business intelligence is to support better business decision-making." However, one could say
-                                the same about data analytics.</p>
-                            <p>To draw the line between business intelligence and data analytics, we think it's more useful
-                                to talk about what we want to accomplish. We can divide analytics into three categories:
-                                descriptive, predictive, and prescriptive.</p> --}}
+                                <h4>Backend Development Services Include :</h4>
+                                <li>PHP</li>
+                                <li>Laravel</li>
+                                <li>Node JS</li>
+                                <li>Python</li>
+                                <li>Java</li>
+                                <li>.net</li>
                             </div>
                             <div class="col-md-6">
-                                <div class="fade-up-container w-100 p-5">
+                                <div class=" w-100 p-5">
                                     <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                         alt="b1">
                                 </div>
@@ -222,7 +229,7 @@
                         </div>
                         <div class="row py-2">
                             <div class="col-md-6">
-                                <div class="fade-up-container w-100 p-5">
+                                <div class=" w-100 p-5">
                                     <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                         alt="b1">
                                 </div>
@@ -230,27 +237,23 @@
                             <div class="col-md-6 mt-5">
                                 <h3>E-commerce Solutions</h3>
                                 <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                    Empowering businesses to thrive in the digital marketplace, our comprehensive e-commerce
-                                    solutions offer seamless integration, user-friendly interfaces, and robust features
-                                    tailored to maximize sales and customer satisfaction.
+                                    Transform your business with Flicode solutions's comprehensive e-commerce solutions.
+                                    We specialize in developing high-performance, scalable e-commerce platforms that enable
+                                    businesses to sell their products and services online seamlessly. Whether you're a small
+                                    retailer or a large enterprise, our customized e-commerce solutions are designed to meet
+                                    your unique needs, driving growth and improving customer experience.
                                 </p>
-                                {{-- <p class="text-align" style="text-align: justify; line-height: 30px;">
-                                Boost your online presence and revenue with our tailored e-commerce solutions. We create
-                                secure, user-friendly platforms that enhance the shopping experience for your customers.
-                            </p>
-                            <h4>Drive meaningful connections with powerful mobile applications :</h4>
-                            <p>We have employed bright and passionate individuals that are pros in making complex eCommerce
-                                projects technically and aesthetically impeccable. We cater our eCommerce web development
-                                services to both B2B and B2C ventures and focus on ROI for our clients as our ultimate
-                                success metric.</p>
-                            <p>New IT technologies have completely changed the way people shop in the 21st century. Internet
-                                and mobile devices have made it possible to purchase products or services at any time and in
-                                any location As a result, a tremendous number of e-commerce websites appeared on the world
-                                wide web and continue to compete with each other.</p>
-                            <p>Today, the eCommerce market is growing infinitely. The yearly growth for the eCommerce
-                                industry is approximately 23% according to BigCommerce. eMarketer forecasted that global
-                                eCommerce sales are expected to cross $4 trillion in 2020 and these are just the statistics
-                                for the retail sector.</p> --}}
+                                <h4>E-commerce Development Services Include :</h4>
+                                <ul class="mob ms-3">
+
+                                    <li>Magento</li>
+                                    <li>Shopify</li>
+                                    <li>WooCommerce</li>
+                                    <li>BigCommerce</li>
+                                    <li>PrestaShop</li>
+                                    <li>Magento</li>
+                                </ul>
+
                             </div>
                         </div>
                     </div>

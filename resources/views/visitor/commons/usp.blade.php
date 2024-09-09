@@ -3,34 +3,28 @@
 
         <div class="row">
 
-            <div class="four col-md-3">
+            <div class=" col">
                 <div class="counter-box colored">
                     <i class="fa fa-thumbs-o-up"></i>
                     <span class="counter">50 </span> <span class="display-6 text-white "><b>+</b></span>
-                    <p class="text-white fs-4 fw-bolder">Projects</p>
+                    <p class="text-white fs-4 fw-bolder">Projects delivered  successfully</p>
                 </div>
             </div>
-            <div class="four col-md-3">
+            <div class=" col">
                 <div class="counter-box">
                     <i class="fa fa-group"></i>
                     <span class="counter">20 </span> <span class="display-6 text-white "><b>+</b></span>
-                    <p class="text-white fs-4 fw-bolder">Teams</p>
+                    <p class="text-white fs-4 fw-bolder">Expert under same roof</p>
                 </div>
             </div>
-            <div class="four col-md-3">
+            <div class=" col">
                 <div class="counter-box">
                     <i class="fa  fa-shopping-cart"></i>
                     <span class="counter">50 </span> <span class="display-6 text-white "><b>+</b></span>
-                    <p class="text-white fs-4 fw-bolder">Happy Customers</p>
+                    <p class="text-white fs-4 fw-bolder">Satisfied Clients</p>
                 </div>
             </div>
-            <div class="four col-md-3">
-                <div class="counter-box">
-                    <i class="fa  fa-user"></i>
-                    <span class="counter">100 </span> <span class="display-6 text-white "><b>+</b></span>
-                    <p class="text-white fs-4 fw-bolder">Interns</p>
-                </div>
-            </div>
+           
         </div>
     </div>
 </div>
