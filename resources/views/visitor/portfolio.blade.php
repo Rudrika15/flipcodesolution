@@ -1,11 +1,17 @@
 @extends('visitor.layouts.app')
 @section('title')
-    <title>Flipcode solutions | Portfolio</title>
+    <title>Flipcode Solutions | Portfolio</title>
 @endsection
 
 @section('content')
     @php
         $jsonData = [
+            [
+                'image' => asset('client-logo/smvs.jpg'),
+                'title' => 'SMVS Swaminarayan Sanstha',
+                'technology' => 'Laravel',
+                'industry' => 'Religious and Spiritual Industry',
+            ],
             [
                 'image' => asset('client-logo/argilgraygrp.jpg'),
                 'title' => 'Argil Gray Group',
@@ -22,7 +28,7 @@
                 'image' => asset('client-logo/brand-beans-logo.jpg'),
                 'title' => 'Brand Beans',
                 'technology' => 'Laravel',
-                'industry' => 'Marketing & advertising Industry',
+                'industry' => 'Marketing & Advertising Industry',
             ],
             [
                 'image' => asset('client-logo/cu-shah-logo.jpg'),
@@ -42,36 +48,30 @@
                 'technology' => 'Laravel',
                 'industry' => 'Construction',
             ],
-            [
-                'image' => asset('client-logo/smvs.jpg'),
-                'title' => 'SMVS Swaminarayan Sanstha',
-                'technology' => 'Laravel',
-                'industry' => 'Religious and Spiritual Industry',
-            ],
-
+           
             [
                 'image' => asset('client-logo/ConsultantLogo.jpg'),
                 'title' => 'Consultant',
                 'technology' => 'Laravel',
                 'industry' => 'Consultancy',
             ],
-
             [
                 'image' => asset('client-logo/click-to-care.jpg'),
                 'title' => 'Click To Care',
                 'technology' => 'Laravel',
-                'industry' => 'HealthCare Industry',
+                'industry' => 'Healthcare Industry',
             ],
             [
                 'image' => asset('client-logo/micro.png'),
                 'title' => 'Micro Dimonds & CBN Wheels',
                 'technology' => 'Laravel',
-                'industry' => ' Abrasives Industry',
+                'industry' => 'Abrasives Industry',
             ],
         ];
+        $technologies = array_unique(array_column($jsonData, 'technology'));
     @endphp
 
-    <div class="container-fluid ">
+    <div class="container-fluid">
         <div class="image-fluid header-career">
             <div class="headercontent">
                 <h1 class="display-4 fw-light">Distinguished Clientele</h1>
@@ -81,84 +81,69 @@
                     Discover how we can support your business success—reach out to us at
                     <span>contact@flipcodesolutions.com</span>
                 </p>
-                <a href="#porfolio" class="btn btn-dark btn-lg">Portfolio</a>
+                <a href="#portfolio" class="btn btn-dark btn-lg">Portfolio</a>
             </div>
         </div>
 
         <!-- breadcrumb end -->
 
-        <!-- portfolio design  -->
+        <!-- portfolio design -->
         <div class="container-fluid py-3 bg-light">
             <div class="container py-3" id="clients">
-                <div class="section-head col-sm-12" id="porfolio">
+                <div class="section-head col-sm-12" id="portfolio">
                     <h4><span>Portfolio</span></h4>
                 </div>
-                <div class="row py-2 bg-light">
-                    <div class="col-md-12">
-                        <!-- Start portfolio Section  -->
-                        <div class="mt-5">
-                            <a class="anchor" id="portfolio-link"></a>
-                            <div id="portfolio" class="container-fluid">
-                                <div class="row" id="portfolioItems">
-                                    <div class="col-lg-12 text-center">
-                                        {{-- <div class="search-container justify-content-center">
-                                            <div>
 
-                                                <input type="text" id="searchTechnology" class="search-input"
-                                                    placeholder="Search technology..." />
-                                            </div>
-                                            <div>
+                <!-- Tab navigation -->
+                <ul class="nav nav-tabs" id="portfolioTabs" role="tablist">
+                    @foreach ($technologies as $technology)
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link @if($loop->first) active @endif" id="{{ Str::slug($technology) }}-tab" data-bs-toggle="tab" href="#{{ Str::slug($technology) }}" role="tab">{{ $technology }}</a>
+                        </li>
+                    @endforeach
+                </ul>
 
-                                                <input type="text" id="searchIndustry" class="search-input"
-                                                    placeholder="Search industry..." />
-                                            </div>
-                                            <button class="reset-button" id="resetButton">
-                                                <i class="fa fa-refresh"></i>
-                                            </button>
-                                        </div> --}}
-
-
-                                        <hr />
-                                        <div class="container-fluid">
-                                            <div class="row">
-
+                <!-- Tab content -->
+                <div class="tab-content" id="portfolioTabContent">
+                    @foreach ($technologies as $technology)
+                        <div class="tab-pane fade @if($loop->first) show active @endif" id="{{ Str::slug($technology) }}" role="tabpanel" aria-labelledby="{{ Str::slug($technology) }}-tab">
+                            <div class="row py-2 bg-light">
+                                <div class="col-md-12">
+                                    <div class="mt-5">
+                                        <div id="portfolio" class="container-fluid">
+                                            <div class="row" id="portfolioItems">
                                                 @foreach ($jsonData as $data)
-                                                    <div class="col-md-4 py-4 " data-aos="zoom-in" data-aos-duration="1000">
-
-                                                        <div class=" card ">
-                                                            <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}"
-                                                                class="card-img-top" />
-                                                            <div class="card-body">
-                                                                <h5 class="card-title fs-6 fw-bold">{{ $data['title'] }}
-                                                                </h5>
-
-                                                                <div class="container mt-3">
-
-                                                                    <div class="d-flex justify-content-between mb-3">
-                                                                        <div class="pe-1 fs-6">{{ $data['technology'] }}
+                                                    @if ($data['technology'] == $technology)
+                                                        <div class="col-md-4 py-4" data-aos="zoom-in" data-aos-duration="1000">
+                                                            <div class="card">
+                                                                <img src="{{ $data['image'] }}" alt="{{ $data['title'] }}" class="card-img-top" />
+                                                                <div class="card-body">
+                                                                    <h5 class="card-title fs-6 fw-bold">{{ $data['title'] }}</h5>
+                                                                    <div class="container mt-3">
+                                                                        <div class="d-flex justify-content-between mb-3">
+                                                                            <div class="pe-1 fs-6">{{ $data['technology'] }}</div>
+                                                                            <div class="fs-6">{{ $data['industry'] }}</div>
                                                                         </div>
-
-                                                                        <div class=" fs-6"> {{ $data['industry'] }}</div>
                                                                     </div>
-
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    @endif
                                                 @endforeach
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-
-
-
             </div>
         </div>
-    @endsection
+    </div>
+
+    @push('scripts')
+        <!-- Include Bootstrap JavaScript if not already included -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    @endpush
+@endsection

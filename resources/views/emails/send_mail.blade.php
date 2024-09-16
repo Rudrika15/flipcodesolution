@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>ItsolutionStuff.com</title>
 </head>
+
 <body>
     <h1>{{ $mailData['title'] }}</h1>
     <p>{{ $mailData['body'] }}</p>
     <p>{!! $mailData['url'] !!}</p>
-    
+
     <p>Test Mail</p>
     <br>
 
@@ -15,11 +17,12 @@
         @csrf
         <button type="submit">Verified</button>
     </form> --}}
-    
 
-     {{-- <a href="" style="background-color:green;padding:10px;text-decoration:none;color:white"> <b>Verified You Email Address </b></a> --}}
+
+    {{-- <a href="" style="background-color:green;padding:10px;text-decoration:none;color:white"> <b>Verified You Email Address </b></a> --}}
     <p>Thank you</p>
 </body>
+
 </html>
 
 
@@ -54,7 +57,8 @@
             <tr>
                 <td
                     style="background-color: #ebf1ff; padding-top:0;padding-right: 0px;padding-bottom: 20px;padding-left: 0px;">
-                    <table style="background-color: #fff;padding-top:0;padding-bottom: 0px;max-width: 620px;display: block;margin: 0 auto;border-radius: 10px;margin-top: -60px;">
+                    <table
+                        style="background-color: #fff;padding-top:0;padding-bottom: 0px;max-width: 620px;display: block;margin: 0 auto;border-radius: 10px;margin-top: -60px;">
                         <tr>
                             <td style="margin: 0;padding: 0;">
                                 <table style="width: 100%;max-width: 100%;border-collapse: collapse;">
@@ -81,7 +85,9 @@
                                                 <p
                                                     style="font-family: 'Open Sans', sans-serif;font-size: 24px;font-weight: 700;line-height: 1.25em;color: #000;margin:0; text-align: center;">
                                                     Thank you for Contact us</p>
-                                                    <p style="height:3px;width:95%;background-color:#000;margin-left: auto;margin-right: auto;"></p>
+                                                <p
+                                                    style="height:3px;width:95%;background-color:#000;margin-left: auto;margin-right: auto;">
+                                                </p>
                                             </td>
                                         </tr>
                                         <tr>
@@ -93,23 +99,29 @@
                                                     style="width: 100%;max-width: 100%;">
                                                     <tbody>
                                                         <tr>
-                                                            <td style="padding-top: 8px;padding-bottom: 10px; padding-right: 20px;padding-left: 20px;">
+                                                            <td
+                                                                style="padding-top: 8px;padding-bottom: 10px; padding-right: 20px;padding-left: 20px;">
                                                                 <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
-                                                                    Hello, {{$data['name']}}
+                                                                    Hello, {{ $data['name'] }}
                                                                 </p>
-                                                                <p style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
-Thank you for reaching out to us. We appreciate your interest . I'd be happy to assist you with any questions you have.
-</p>
-                                                            <p
+                                                                <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
-Please feel free to share your specific inquiries, and I'll do my best to provide the information you need.</p>
-                                                            <p
+                                                                    Thank you for reaching out to us. We appreciate your
+                                                                    interest . I'd be happy to assist you with any
+                                                                    questions you have.
+                                                                </p>
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+                                                                    Please feel free to share your specific inquiries,
+                                                                    and I'll do my best to provide the information you
+                                                                    need.</p>
+                                                                <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
 
-Looking forward to hearing from you.
+                                                                    Looking forward to hearing from you.
                                                                 </p>
-<br>
+                                                                <br>
                                                                 <p
                                                                     style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
                                                                     Thank you,

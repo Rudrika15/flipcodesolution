@@ -5,7 +5,7 @@
 @php
     $jsonData = [
         [
-            'title' => 'React.js Intern',
+            'title' => 'React.js ',
             'detail' =>
                 'We are looking for a passionate intern to join our front-end development team. The ideal candidate should have a strong interest in building responsive and dynamic web applications.',
             'role' => 'Frontend Developer',
@@ -19,7 +19,7 @@
             'status' => 'Open',
         ],
         [
-            'title' => 'Laravel Intern',
+            'title' => 'Laravel ',
             'detail' =>
                 'We are seeking a motivated intern to join our back-end development team. The ideal candidate should have a strong interest in building scalable and robust web applications using the Laravel framework.',
             'role' => 'Backend Developer',
@@ -33,7 +33,7 @@
             'status' => 'Open',
         ],
         [
-            'title' => 'Flutter Intern',
+            'title' => 'Flutter ',
             'detail' =>
                 'We are looking for a passionate intern to join our mobile development team. The ideal candidate should have a strong interest in building high-performance mobile applications using the Flutter framework.',
             'role' => 'Mobile Developer',
@@ -47,7 +47,7 @@
             'status' => 'Open',
         ],
         [
-            'title' => 'Node.js Backend Intern',
+            'title' => 'Node.js Backend ',
             'detail' =>
                 'We are looking for a passionate intern to join our backend development team. The ideal candidate should have a strong interest in building scalable and efficient server-side applications using Node.js.',
             'role' => 'Backend Developer',
@@ -61,7 +61,7 @@
             'status' => 'Open',
         ],
         [
-            'title' => 'React Native Intern',
+            'title' => 'React Native ',
             'detail' =>
                 'We are seeking a motivated intern to join our mobile app development team. The ideal candidate should have a strong interest in building responsive and dynamic mobile applications using React Native.',
             'role' => 'Mobile Developer',
@@ -151,7 +151,10 @@
                                             <div class="col-md-10">
                                                 <ul>
                                                     <li>
-                                                        <p><strong>Experience:</strong> {{ $data['experience'] }}</p>
+                                                        <p><strong>Experience:</strong> 0-1 years</p>
+                                                    </li>
+                                                    <li>
+                                                        <p><strong>Skills:</strong> {{ $data['experience'] }}</p>
                                                     </li>
                                                     <li>
                                                         <p><strong>Qualification:</strong> {{ $data['qualification'] }}</p>
@@ -190,45 +193,95 @@
                         <form id="applicationForm" enctype="multipart/form-data" method="POST"
                             action="{{ route('career_send_mail') }}">
                             @csrf
-                            <!-- Form Fields -->
+                            <!-- Full Name -->
                             <div class="mb-1">
                                 <label for="fullName" class="form-label">Full Name</label>
-                                <input type="text" name="fullname" class="form-control" id="fullName">
-                                <span class="text-danger" id="fullnameError"></span>
+                                <input type="text" name="fullname"
+                                    class="form-control @error('fullname') is-invalid @enderror" id="fullName"
+                                    value="{{ old('fullname') }}">
+                                <span class="text-danger" id="fullnameError">
+                                    @error('fullname')
+                                        {{ $message }}
+                                    @enderror
+                                </span>
                             </div>
+
+                            <!-- Email -->
                             <div class="mb-1">
                                 <label for="email" class="form-label">Email address</label>
-                                <input type="email" name="email" class="form-control" id="email">
-                                <span class="text-danger" id="emailError"></span>
+                                <input type="text" name="email"
+                                    class="form-control @error('email') is-invalid @enderror" id="email"
+                                    value="{{ old('email') }}">
+                                <span class="text-danger" id="emailError">
+                                    @error('email')
+                                        {{ $message }}
+                                    @enderror
+                                </span>
                             </div>
+
+                            <!-- Phone Number -->
                             <div class="mb-1">
                                 <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" name="phoneNo" class="form-control" id="phone">
-                                <span class="text-danger" id="phoneError"></span>
+                                <input type="tel" name="phoneNo"
+                                    class="form-control @error('phoneNo') is-invalid @enderror" id="phoneNo"
+                                    value="{{ old('phoneNo') }}">
+                                <span class="text-danger" id="phoneNoError">
+                                    @error('phoneNo')
+                                        {{ $message }}
+                                    @enderror
+                                </span>
                             </div>
+
+                            <!-- City -->
                             <div class="mb-1">
                                 <label for="city" class="form-label">City</label>
-                                <input type="tel" name="city" class="form-control" id="city">
-                                <span class="text-danger" id="cityError"></span>
+                                <input type="text" name="city"
+                                    class="form-control @error('city') is-invalid @enderror" id="city"
+                                    value="{{ old('city') }}">
+                                <span class="text-danger" id="cityError">
+                                    @error('city')
+                                        {{ $message }}
+                                    @enderror
+                                </span>
                             </div>
+
+                            <!-- Position Applied For -->
                             <div class="mb-1">
                                 <label for="position" class="form-label">Position Applied For</label>
-                                <select class="form-select" id="position" name="position">
+                                <select class="form-select @error('position') is-invalid @enderror" id="position"
+                                    name="position">
                                     <option value="">Select Position</option>
                                     @foreach ($jsonData as $data)
                                         @if ($data['status'] === 'Open')
-                                            <option value="{{ $data['title'] }}">{{ $data['title'] }}</option>
+                                            <option value="{{ $data['title'] }}"
+                                                {{ old('position') == $data['title'] ? 'selected' : '' }}>
+                                                {{ $data['title'] }}</option>
                                         @endif
                                     @endforeach
                                 </select>
+                                <span class="text-danger" id="positionError">
+                                    @error('position')
+                                        {{ $message }}
+                                    @enderror
+                                </span>
                             </div>
+
+                            <!-- Upload Resume -->
                             <div class="mb-1">
                                 <label for="resume" class="form-label">Upload Resume</label>
-                                <input type="file" name="file" class="form-control" id="resume">
-                                <span class="text-danger" id="resumeError"></span>
+                                <input type="file" name="file"
+                                    class="form-control @error('file') is-invalid @enderror" id="file">
+                                <span class="text-danger" id="fileError">
+                                    @error('file')
+                                        {{ $message }}
+                                    @enderror
+                                </span>
                             </div>
+
                             <button type="submit" class="btn btn-dark">Submit Application</button>
                         </form>
+
+
                     </div>
                 </div>
             </div>
@@ -237,30 +290,48 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function() {
-            // Initialize jQuery Validation
-            $('#applicationForm').on('submit', function(event) {
+            // Toggle job description visibility with smooth animation
+            function toggleDescription(descriptionId) {
+                var description = $('#' + descriptionId);
+    
+                // Slide toggle with animation
+                description.slideToggle('slow', function() {
+                    // Optionally, you can change the button text when the description is toggled
+                    var buttonText = description.is(':visible') ? 'View Less' : 'View More';
+                    $('button[data-title="' + descriptionId.replace('job-description-', '') + '"]').text(buttonText);
+                });
+            }
+    
+            // Attach click event to dynamically created elements
+            $('.btn-danger').click(function() {
+                var descriptionId = $(this).attr('onclick').match(/'([^']+)'/)[1]; // Extracting the ID from onclick attribute
+                toggleDescription(descriptionId);
+            });
+        });
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+            // On form submit
+            $('#applicationForm').on('submit', function (event) {
                 event.preventDefault();
-
+    
                 // Clear previous errors
                 $('.text-danger').text('');
-
-                // Select the submit button and store its original text
+    
                 var submitButton = $(this).find('button[type="submit"]');
-                var originalButtonText = submitButton
-                    .html(); // Use .html() to preserve any HTML content in the button
-
-                // Disable the submit button and change its text
+                var originalButtonText = submitButton.html(); // Store the original button text
                 submitButton.prop('disabled', true).html('Sending...');
-
+    
                 var formData = new FormData(this);
-
+    
                 $.ajax({
                     url: $(this).attr('action'),
                     type: 'POST',
                     data: formData,
                     processData: false,
                     contentType: false,
-                    success: function(response) {
+                    success: function (response) {
                         Swal.fire({
                             title: 'Thank You!',
                             text: 'Thanks for Applying! We will contact you soon...',
@@ -268,15 +339,14 @@
                             confirmButtonText: 'OK'
                         }).then(() => {
                             $('#applicationForm')[0].reset();
-                            $('#applyModal').modal('hide');
                         });
                     },
-                    error: function(xhr) {
-                        if (xhr.status === 422) { // Validation error
+                    error: function (xhr) {
+                        if (xhr.status === 422) { // Laravel validation error
                             var errors = xhr.responseJSON.errors;
-
-                            // Loop through each error and display it below the respective input field
-                            $.each(errors, function(key, value) {
+                            
+                            // Loop through errors and display them below respective input fields
+                            $.each(errors, function (key, value) {
                                 $('#' + key + 'Error').text(value[0]);
                             });
                         } else {
@@ -288,22 +358,12 @@
                             });
                         }
                     },
-                    complete: function() {
-                        // Re-enable the submit button and restore its original text
+                    complete: function () {
                         submitButton.prop('disabled', false).html(originalButtonText);
                     }
                 });
             });
-
-            // Toggle job description visibility
-            function toggleDescription(descriptionId) {
-                var description = document.getElementById(descriptionId);
-                description.style.display = description.style.display === "none" || description.style.display ===
-                    "" ? "block" : "none";
-            }
-
-            // Set modal title and position value on modal show
-
         });
     </script>
+    
 @endsection

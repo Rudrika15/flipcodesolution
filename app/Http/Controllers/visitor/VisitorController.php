@@ -112,19 +112,29 @@ class VisitorController extends Controller
     }
     public function career_send_mail(Request $request)
     {
-        // Validate the request data
+        set_time_limit(0);
+        
         $request->validate([
             'fullname' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phoneNo' => 'required|digits:10',
-            // 'file' => 'required|file|mimes:pdf,doc,docx|max:2048' // Adjust file types and size as needed
-            'file' => 'required' // Adjust file types and size as needed
+            'file' => 'required|file|mimes:pdf,doc,docx|max:2048',
+            'city'=>'required',
+            'position'=>'required'
+            
+        ], [
+            'fullname.required' => 'Full name is required.',
+            'email.required' => 'Email is required.',
+            'email.email' => 'Invalid email format.',
+            'phoneNo.required' => 'Phone number is required.',
+            'file.required' => 'File is required.',
+            'file.mimes' => 'Only PDF, DOC, and DOCX files are allowed.',
+            'file.max' => 'File size should not exceed 2MB.',
+            'city.required' => 'City is required.',
+            'position.required' => 'Position is required.',
         ]);
-
-        // Handle file upload
-
-        // Create a new Career record
-        // Handle file upload
+    
+        // Save data to the Career model
         $career = new Career();
         $career->fullname = $request->fullname;
         $career->email = $request->email;
@@ -134,30 +144,32 @@ class VisitorController extends Controller
         $career->file = time() . '-' . $request->file->getClientOriginalName();
         $request->file->move(storage_path('uploads'), $career->file);
         $career->save();
-
-        // Prepare attachment path
+        
         $attachmentPath = storage_path('uploads/' . $career->file);
-
-
+        
+    
+        // Prepare the data for the user mail
         $userData = [
-            'name' => $request->fullName,
+            'name' => $request->fullname,
             'email' => $request->email,
             'phoneNo' => $request->phoneNo,
             'address' => $request->address,
             'city' => $request->city,
             'jobTitle' => $request->position,
         ];
-        // Send email to the user
-        $email = $career->email;  // Make sure you use the email from the saved record
-        Mail::to($email)->send(new CareerMail($userData));
-
-        // Send email to the admin with CC and attachment
+    
+        // Queue the user email
+        Mail::to($career->email)->queue(new CareerMail($userData));
+    
+        // Queue the admin email with CC addresses and the attachment
         $ccAddresses = ['ravirajsinh.m.gohil@gmail.com', 'parmarjigardhirajlal@gmail.com'];
-        Mail::to('flipcodesolutions@gmail.com')->send(new CareerAdminMail($career, $ccAddresses, $attachmentPath));
-
-        // Redirect with success message
+        Mail::to('flipcodesolutions@gmail.com')
+            ->cc($ccAddresses)
+            ->queue(new CareerAdminMail($career, $ccAddresses, $attachmentPath));
+    
         return redirect('GreetingPage')->with('success', 'Mail sent successfully! Thank you for contacting us.');
     }
+    
 
 
     public function GreetingPage()
