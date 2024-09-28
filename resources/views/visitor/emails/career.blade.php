@@ -3,58 +3,133 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career Form Submission</title>
-    <!-- Add Bootstrap CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <!DOCTYPE html>
-    <html lang="en">
-
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>FlipCode Solutions</title>
-        <!-- Add Bootstrap CSS -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    </head>
-
-    <body style="background-color: #f4f4f4; font-family: Arial, sans-serif;">
-        <img src="https://flipcodesolutions.com/img/logo.png"  width="200" class="mb-1" alt="Flipcode" />
-
-        <table class="container" style="width: 100%; max-width: 1000px; margin: 0 auto; padding: 20px;">
+<body style="background-color: #fff;box-sizing: border-box;margin: 0px;padding: 0px;">
+    <div style="height: 100vh;width: 100%;margin: 10px auto;background-color: #ebf1ff;border: solid 1px #ebf1ff;">
+        <table style="width: 100%;max-width: 100%;border-collapse: collapse;">
             <tr>
                 <td>
-                    <h4>Hello {{ $user->fullname}},</h4>
-                    <p class="lead">Thank you so much  for contacting us. see you ahead</p>
-                    <ul class="list-group">
-                        <li class="list-group-item"><strong>Name:</strong> {{ $user->fullname}}</li>
-                        <li class="list-group-item"><strong>Email:</strong> {{ $user->email }}</li>
-                        <li class="list-group-item"><strong>City:</strong> {{ $user->city }}</li>
-                    </ul>
-                    <div class="mt-4">
-                        <!-- 
-                            <h5><strong>Message:</strong></h5>
-                            <p>{{ $user->message }}</p> -->
-                    </div>
+                    <table style="width: 100%;max-width: 100%;border-collapse: collapse;">
+                        <tr>
+                            <td
+                                style="padding-top: 5px;padding-right: 20px;padding-left: 20px;background: #171823;height: 180px;">
+                                <p style="margin: 0;padding: 0;text-align: center;"><img
+                                        src="https://flipcodesolutions.com/img/logo.png" alt="Logo"
+                                        style="width: 212px;" max-width="117"></p>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
-            
-
             <tr>
-                <td>
-                    <div class="jumbotron text-center bg-secondary text-white mt-2" style="padding: 20px;">
-                        <p class="mb-0 text-center">Thank you again</p>
-                    </div>
+                <td
+                    style="background-color: #ebf1ff; padding-top:0;padding-right: 0px;padding-bottom: 20px;padding-left: 0px;">
+                    <table
+                        style="background-color: #fff;padding-top:0;padding-bottom: 0px;max-width: 620px;display: block;margin: 0 auto;border-radius: 10px;margin-top: -60px;">
+                        <tr>
+                            <td style="margin: 0;padding: 0;">
+                                <table style="width: 100%;max-width: 100%;border-collapse: collapse;">
+                                    <tbody>
+                                        <tr>
+                                            <td
+                                                style="margin: 0;padding-top: 10px;padding-bottom: 10px;padding-right: 10px;padding-left: 10px; font-family: 'Open Sans', sans-serif;font-size: 26px;font-weight: 600;line-height: 1.25em;color: #fff;text-align: center !important;background-color: #fd6602;border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table style="width: 100%;max-width: 100%;border-collapse: collapse;">
+                                    <tbody>
+                                        <tr>
+                                            <td style="height: 15px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td
+                                                style="margin: 0;padding: 0;font-family: 'Open Sans', sans-serif;font-size: 20px;font-weight: 600;line-height: 1.25em;color: #000;text-align: center;">
+                                                <p
+                                                    style="font-family: 'Open Sans', sans-serif;font-size: 24px;font-weight: 700;line-height: 1.25em;color: #000;margin:0; text-align: center;">
+                                                    Thank you for applying</p>
+                                                <p
+                                                    style="height:3px;width:95%;background-color:#000;margin-left: auto;margin-right: auto;">
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height: 10px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 0px;">
+                                                <table cellspacing="0" cellpadding="0"
+                                                    style="width: 100%;max-width: 100%;">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td
+                                                                style="padding-top: 8px;padding-bottom: 10px; padding-right: 20px;padding-left: 20px;">
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+                                                                    Hello,
+                                                                </p>
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+                                                                    Thank you for applying for the {{ $user['jobTitle'] }} position at flipcode solutions private limited. We have received your application and resume, and we appreciate the time and effort you put into your submission.
+                                                                </p>
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+                                                                    Our hiring team is currently reviewing all applications, and we will be in touch if your qualifications match our needs for the role. We aim to provide updates on the next steps in the hiring process as soon as possible.</p>
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000l; center;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+
+                                                                    In the meantime, if you have any questions or need additional information, please don't hesitate to reach out to us. We're here to help.
+                                                                </p>
+                                                                <br>
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 400;line-height: 1.45em;color: #000;margin-top: 0;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+                                                                    Thank you,
+                                                                </p>
+                                                                <p
+                                                                    style="font-family: 'Open Sans', sans-serif;font-size: 15px;font-weight: 500;line-height: 1.45em;color: #1e1e1e;margin-top: 0px;margin-right: 0;margin-bottom: 10px;margin-left: 0;padding: 0;">
+                                                                   Flipcode solutions Private Limited
+                                        
+                                                                </p>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style="height: 45px;"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="margin: 0;padding: 0;">
+                                <table style="width: 100%;max-width: 100%;border-collapse: collapse;">
+                                    <tbody>
+                                        <tr>
+                                            <td
+                                                style="margin: 0;padding-top: 10px;padding-bottom: 10px;padding-right: 10px;padding-left: 10px; font-family: 'Open Sans', sans-serif;font-size: 26px;font-weight: 600;line-height: 1.25em;color: #fff;text-align: center !important;background-color: #fd6602;border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;">
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         </table>
-
-    </body>
-
-    </html>
+    </div>
 </body>
 
 </html>
