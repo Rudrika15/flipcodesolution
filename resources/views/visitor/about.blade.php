@@ -24,9 +24,7 @@
         <!-- breadcrumb end -->
 
         <div class="container py-3">
-            <div class="section-head col-sm-12" id="aboutus">
-                <h4><span>About</span> Us</h4>
-            </div>
+            
             <div class="row py-2">
                 <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
                     <p class="text-align" style="text-align: justify; line-height: 35px;">

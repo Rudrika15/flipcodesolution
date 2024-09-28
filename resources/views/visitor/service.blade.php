@@ -19,9 +19,9 @@
 
         <!-- breadcrumb end -->
         <div class="container py-3">
-            <div class="section-head col-sm-12" id="service">
+            {{-- <div class="section-head col-sm-12" id="service">
                 <h4><span>Services</span></h4>
-            </div>
+            </div> --}}
             <style>
                 .fade-up-container {
                     position: relative;
