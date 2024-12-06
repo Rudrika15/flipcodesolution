@@ -56,7 +56,12 @@
                         <div class="row py-2 ">
                             <div class="col-md-6 mt-5">
                                 <h3>Custom Software Development</h3>
-                                <p class="text-align" style="text-align: justify; line-height: 30px;">Custom Software Development is the process of designing, creating, deploying, and maintaining software tailored to meet the unique needs and requirements of a specific business or organization. Unlike off-the-shelf solutions, which are designed for mass markets, custom software is built to address the precise challenges and goals of a company, delivering a solution that fits seamlessly with its processes and objectives.
+                                <p class="text-align" style="text-align: justify; line-height: 30px;">Custom Software
+                                    Development is the process of designing, creating, deploying, and maintaining software
+                                    tailored to meet the unique needs and requirements of a specific business or
+                                    organization. Unlike off-the-shelf solutions, which are designed for mass markets,
+                                    custom software is built to address the precise challenges and goals of a company,
+                                    delivering a solution that fits seamlessly with its processes and objectives.
 
                                 </p>
 
@@ -265,7 +270,7 @@
 
         <!-- our technology -->
 
-        @include('visitor.commons.technology')
+        {{-- @include('visitor.commons.technology') --}}
 
 
         <!-- End our technology -->
