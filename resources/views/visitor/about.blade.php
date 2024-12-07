@@ -24,7 +24,7 @@
         <!-- breadcrumb end -->
 
         <div class="container py-3">
-            
+
             <div class="row py-2">
                 <div class="col-md-6" data-aos="fade-right" data-aos-duration="1000">
                     <p class="text-align" style="text-align: justify; line-height: 35px;">
@@ -115,7 +115,7 @@
 
     <!-- why choose us -->
 
-    @include('visitor.commons.whychooseus')
+    {{-- @include('visitor.commons.whychooseus') --}}
 
     <!-- why choose End -->
 

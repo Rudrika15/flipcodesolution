@@ -50,19 +50,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-    body {
-    font-family: 'Montserrat', sans-serif;
-}
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
 
-h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-}
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
 
-p {
-    font-family: 'Montserrat', sans-serif;
-}
-</style>
+        p {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
 
 </head>
 
@@ -254,11 +256,11 @@ p {
 <div id="mobile-freez-icon">
     <a id="free_quote_1" href="{{ route('contact') }}"><i class="fa fa-envelope"></i> Get Help
         Now</a>
-    <div class="wp-phone">
+    <div class="wp-phone text-center">
         <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i
                 class="bi bi-whatsapp ps-3 pt-2"></i></a>
     </div>
-    <div class="phone">
+    <div class="phone text-center">
         <a href="tel:+919979404044" rel="nofollow">
             <i class="bi bi-telephone-fill ps-3 pt-2"></i>
         </a>

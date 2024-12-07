@@ -10,9 +10,8 @@
 
     <!-- about us -->
 
-    <div class="container pt-3">
+    {{-- <div class="container pt-3">
         <div class="row pt-2">
-
             <div data-aos="fade-right" class="col-md-6  h-auto mt-3">
                 <h2 class="text-align pb-1">Our Story</h2>
                 <p class="text-align" style=" font-size:14px; text-align: justify; line-height: 24px;">
@@ -37,7 +36,28 @@
                     alt="b1">
             </div>
         </div>
+    </div> --}}
 
+    <div class="container pt-3">
+        <div class="row pt-2 w-100">
+            <div data-aos="fade-right" class="col-md-5 h-auto pt-3">
+                <h2 class="text-align pb-1">About Us</h2>
+                <p class="text-align  mt-3" style=" font-size:14px; text-align: justify; line-height: 24px;">
+                <h2 class="main-title mb-3" style="font-size : 45px; font-weight: 900;">Premier Web and Mobile App
+                    Development Firm
+                    Your Trusted Partner for Digital Solutions</h2>
+                For over two decades, we’ve been offering top-tier web and mobile app development services to businesses
+                globally, achieving consistent success in every project. Get access to talented developers at
+                cost-effective rates. Our design-driven approach and streamlined execution guarantee that you receive
+                optimal solutions tailored to your needs.
+                </p>
+                <div><a type="button" href="{{ Route('service') }}" class=" btn submit-org-btn">What we do</a></div>
+            </div>
+            <div class="col-md-7 d-flex justify-content-center" data-aos="fade-left">
+                <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" alt="b1">
+            </div>
+
+        </div>
     </div>
 
 
