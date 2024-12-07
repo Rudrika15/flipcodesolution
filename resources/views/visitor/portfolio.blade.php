@@ -2,6 +2,71 @@
 @section('title')
     <title>Flipcode solutions | Portfolio</title>
 @endsection
+<style>
+    .web-apps-slider .portfolio-item {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .web-apps-slider .portfolio-item h5 {
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    .web-apps-slider img {
+        border-radius: 8px;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .web-apps-slider .portfolio-item {
+        display: inline-block;
+
+    }
+
+    /* Style the dots container */
+    .slick-dots {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        z-index: 100;
+    }
+
+    .slick-dots li {
+        display: inline-block !important;
+    }
+
+    .slick-dots li button {
+        background-color: #ccc;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        padding: 0;
+        margin: 0;
+        transition: background-color 0.3s ease;
+        border: none;
+        text-indent: -9999px;
+        display: block !important;
+        /* Ensure buttons are block elements */
+    }
+
+    .slick-dots li button span {
+        display: none !important;
+        /* Hide any text or numbers */
+    }
+
+    /* Active dot style */
+    .slick-dots li.slick-active button {
+        background-color: #FF6600;
+        /* Color for active dot */
+    }
+
+    /* Hover effect for dots */
+    .slick-dots li button:hover {
+        background-color: #FF6600;
+    }
+</style>
 @section('content')
     @php
         $jsonData = [
@@ -101,7 +166,7 @@
                 'industry' => 'BB - Influencer Marketing',
                 'type' => 'app',
             ],
-           
+
             [
                 'image' => url(
                     'https://play-lh.googleusercontent.com/pORULxwQsuyiQLnqe063_sbpqe3lg_WAJHWcN3EleMtP-zjMTQEr4jjkqdq-Oj8n7hj0=w240-h480-rw',
@@ -127,10 +192,11 @@
                 {{-- <div class="section-head col-sm-12" id="portfolio">
                     <h4><span>Portfolio</span></h4>
                 </div> --}}
+
                 <div class="row bg-light">
                     <div class="col-md-12 text-center">
                         <div>
-                            <nav>
+                            {{-- <nav>
                                 <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                                     <button class="nav-link active" style="color:  #FF6600 !important" id="nav-home-tab"
                                         data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab"
@@ -152,9 +218,10 @@
                                                 <div class="portfolio-item">
                                                     <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
                                                         class="img-fluid">
+                                                    <p class="text-muted">{{ $item['industry'] }}</p>
                                                     <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                                    {{-- <p>{{ $item['technology'] }}</p>
-                                                <p>{{ $item['industry'] }}</p> --}}
+                                                    <p>{{ $item['technology'] }}</p>
+
                                                 </div>
                                             </div>
                                         @endforeach
@@ -169,9 +236,9 @@
                                                     <div class="portfolio-item">
                                                         <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
                                                             class="img-fluid">
+                                                        <p class="text-muted">{{ $item['industry'] }}</p>
                                                         <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                                        {{-- <p>{{ $item['technology'] }}</p>
-                                                    <p>{{ $item['industry'] }}</p> --}}
+                                                        <p>{{ $item['technology'] }}</p>
                                                     </div>
                                                 </div>
                                             @endif
@@ -187,19 +254,51 @@
                                                     <div class="portfolio-item">
                                                         <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
                                                             class="img-fluid">
+                                                        <p class="text-muted">{{ $item['industry'] }}</p>
                                                         <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                                        {{-- <p>{{ $item['technology'] }}</p>
-                                                    <p>{{ $item['industry'] }}</p> --}}
+                                                        <p>{{ $item['technology'] }}</p>
                                                     </div>
                                                 </div>
                                             @endif
                                         @endforeach
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
+
+
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row mb-5 p-5" style="width: 100%">
+            <h2 class="text-center mb-5">Web Apps</h2>
+            <div class="web-apps-slider">
+                @foreach ($jsonData as $item)
+                    @if (isset($item['type']) && $item['type'] === 'web')
+                        <div class="portfolio-item">
+                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
+                            <p class="text-muted">{{ $item['industry'] }}</p>
+                            <h5 class="pt-3 ">{{ $item['title'] }}</h5>
+                            <p>{{ $item['technology'] }}</p>
+                        </div>
+                    @endif
+                @endforeach
+            </div>
+        </div>
+        <div class="row mb-5 p-5">
+            <h2 class="text-center mb-5">Mobile Apps</h2>
+            <div class="web-apps-slider">
+                @foreach ($jsonData as $item)
+                    @if (isset($item['type']) && $item['type'] === 'app')
+                        <div class="portfolio-item">
+                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
+                            <p class="text-muted">{{ $item['industry'] }}</p>
+                            <h5 class="pt-3">{{ $item['title'] }}</h5>
+                            <p>{{ $item['technology'] }}</p>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         </div>
     </div>

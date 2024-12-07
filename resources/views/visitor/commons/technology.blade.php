@@ -1,11 +1,10 @@
 <style>
-    .nav-tabs .nav-link {
+    .nav-pills .nav-link {
         color: gray;
         /* Inactive tab color */
     }
 
-    .nav-tabs .nav-link.active {
-        color: ;
+    .nav-pills .nav-link.active {
         /* Active tab color */
         border-color: #ff6600;
         background-color: #ff6600 !important;
@@ -24,7 +23,7 @@
         </div>
     </div>
 
-    <ul class="nav nav-tabs justify-content-center" role="tablist">
+    <ul class="nav nav-pills justify-content-center" role="tablist">
         <li class="nav-item">
             <a class="nav-link active" data-bs-toggle="tab" href="#front">Front End</a>
         </li>
@@ -43,7 +42,7 @@
     </ul>
 
     <!-- Tab panes -->
-    <div class="tab-content">
+    <div class="tab-content  mt-4 pb-3" style="padding-left: 11%">
         <div id="front" class="container tab-pane active"><br>
             <div class="container">
                 <div class="row">

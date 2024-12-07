@@ -40,8 +40,8 @@
 
     <div class="container pt-3">
         <div class="row pt-2 w-100">
-            <div data-aos="fade-right" class="col-md-5 h-auto pt-3">
-                <h2 class="text-align pb-1">About Us</h2>
+            <div data-aos="fade-right" class="col-md-5 h-auto" style="margin-top: 120px;">
+                {{-- <h2 class="text-align pb-1">About Us</h2> --}}
                 <p class="text-align  mt-3" style=" font-size:14px; text-align: justify; line-height: 24px;">
                 <h2 class="main-title mb-3" style="font-size : 45px; font-weight: 900;">Premier Web and Mobile App
                     Development Firm

@@ -91,7 +91,7 @@
         </div>
 
         <!-- Benefits Section -->
-        <div class="benefitscontainer container my-5 text-center" data-aos="flip-up" data-aos-duration="1000">
+        {{-- <div class="benefitscontainer container my-5 text-center" data-aos="flip-up" data-aos-duration="1000">
             <div class="section-head col-sm-12">
                 <h4><span>Perks Of</span> Joining </h4>
             </div>
@@ -119,7 +119,7 @@
                     <p>We host happy hours, employee appreciation events, and some awesome team building events.</p>
                 </li>
             </ul>
-        </div>
+        </div> --}}
 
         <!-- Job Openings Section -->
         <div class="current-openings my-5" id="joblistings">
@@ -134,7 +134,7 @@
                                 <div class="job-card">
                                     <div class="row">
                                         <div class="col-md-8">
-                                            <h4>{{ $data['title'] }}</h4>
+                                            <h4>{{ $data['role'] }} ( {{ $data['title'] }})</h4>
                                         </div>
                                         <div class="col-md-4 text-end">
                                             <button class="btn btn-danger rounded-pill" data-title="{{ $data['title'] }}"
@@ -293,45 +293,47 @@
             // Toggle job description visibility with smooth animation
             function toggleDescription(descriptionId) {
                 var description = $('#' + descriptionId);
-    
+
                 // Slide toggle with animation
                 description.slideToggle('slow', function() {
                     // Optionally, you can change the button text when the description is toggled
                     var buttonText = description.is(':visible') ? 'View Less' : 'View More';
-                    $('button[data-title="' + descriptionId.replace('job-description-', '') + '"]').text(buttonText);
+                    $('button[data-title="' + descriptionId.replace('job-description-', '') + '"]').text(
+                        buttonText);
                 });
             }
-    
+
             // Attach click event to dynamically created elements
             $('.btn-danger').click(function() {
-                var descriptionId = $(this).attr('onclick').match(/'([^']+)'/)[1]; // Extracting the ID from onclick attribute
+                var descriptionId = $(this).attr('onclick').match(/'([^']+)'/)[
+                    1]; // Extracting the ID from onclick attribute
                 toggleDescription(descriptionId);
             });
         });
     </script>
-    
+
     <script>
-        $(document).ready(function () {
+        $(document).ready(function() {
             // On form submit
-            $('#applicationForm').on('submit', function (event) {
+            $('#applicationForm').on('submit', function(event) {
                 event.preventDefault();
-    
+
                 // Clear previous errors
                 $('.text-danger').text('');
-    
+
                 var submitButton = $(this).find('button[type="submit"]');
                 var originalButtonText = submitButton.html(); // Store the original button text
                 submitButton.prop('disabled', true).html('Sending...');
-    
+
                 var formData = new FormData(this);
-    
+
                 $.ajax({
                     url: $(this).attr('action'),
                     type: 'POST',
                     data: formData,
                     processData: false,
                     contentType: false,
-                    success: function (response) {
+                    success: function(response) {
                         Swal.fire({
                             title: 'Thank You!',
                             text: 'Thanks for Applying! We will contact you soon...',
@@ -341,12 +343,12 @@
                             $('#applicationForm')[0].reset();
                         });
                     },
-                    error: function (xhr) {
+                    error: function(xhr) {
                         if (xhr.status === 422) { // Laravel validation error
                             var errors = xhr.responseJSON.errors;
-                            
+
                             // Loop through errors and display them below respective input fields
-                            $.each(errors, function (key, value) {
+                            $.each(errors, function(key, value) {
                                 $('#' + key + 'Error').text(value[0]);
                             });
                         } else {
@@ -358,12 +360,11 @@
                             });
                         }
                     },
-                    complete: function () {
+                    complete: function() {
                         submitButton.prop('disabled', false).html(originalButtonText);
                     }
                 });
             });
         });
     </script>
-    
 @endsection
