@@ -67,6 +67,7 @@
         background-color: #FF6600;
     }
 </style>
+
 @section('content')
     @php
         $jsonData = [
@@ -187,16 +188,16 @@
             </div>
         </div>
 
-        <div class="container-fluid pt-3 bg-light">
+        {{-- <div class="container-fluid pt-3 bg-light">
             <div class="container pt-3" id="clients">
-                {{-- <div class="section-head col-sm-12" id="portfolio">
+                <div class="section-head col-sm-12" id="portfolio">
                     <h4><span>Portfolio</span></h4>
-                </div> --}}
+                </div>
 
                 <div class="row bg-light">
                     <div class="col-md-12 text-center">
                         <div>
-                            {{-- <nav>
+                            <nav>
                                 <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                                     <button class="nav-link active" style="color:  #FF6600 !important" id="nav-home-tab"
                                         data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab"
@@ -263,14 +264,14 @@
                                         @endforeach
                                     </div>
                                 </div>
-                            </div> --}}
+                            </div>
 
 
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="row mb-5 p-5" style="width: 100%">
             <h2 class="text-center mb-5">Web Apps</h2>
             <div class="web-apps-slider">
@@ -286,7 +287,7 @@
                 @endforeach
             </div>
         </div>
-        <div class="row mb-5 p-5">
+        <div class="row mb-5 p-5" style="width: 100%">
             <h2 class="text-center mb-5">Mobile Apps</h2>
             <div class="web-apps-slider">
                 @foreach ($jsonData as $item)
