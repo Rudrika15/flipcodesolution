@@ -120,6 +120,7 @@
 
 
     @yield('content')
+    <button id="scrollToTop" title="Go to top">↑</button>
 
     {{-- footer  start ---------------------------------------------------------------------------------------------------------------- --}}
 
@@ -148,11 +149,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
     </script>  --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script src="{{ asset('js/counter.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
 
     <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
@@ -169,6 +172,41 @@
     </script>
     <script>
         AOS.init();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.style.overflowX = 'hidden';
+            document.body.style.overflowX = 'hidden';
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.web-apps-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: false,
+                centerMode: false,
+                infinite: true,
+
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+
+                ]
+            });
+        });
     </script>
 </body>
 
@@ -266,6 +304,31 @@
         </a>
     </div>
 </div>
+<script>
+    // Get the button
+    const scrollToTopButton = document.getElementById("scrollToTop");
+
+    // Show the button when the user scrolls down 20px
+    window.onscroll = function() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopButton.style.display = "block";
+            // in tablet and smaller device it should not to show 
+            if (window.innerWidth < 769) {
+                scrollToTopButton.style.display = "none";
+            }
+        } else {
+            scrollToTopButton.style.display = "none";
+        }
+    };
+
+    // Scroll to the top when the button is clicked
+    scrollToTopButton.onclick = function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+</script>
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
