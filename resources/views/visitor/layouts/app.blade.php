@@ -119,8 +119,8 @@
 
 
 
-    @yield('content')
     <button id="scrollToTop" title="Go to top">↑</button>
+    @yield('content')
 
     {{-- footer  start ---------------------------------------------------------------------------------------------------------------- --}}
 
@@ -179,6 +179,49 @@
             document.body.style.overflowX = 'hidden';
         });
     </script>
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollToTopButton = document.getElementById("scrollToTop");
+
+            if (!scrollToTopButton) {
+                console.error("Scroll to Top button not found in the DOM!");
+                return;
+            }
+
+            // Function to toggle button visibility
+            function toggleScrollToTopButton() {
+                const viewportWidth = window.innerWidth;
+                const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+                console.log("Viewport Width:", viewportWidth);
+                console.log("Scroll Position:", scrollPosition);
+
+                if (viewportWidth >= 769 && scrollPosition > 20) {
+                    scrollToTopButton.style.display = "block";
+                    console.log("Scroll button shown.");
+                } else {
+                    scrollToTopButton.style.display = "none";
+                    console.log("Scroll button hidden.");
+                }
+            }
+
+            // Add scroll and resize event listeners
+            window.onscroll = toggleScrollToTopButton;
+            window.onresize = toggleScrollToTopButton;
+
+            // Smooth scroll to top
+            scrollToTopButton.onclick = function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            };
+
+            // Initial check
+            toggleScrollToTopButton();
+        });
+    </script>
+
     <script>
         $(document).ready(function() {
             $('.web-apps-slider').slick({
@@ -207,7 +250,68 @@
                 ]
             });
         });
+    </script> --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollToTopButton = document.getElementById("scrollToTop");
+
+            function toggleScrollToTopButton() {
+                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                // console.log("Scroll Position:", scrollPosition);
+
+                if (window.innerWidth >= 769 && scrollPosition > 20) {
+                    scrollToTopButton.style.display = "block";
+                } else {
+                    scrollToTopButton.style.display = "none";
+                }
+            }
+
+            // Smooth scroll to top
+            scrollToTopButton.onclick = function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            };
+
+            // Initialize slider and wait for it to complete
+            $(document).ready(function() {
+                $('.web-apps-slider').on('init', function() {
+                    // console.log("Slick initialized. Rechecking scroll...");
+                    toggleScrollToTopButton(); // Check scroll after slider initialization
+                });
+
+                $('.web-apps-slider').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    dots: true,
+                    arrows: false,
+                    centerMode: false,
+                    infinite: true,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1
+                            },
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 2
+                            },
+                        },
+                    ],
+                });
+            });
+
+            // Add event listeners for scroll and resize
+            window.addEventListener("scroll", toggleScrollToTopButton);
+            window.addEventListener("resize", toggleScrollToTopButton);
+        });
     </script>
+
 </body>
 
 </html>
@@ -304,31 +408,7 @@
         </a>
     </div>
 </div>
-<script>
-    // Get the button
-    const scrollToTopButton = document.getElementById("scrollToTop");
 
-    // Show the button when the user scrolls down 20px
-    window.onscroll = function() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopButton.style.display = "block";
-            // in tablet and smaller device it should not to show 
-            if (window.innerWidth < 769) {
-                scrollToTopButton.style.display = "none";
-            }
-        } else {
-            scrollToTopButton.style.display = "none";
-        }
-    };
-
-    // Scroll to the top when the button is clicked
-    scrollToTopButton.onclick = function() {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    };
-</script>
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
