@@ -26,8 +26,16 @@ body {
     line-height: 24px !important;
     font-size: 14px !important;
     top: 0 !important;
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    /* background-color: transparent !important; */
 }
-
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-y: auto; /* Allow vertical scrolling */
+    }
+}
 /* breadcrumb css of image start */
 
 .parallax {
@@ -442,13 +450,13 @@ a.anchor {
     visibility: hidden;
 }
 
+.filter {
+    filter: grayscale(15%);
+}
+
 /* navbar */
 .nav-logo {
     height: 50px;
-}
-
-.filter {
-    filter: grayscale(15%);
 }
 
 @media (max-width: 768px) {
@@ -613,7 +621,6 @@ a.anchor {
     float: left;
     display: inline-block;
     vertical-align: middle;
-
     padding: 6% 2%;
 }
 
@@ -701,12 +708,22 @@ hr {
 /* greeting thanku msg css  End*/
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: white !important;
+    transition: all 0.3s ease-in-out !important;
+    border: none; /* Removes any borders, if present */
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1030; /* Ensures the navbar stays above other content */
 }
 
+/* .navbar.scrolled {
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .nav-link {
+    color: #555 !important;
+} */
 .nav-link {
     font-size: 1.2rem;
     font-weight: 500;
