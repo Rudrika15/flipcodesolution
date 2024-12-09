@@ -78,7 +78,7 @@
     <div class="container mt-5 mb-5">
         <div class="row ">
             <div class="section-head col-sm-12 mb-5">
-                <h4>We Simplify <span>Software Development </span> Process </h4>
+                <h4><span>We Simplify </span> Software Development <span>Process</span> </h4>
             </div>
 
             <div class="col">
@@ -95,7 +95,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash text-danger"
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash text-warning"
                                 style="font-size: 50px;"></i></h3>
                         <h4 class="card-title py-2 text-center">Design</h4>
                         <p class="card-text text-center">Develop the system architecture, UI/UX, and technical
@@ -106,7 +106,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-gear text-warning"
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-gear text-info"
                                 style="font-size: 50px;"></i></h3>
                         <h4 class="card-title py-2 text-center">Development (Build)</h4>
                         <p class="card-text text-center">Write, integrate, and implement the code to create the software.
@@ -117,7 +117,7 @@
             <div class="col">
                 <div class="card">
                     <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-patch-check text-info"
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-patch-check text-danger"
                                 style="font-size: 50px;"></i></h3>
                         <h4 class="card-title py-2 text-center">Testing</h4>
                         <p class="card-text text-center">Validate functionality, performance, and quality through thorough
