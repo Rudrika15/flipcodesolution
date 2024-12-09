@@ -71,7 +71,7 @@
 <body>
 
 
-    <nav class="navbar navbar-expand-lg bg-white navbar-primary">
+    <nav class="navbar  navbar-expand-lg fixed-top bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('img/logo.png') }}" class="nav-logo"></a>
@@ -88,9 +88,6 @@
                         <a class="nav-link text-warning {{ Route::is('about') ? 'active' : '' }}"
                             href="{{ route('about') }}">About</a>
                     </li>
-
-
-
                     <li class="for-active-colored">
                         <a class="nav-link text-warning {{ Route::currentRouteNamed('service') ? 'active' : '' }}"
                             href="{{ route('service') }}">Services</a>
@@ -118,8 +115,8 @@
     </nav>
 
 
-
     <button id="scrollToTop" title="Go to top">↑</button>
+
     @yield('content')
 
     {{-- footer  start ---------------------------------------------------------------------------------------------------------------- --}}
@@ -173,12 +170,7 @@
     <script>
         AOS.init();
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            document.documentElement.style.overflowX = 'hidden';
-            document.body.style.overflowX = 'hidden';
-        });
-    </script>
+
     {{-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const scrollToTopButton = document.getElementById("scrollToTop");
@@ -251,6 +243,18 @@
             });
         });
     </script> --}}
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script> --}}
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const scrollToTopButton = document.getElementById("scrollToTop");
@@ -309,6 +313,26 @@
             // Add event listeners for scroll and resize
             window.addEventListener("scroll", toggleScrollToTopButton);
             window.addEventListener("resize", toggleScrollToTopButton);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const applyOverflowRestriction = () => {
+                if (window.innerWidth <= 768 && window.innerWidth <= 1024) {
+                    document.documentElement.style.overflowX = 'hidden';
+                    document.body.style.overflowX = 'hidden';
+                    document.body.style.overflowY = 'auto';
+                    document.documentElement.style.overflowY = 'auto';
+                } else {
+                    document.documentElement.style.overflowX = '';
+                    document.body.style.overflowX = '';
+                    document.body.style.overflowY = '';
+                    document.documentElement.style.overflowY = '';
+                }
+            };
+
+            applyOverflowRestriction();
+            window.addEventListener('resize', applyOverflowRestriction);
         });
     </script>
 
@@ -398,13 +422,13 @@
 <div id="mobile-freez-icon">
     <a id="free_quote_1" href="{{ route('contact') }}"><i class="fa fa-envelope"></i> Get Help
         Now</a>
-    <div class="wp-phone text-center">
+    <div class="wp-phone d-flex align-items-center justify-content-center">
         <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i
-                class="bi bi-whatsapp ps-3 pt-2"></i></a>
+                class="bi bi-whatsapp pt-2"></i></a>
     </div>
-    <div class="phone text-center">
+    <div class="phone  d-flex align-items-center justify-content-center">
         <a href="tel:+919979404044" rel="nofollow">
-            <i class="bi bi-telephone-fill ps-3 pt-2"></i>
+            <i class="bi bi-telephone-fill pt-2"></i>
         </a>
     </div>
 </div>
@@ -412,21 +436,3 @@
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
-
-{{-- <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const navbar = document.querySelector('.navbar');
-        const navbarLogo = document.querySelector('.nav-logo');
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 100) {
-                navbar.classList.remove('transparent');
-                navbar.classList.add('sticky');
-                navbarLogo.classList.add('filter');
-            } else {
-                navbar.classList.remove('sticky');
-                navbar.classList.add('transparent');
-                navbarLogo.classList.remove('filter');
-            }
-        });
-    });
-</script> --}}

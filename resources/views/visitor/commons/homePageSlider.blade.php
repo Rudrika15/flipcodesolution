@@ -1,6 +1,6 @@
 
 {{-- -------------------------------------------------------------- VIDEO DIV --------------------------------------------------------------- - --}}
-<div class="video-container">
+<div class="video-container position-relative top-0">
     <video id="video-background" autoplay muted loop>
         <source src="{{ asset('img/1.mp4') }}" type="video/mp4">
         <!-- Add other video sources if needed -->
