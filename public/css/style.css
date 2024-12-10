@@ -1153,3 +1153,36 @@ logo Slider .logo-slider {
     background-color: #ff6600;
     transform: scale(1.1);
 }
+
+/* respnosive home page main-title */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main-title {
+        font-size: 27px !important;
+        margin-top: none !important;
+    }
+    .main-title-container {
+        margin-top: none !important;
+        padding-top: none !important;
+    }
+    .main-title-container .row .col-md-5 {
+        margin-top: 0px !important;
+        padding-top: none !important;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 800px) {
+    .main-title {
+        font-size: 35px !important;
+    }
+    .main-title-container .row .col-md-5 {
+        margin-top: 0px !important;
+        padding-top: none !important;
+    }
+    .main-title-container .row .col-md-7 .img-fluid {
+        margin-top: none !important;
+        padding-top: none !important;
+    }
+}
