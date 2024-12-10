@@ -272,35 +272,41 @@
                 </div>
             </div>
         </div> --}}
-        <div class="row mb-5 p-5" style="width: 100%">
-            <h2 class="text-center mb-5">Web Apps</h2>
-            <div class="web-apps-slider">
-                @foreach ($jsonData as $item)
-                    @if (isset($item['type']) && $item['type'] === 'web')
-                        <div class="portfolio-item">
-                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
-                            <p class="text-muted">{{ $item['industry'] }}</p>
-                            <h5 class="pt-3 ">{{ $item['title'] }}</h5>
-                            <p>{{ $item['technology'] }}</p>
-                        </div>
-                    @endif
-                @endforeach
+        <div class="container-fluid overflow-x-hidden">
+            <div class="row mb-5 p-5 ">
+                <h2 class="text-center mb-5">Web Apps</h2>
+                <div class="web-apps-slider">
+                    @foreach ($jsonData as $item)
+                        @if (isset($item['type']) && $item['type'] === 'web')
+                            <div class="portfolio-item">
+                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
+                                <p class="text-muted">{{ $item['industry'] }}</p>
+                                <h5 class="pt-3 ">{{ $item['title'] }}</h5>
+                                <p>{{ $item['technology'] }}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
-        <div class="row mb-5 p-5" style="width: 100%">
-            <h2 class="text-center mb-5">Mobile Apps</h2>
-            <div class="web-apps-slider">
-                @foreach ($jsonData as $item)
-                    @if (isset($item['type']) && $item['type'] === 'app')
-                        <div class="portfolio-item">
-                            <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
-                            <p class="text-muted">{{ $item['industry'] }}</p>
-                            <h5 class="pt-3">{{ $item['title'] }}</h5>
-                            <p>{{ $item['technology'] }}</p>
-                        </div>
-                    @endif
-                @endforeach
+
+        <div class="container-fluid overflow-x-hidden">
+            <div class="row mb-5 p-5">
+                <h2 class="text-center mb-5">Mobile Apps</h2>
+                <div class="web-apps-slider">
+                    @foreach ($jsonData as $item)
+                        @if (isset($item['type']) && $item['type'] === 'app')
+                            <div class="portfolio-item">
+                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
+                                <p class="text-muted">{{ $item['industry'] }}</p>
+                                <h5 class="pt-3">{{ $item['title'] }}</h5>
+                                <p>{{ $item['technology'] }}</p>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
+
     </div>
 @endsection
