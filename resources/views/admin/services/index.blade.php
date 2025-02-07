@@ -1,85 +1,79 @@
 @extends('admin.layouts.app')
 
 @section('content')
-
-<div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="row justify-content-between align-items-center w-100">
-            <div class="col">
-                <h2>Service Management</h2>
-            </div>
-            <div class="col-auto">
-                <a class="btn btn-success" href="{{ route('services.create') }}">Create New Service</a>
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="row justify-content-between align-items-center w-100">
+                <div class="col">
+                    <h2>Service Management</h2>
+                </div>
+                <div class="col-auto">
+                    <a class="btn btn-success" href="{{ route('services.create') }}">Create New Service</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
-@if ($message = Session::get('success'))
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
 
-<div class="alert alert-success">
+            <p>{{ $message }}</p>
 
-    <p>{{ $message }}</p>
+        </div>
+    @endif
 
-</div>
+    <div class="mt-3">
 
-@endif
+        <table class="table table-bordered">
 
-<div class="mt-3">
+            <tr>
+                <th>ID</th>
 
-    <table class="table table-bordered">
+                <th>Title</th>
 
-        <tr>
-            <th>ID</th>
+                <th>Photo</th>
 
-            <th>Title</th>
+                <th>Detail</th>
 
-            <th>Photo</th>
+                <th width="280px">Action</th>
 
-            <th>Detail</th>
+            </tr>
 
-            <th width="280px">Action</th>
+            @foreach ($services as $service)
+                <tr>
 
-        </tr>
+                    <td>{{ ++$i }}</td>
+                    <td>{{ $service->title }}</td>
+                    <td>
+                        <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="img-thumbnail" height="150px"
+                            width="150px" alt="serviceImage">
+                    <td>{!! $service->detail !!}</td>
+                    </td>
 
-        @foreach ($services as $service)
+                    <td>
 
-        <tr>
+                        <form action="{{ route('services.destroy', $service->id) }}" enctype="multipart/form-data"
+                            method="POST">
 
-            <td>{{ ++$i }}</td>
-            <td>{{ $service->title }}</td>
-            <td><img src="{{asset('serviceImages')}}/{{ $service->photo }}" class="img-thumbnail" height="150px"
-                    width="150px" alt="">
-            <td>{!! $service->detail !!}</td>
-            </td>
+                            <a class="btn btn-info" href="{{ route('services.show', $service->id) }}">Show</a>
 
-            <td>
+                            <a class="btn btn-primary" href="{{ route('services.edit', $service->id) }}">Edit</a>
 
-                <form action="{{ route('services.destroy',$service->id) }}" enctype="multipart/form-data" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
 
-                    <a class="btn btn-info" href="{{ route('services.show',$service->id) }}">Show</a>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
 
-                    <a class="btn btn-primary" href="{{ route('services.edit',$service->id) }}">Edit</a>
+        </table>
 
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
-
-                </form>
-            </td>
-        </tr>
-
-        @endforeach
-
-    </table>
-
-</div>
+    </div>
 
 
 
-{!! $services->links() !!}
-
-
-
+    {!! $services->links() !!}
 @endsection

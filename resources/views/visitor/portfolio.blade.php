@@ -2,6 +2,10 @@
 @section('title')
     <title>Flipcode solutions | Portfolio</title>
 @endsection
+@section('meta')
+    <meta name="description"
+        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting. We are a leading IT company that offers a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+@endsection
 <style>
     .web-apps-slider .portfolio-item {
         padding: 10px;
@@ -279,7 +283,8 @@
                     @foreach ($jsonData as $item)
                         @if (isset($item['type']) && $item['type'] === 'web')
                             <div class="portfolio-item">
-                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
+                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" alt="{{ $item['title'] }}"
+                                    class="img-fluid">
                                 <p class="text-muted">{{ $item['industry'] }}</p>
                                 <h5 class="pt-3 ">{{ $item['title'] }}</h5>
                                 <p>{{ $item['technology'] }}</p>
@@ -297,7 +302,8 @@
                     @foreach ($jsonData as $item)
                         @if (isset($item['type']) && $item['type'] === 'app')
                             <div class="portfolio-item">
-                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="img-fluid">
+                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" alt="{{ $item['title'] }}"
+                                    class="img-fluid">
                                 <p class="text-muted">{{ $item['industry'] }}</p>
                                 <h5 class="pt-3">{{ $item['title'] }}</h5>
                                 <p>{{ $item['technology'] }}</p>

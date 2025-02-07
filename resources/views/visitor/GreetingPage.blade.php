@@ -1,8 +1,12 @@
 @extends('visitor.layouts.app')
 @section('title')
     <title>Flipcode solutions | Contact</title>
+@endsection
+@section('meta')
+    <meta name="description"
+        content="Welcome to Flipcode Solutions, a leading IT company that offers a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting. We are always here to help you bring your ideas to life.">
+@endsection
 @section('content')
-
     <div class="bg-image"
         style="background: url({{ asset('img/banner3.jpg') }}) no-repeat center;
     padding: 30px 0px 30px;

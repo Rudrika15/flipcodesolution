@@ -1,11 +1,15 @@
 @extends('visitor.layouts.app')
 @section('title')
     <title>Flipcode solutions | About</title>
-    <style>
-        div.p {
-            word-wrap: break-word;
-        }
-    </style>
+@endsection
+<style>
+    div.p {
+        word-wrap: break-word;
+    }
+</style>
+@section('meta')
+    <meta name="description"
+        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
 @endsection
 @section('content')
     <div class="container-fluid ">
@@ -47,7 +51,7 @@
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <img src="{{ asset('img/about.png') }}" class="img-fluid " style="max-height: 440px; width:500px;"
-                        alt="b1">
+                        alt="aboutImg">
                 </div>
             </div>
             <div class="row">

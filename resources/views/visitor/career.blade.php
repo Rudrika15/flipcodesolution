@@ -2,6 +2,10 @@
 @section('title')
     <title>Flipcode solutions | Career</title>
 @endsection
+@section('meta')
+    <meta name="description"
+        content="Join our team at Flipcode Solutions and explore exciting career opportunities in front-end development, particularly with React.js. We are seeking passionate individuals eager to grow and innovate in a dynamic IT environment.">
+@endsection
 @php
     $jsonData = [
         [

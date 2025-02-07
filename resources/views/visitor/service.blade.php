@@ -2,6 +2,10 @@
 @section('title')
     <title>Flipcode solutions | Services</title>
 @endsection
+@section('meta')
+    <meta name="description"
+        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+@endsection
 @section('content')
     <div class="container-fluid ">
         <div class="image-fluid header-career">
@@ -77,7 +81,7 @@
                             <div class="col-md-6">
                                 <div class=" w-100 p-5">
                                     <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                        alt="b1">
+                                        alt="service">
 
                                 </div>
 
@@ -87,7 +91,7 @@
                             <div class="col-md-6">
                                 <div class=" w-100 p-5">
                                     <img src="{{ asset('img/webdev.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                        alt="b1">
+                                        alt="service2">
                                 </div>
                             </div>
                             <div class="col-md-6 mt-5">
@@ -168,7 +172,7 @@
                             <div class="col-md-6">
                                 <div class=" w-100 p-5">
                                     <img src="{{ asset('img/mob-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                        alt="b1">
+                                        alt="service3">
                                 </div>
                             </div>
                         </div>
@@ -176,7 +180,7 @@
                             <div class="col-md-6">
                                 <div class=" w-100 p-5">
                                     <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                        alt="b1">
+                                        alt="service4">
                                 </div>
                             </div>
                             <div class="col-md-6 mt-5">
@@ -228,7 +232,7 @@
                             <div class="col-md-6">
                                 <div class=" w-100 p-5">
                                     <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                        alt="b1">
+                                        alt="service5">
                                 </div>
                             </div>
                         </div>
@@ -236,7 +240,7 @@
                             <div class="col-md-6">
                                 <div class=" w-100 p-5">
                                     <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image"
-                                        alt="b1">
+                                        alt="service6">
                                 </div>
                             </div>
                             <div class="col-md-6 mt-5">

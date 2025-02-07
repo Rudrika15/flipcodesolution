@@ -2,6 +2,10 @@
 @section('title')
     <title>Flipcode solutions | Contact</title>
 @endsection
+@section('meta')
+    <meta name="description"
+        content="Contact us for any inquiries or collaboration opportunities. We're here to help you bring your ideas to life.">
+@endsection
 @section('content')
     <div class="container-fluid ">
         <div class="image-fluid header-career">

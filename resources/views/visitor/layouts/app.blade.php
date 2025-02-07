@@ -5,7 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('title')
-    <title>Document</title>
+    @yield('meta')
+    <meta name="keywords"
+        content="web development company surendranagar,web development company, software development company,
+         software development company, e-commerce solutions, digital marketing, IT consulting, software development, 
+         web application development, mobile app development, IT services, web design, web development, software solutions,
+         IT solutions, e-commerce solutions, digital marketing, IT consulting,IT company surendranagar">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Flipcode Solutions - Leading IT Company">
+    <meta property="og:description"
+        content="At Flipcode Solutions, we offer a wide range of IT services including web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+    <meta property="og:image" content=" {{ asset('img/logo.png') }}">
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Flipcode Solutions - Leading IT Company">
+    <meta name="twitter:description"
+        content="At Flipcode Solutions, we offer a wide range of IT services including web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+    <meta name="twitter:image" content="{{ asset('img/logo.png') }}">
+
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -14,7 +35,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('img/faviconImg.png') }}">
+    <link rel="icon" alt="favicon" type="image/x-icon" href="{{ asset('img/faviconImg.png') }}">
     {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -74,7 +95,15 @@
     <nav class="navbar  navbar-expand-lg fixed-top bg-transparent">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="{{ asset('img/logo.png') }}" class="nav-logo"></a>
+                <img src="{{ asset('img/logo.png') }}"
+                    srcset="{{ asset('img/logo.png') }} 600w, 
+                    {{ asset('img/logo.png') }} 1200w, 
+                     {{ asset('img/logo.png') }} 2000w"
+                    sizes="(max-width: 600px) 100vw, 
+                    (max-width: 1200px) 50vw, 
+                    33vw"
+                    alt="logo" class="nav-logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">

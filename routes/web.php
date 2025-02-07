@@ -13,6 +13,7 @@ use App\Http\Controllers\admin\TechnologyController;
 use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\visitor\VisitorController;
 use App\Http\Controllers\HomeController;
+use App\Models\Blog;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,53 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+use Illuminate\Support\Facades\Response;
+
+Route::get('/sitemap.xml', function () {
+    $urls = [
+        [
+            'loc' => url('/'),
+            'lastmod' => now()->toAtomString(),
+            'changefreq' => 'daily',
+            'priority' => '1.0',
+        ],
+        [
+            'loc' => url('/about'),
+            'lastmod' => now()->toAtomString(),
+            'changefreq' => 'monthly',
+            'priority' => '0.8',
+        ],
+    ];
+
+    // Add dynamic URLs (Example: Blog Posts)
+    $posts = Blog::latest()->get();
+    foreach ($posts as $post) {
+        $urls[] = [
+            'loc' => url("/posts/{$post->slug}"),
+            'lastmod' => $post->updated_at->toAtomString(),
+            'changefreq' => 'weekly',
+            'priority' => '0.9',
+        ];
+    }
+
+    // Generate XML
+    $xml = view('sitemap', compact('urls'))->render();
+    return Response::make($xml, 200)->header('Content-Type', 'application/xml');
+});
+
+Route::get('/robots.txt', function () {
+    $content = "User-agent: *\n";
+    $content .= "Disallow: /admin\n";  // Prevent search engines from indexing /admin
+    $content .= "Sitemap: " . url('/sitemap.xml') . "\n";
+
+    return Response::make($content, 200)->header('Content-Type', 'text/plain');
+});
+
+
+
+
 
 Route::get('/admin', function () {
     return view('home');

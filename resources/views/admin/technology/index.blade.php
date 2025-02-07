@@ -1,84 +1,76 @@
 @extends('admin.layouts.app')
 
 @section('content')
-
-<div class="row">
-    <div class="col-lg-12 margin-tb">
-        <div class="row justify-content-between align-items-center w-100">
-            <div class="col">
-                <h2>Technology Management</h2>
-            </div>
-            <div class="col-auto">
-                <a class="btn btn-success" href="{{ route('technology.create') }}">Create New Technology</a>
+    <div class="row">
+        <div class="col-lg-12 margin-tb">
+            <div class="row justify-content-between align-items-center w-100">
+                <div class="col">
+                    <h2>Technology Management</h2>
+                </div>
+                <div class="col-auto">
+                    <a class="btn btn-success" href="{{ route('technology.create') }}">Create New Technology</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
 
 
-@if ($message = Session::get('success'))
+    @if ($message = Session::get('success'))
+        <div class="alert alert-success">
 
-<div class="alert alert-success">
+            <p>{{ $message }}</p>
 
-    <p>{{ $message }}</p>
+        </div>
+    @endif
 
-</div>
+    <div class="mt-3">
 
-@endif
+        <table class="table table-bordered">
 
-<div class="mt-3">
+            <tr>
+                <th>ID</th>
 
-    <table class="table table-bordered">
+                <th>Tech Name</th>
 
-        <tr>
-            <th>ID</th>
+                <th>Photo</th>
 
-            <th>Tech Name</th>
+                <th>Details</th>
 
-            <th>Photo</th>
+                <th width="280px">Action</th>
 
-            <th>Details</th>
+            </tr>
 
-            <th width="280px">Action</th>
+            @foreach ($technology as $technology)
+                <tr>
 
-        </tr>
+                    <td>{{ ++$i }}</td>
+                    <td>{{ $technology->techname }}</td>
+                    <td><img src="{{ asset('technologyImages') }}/{{ $technology->photo }}" class="img-thumbnail"
+                            height="150px" width="150px" alt="technologyImage"></td>
+                    <td>{!! $technology->detail !!}</td>
+                    <td>
 
-        @foreach ($technology as $technology)
+                        <form action="{{ route('technology.destroy', $technology->id) }}" method="POST">
 
-        <tr>
+                            <a class="btn btn-info" href="{{ route('technology.show', $technology->id) }}">Show</a>
 
-            <td>{{ ++$i }}</td>
-            <td>{{ $technology->techname }}</td>
-            <td><img src="{{asset('technologyImages')}}/{{ $technology->photo }}" class="img-thumbnail" height="150px"
-                    width="150px" alt=""></td>
-            <td>{!! $technology->detail !!}</td>
-            <td>
+                            <a class="btn btn-primary" href="{{ route('technology.edit', $technology->id) }}">Edit</a>
 
-                <form action="{{ route('technology.destroy',$technology->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete</button>
 
-                    <a class="btn btn-info" href="{{ route('technology.show',$technology->id) }}">Show</a>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
 
-                    <a class="btn btn-primary" href="{{ route('technology.edit',$technology->id) }}">Edit</a>
+        </table>
 
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" class="btn btn-danger">Delete</button>
-
-                </form>
-            </td>
-        </tr>
-
-        @endforeach
-
-    </table>
-
-</div>
+    </div>
 
 
 
-{{-- {!! $technology->links() !!} --}}
-
-
-
+    {{-- {!! $technology->links() !!} --}}
 @endsection

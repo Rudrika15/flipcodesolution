@@ -2,6 +2,10 @@
 @section('title')
     <title>Flipcode solutions | Home</title>
 @endsection
+@section('meta')
+    <meta name="description"
+        content="Flipcode Solutions is a leading IT company that offers a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+@endsection
 @section('content')
     {{-- slider --}}
     @include('visitor.commons.homePageSlider')
@@ -55,7 +59,7 @@
                 <div><a type="button" href="{{ Route('service') }}" class=" btn submit-org-btn">What we do</a></div>
             </div>
             <div class="col-md-7 d-flex justify-content-center" data-aos="fade-left">
-                <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" alt="b1">
+                <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" alt="aboutImage">
             </div>
 
         </div>
