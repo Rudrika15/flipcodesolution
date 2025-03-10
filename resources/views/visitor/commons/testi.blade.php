@@ -12,8 +12,11 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active display-item">
-                <img src="img/testi-bg.jpg" class="d-block testi-p" style="height:300px;width:100%"
-                    alt="backgroundImage">
+                <picture>
+                    <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
+                    <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
+                        style="height:300px;width:100%" alt="backgroundImage">
+                </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
                         <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -27,8 +30,11 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/testi-bg.jpg" class="d-block testi-p" style="height:300px;width:100%"
-                    alt ="backgroundImage">
+                <picture>
+                    <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
+                    <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
+                        style="height:300px;width:100%" alt ="backgroundImage">
+                </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
                         <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -43,8 +49,11 @@
             </div>
 
             <div class="carousel-item">
-                <img src="img/testi-bg.jpg" class="d-block testi-p" style="height:300px;width:100%"
-                    alt="backgroundImage">
+                <picture>
+                    <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
+                    <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
+                        style="height:300px;width:100%" alt="backgroundImage">
+                </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
                         <i class="fa-solid fa-quote-left quote-icon"></i>
@@ -59,8 +68,11 @@
             </div>
 
             <div class="carousel-item">
-                <img src="img/testi-bg.jpg" class="d-block testi-p" style="height:300px;width:100%"
-                    alt="backgroundImage">
+                <picture>
+                    <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
+                    <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
+                        style="height:300px;width:100%" alt="backgroundImage">
+                </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
                         <i class="fa-solid fa-quote-left quote-icon"></i>

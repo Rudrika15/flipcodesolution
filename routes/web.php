@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\ServiceController;
 use App\Http\Controllers\visitor\VisitorController;
 use App\Http\Controllers\HomeController;
 use App\Models\Blog;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,6 +30,11 @@ use Illuminate\Support\Facades\Route;
 
 
 use Illuminate\Support\Facades\Response;
+
+Route::get('/convert-images', function () {
+    Artisan::call('convert:images');
+    return Response::make('Images converted successfully.', 200);
+});
 
 Route::get('/sitemap.xml', function () {
     $urls = [
@@ -98,7 +104,7 @@ Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('roles', RoleController::class);
     Route::resource('users', UserController::class);
-    Route::resource('blogs', BlogController::class);
+    // Route::resource('blogs', BlogController::class);
     Route::resource('permissions', PermissionController::class);
     Route::get('/admin/about', [AboutController::class, 'index'])->name('admin.about');
 

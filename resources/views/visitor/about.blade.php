@@ -2,15 +2,16 @@
 @section('title')
     <title>Flipcode solutions | About</title>
 @endsection
+
+@section('meta')
+    <meta name="description"
+        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+@endsection
 <style>
     div.p {
         word-wrap: break-word;
     }
 </style>
-@section('meta')
-    <meta name="description"
-        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
-@endsection
 @section('content')
     <div class="container-fluid ">
         <div class="image-fluid header-career">
@@ -50,8 +51,11 @@
 
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
-                    <img src="{{ asset('img/about.png') }}" class="img-fluid " style="max-height: 440px; width:500px;"
-                        alt="aboutImg">
+                    <picture>
+                        <source srcset="{{ asset('img/about.webp') }}" type="image/webp">
+                        <img src="{{ asset('img/about.png') }}" class="img-fluid " style="max-height: 440px; width:500px;"
+                            alt="aboutImg">
+                    </picture>
                 </div>
             </div>
             <div class="row">

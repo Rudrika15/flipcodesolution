@@ -59,7 +59,10 @@
                 <div><a type="button" href="{{ Route('service') }}" class=" btn submit-org-btn">What we do</a></div>
             </div>
             <div class="col-md-7 d-flex justify-content-center" data-aos="fade-left">
-                <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" alt="aboutImage">
+                <picture>
+                    <source srcset="{{ asset('img/about.webp') }}" type="image/webp">
+                    <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4 about-img" alt="aboutImage">
+                </picture>
             </div>
 
         </div>

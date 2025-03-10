@@ -1,7 +1,11 @@
 <footer id="picassoFooter">
     <div class="footer-content">
         <div class="footer-section footer-logo">
-            <img src="img/newLogo.png" alt="logo"style="width: 70px; height: 70px;">
+            <picture>
+                <source loading="lazy" srcset="{{ asset('img/newLogo.webp') }}" type="image/webp">
+                <img loading="lazy" src="{{ asset('img/newLogo.png') }}" alt="footer-logo"
+                    style="width: 70px; height: 70px;">
+            </picture>
             <h2>Flipcode Solutions</h2>
             <p>Innovating the future, one brushstroke at a time.</p>
         </div>
@@ -56,7 +60,7 @@
         <a class="text-white" href="#"> Flipcodesolution Private Limited</a>
     </div>
 </footer>
-<script>
+{{-- <script>
     window.onload = function() {
         const canvas = document.getElementById('picassoCanvas');
         const ctx = canvas.getContext('2d');
@@ -166,4 +170,4 @@
             });
         });
     };
-</script>
+</script> --}}

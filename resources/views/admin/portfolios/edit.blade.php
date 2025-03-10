@@ -4,162 +4,19 @@
 
 @section('content')
 
-<div class="row">
+    <div class="row">
 
-    <div class="col-lg-12 margin-tb">
+        <div class="col-lg-12 margin-tb">
 
-        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex justify-content-between align-items-center">
 
-            <h2>Edit Portfolio</h2>
+                <h2>Edit Portfolio</h2>
 
-        </div>
+            </div>
 
-        <div class="d-flex justify-content-end mb-3">
+            <div class="d-flex justify-content-end mb-3">
 
-            <a class="btn btn-primary" href="{{ route('portfolios.index') }}"> Back</a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-@if ($errors->any())
-
-<div class="alert alert-danger">
-
-    <strong>Whoops!</strong> There were some problems with your input.<br><br>
-
-    <ul>
-
-        @foreach ($errors->all() as $error)
-
-        <li>{{ $error }}</li>
-
-        @endforeach
-
-    </ul>
-
-</div>
-
-@endif
-
-
-
-<form action="{{ route('portfolios.update',$portfolios->id) }}" enctype="multipart/form-data" method="POST">
-
-    @csrf
-
-    @method('PUT')
-
-    <div class="card">
-
-        <div class="card-body">
-
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <div class="form-group">
-
-                        <strong>Tech ID:</strong>
-
-                        <input type="text" name="techid" value="{{$portfolios->techid}}" class="form-control"
-                            placeholder="Tech ID">
-
-                        @if ($errors->has('techid'))
-
-                        <span class="text-danger">{{ $errors->first('techid') }}</span>
-
-                        @endif
-
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <div class="form-group">
-
-                        <strong>Name:</strong>
-
-                        <input type="text" name="name" value="{{$portfolios->name}}" class="form-control"
-                            placeholder="Name">
-
-                        @if ($errors->has('name'))
-
-                        <span class="text-danger">{{ $errors->first('name') }}</span>
-
-                        @endif
-
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <div class="form-group">
-
-                        <strong>Photo:</strong>
-
-                        <input type="file" name="photo" value="{{$portfolios->photo}}" class="form-control"
-                            placeholder="Photo">
-
-                        @if ($errors->has('photo'))
-
-                        <span class="text-danger">{{ $errors->first('photo') }}</span>
-
-                        @endif
-
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <div class="form-group">
-
-                        <strong>Link:</strong>
-
-                        <input type="text" name="link" value="{{$portfolios->link}}" class="form-control"
-                            placeholder="Link">
-
-                        @if ($errors->has('link'))
-
-                        <span class="text-danger">{{ $errors->first('link') }}</span>
-
-                        @endif
-
-                    </div>
-
-                </div>
-
-                <div class="col-xs-12 col-sm-12 col-md-12">
-
-                    <div class="form-group">
-
-                        <strong>Detail:</strong>
-
-                        <textarea class="ckeditor form-control" style="height:150px" name="detail"
-                            placeholder="Detail">{{$portfolios->techid}}</textarea>
-
-                        @if ($errors->has('detail'))
-
-                        <span class="text-danger">{{ $errors->first('detail') }}</span>
-
-                        @endif
-
-                    </div>
-
-                </div>
-
-                <div class="col-md-12 text-center mt-3">
-
-                    <button type="submit" class="btn btn-primary">Submit</button>
-
-                </div>
+                <a class="btn btn-primary" href="{{ route('portfolios.index') }}"> Back</a>
 
             </div>
 
@@ -168,16 +25,144 @@
     </div>
 
 
-</form>
 
-<!-- Include CKEditor library -->
-<script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    @if ($errors->any())
+        <div class="alert alert-danger">
+
+            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+
+            <ul>
+
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+
+            </ul>
+
+        </div>
+    @endif
+
+
+
+    <form action="{{ route('portfolios.update', $portfolios->id) }}" enctype="multipart/form-data" method="POST">
+
+        @csrf
+
+        @method('PUT')
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <div class="row">
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="form-group">
+
+                            <strong>Tech ID:</strong>
+
+                            <input type="text" name="techid" value="{{ $portfolios->techid }}" class="form-control"
+                                placeholder="Tech ID">
+
+                            @if ($errors->has('techid'))
+                                <span class="text-danger">{{ $errors->first('techid') }}</span>
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="form-group">
+
+                            <strong>Name:</strong>
+
+                            <input type="text" name="name" value="{{ $portfolios->name }}" class="form-control"
+                                placeholder="Name">
+
+                            @if ($errors->has('name'))
+                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="form-group">
+
+                            <strong>Photo:</strong>
+
+                            <input type="file" name="photo" value="{{ $portfolios->photo }}" class="form-control"
+                                placeholder="Photo">
+
+                            @if ($errors->has('photo'))
+                                <span class="text-danger">{{ $errors->first('photo') }}</span>
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="form-group">
+
+                            <strong>Link:</strong>
+
+                            <input type="text" name="link" value="{{ $portfolios->link }}" class="form-control"
+                                placeholder="Link">
+
+                            @if ($errors->has('link'))
+                                <span class="text-danger">{{ $errors->first('link') }}</span>
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+
+                        <div class="form-group">
+
+                            <strong>Detail:</strong>
+
+                            <textarea class="ckeditor form-control" style="height:150px" name="detail" placeholder="Detail">{{ $portfolios->techid }}</textarea>
+
+                            @if ($errors->has('detail'))
+                                <span class="text-danger">{{ $errors->first('detail') }}</span>
+                            @endif
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-12 text-center mt-3">
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </form>
+
+    <!-- Include CKEditor library -->
+    {{-- <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
 
 <script type="text/javascript">
     $(document).ready(function () {
         // Initialize CKEditor on the textarea with ID 'editor'
         CKEDITOR.replace('editor');
     });
-</script>
+</script> --}}
 
 @endsection

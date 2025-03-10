@@ -30,6 +30,14 @@ body {
     overflow-y: auto; */
     /* background-color: transparent !important; */
 }
+
+.headercontent {
+    min-height: 80px; /* Set a fixed height */
+}
+.slider-container {
+    min-height: 400px; /* Reserve space */
+}
+
 @media (max-width: 768px) {
     body {
         overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -462,6 +470,14 @@ a.anchor {
 @media (max-width: 768px) {
     .nav-logo {
         height: 50px;
+    }
+}
+@media (max-width: 576px) {
+    .nav-logo {
+        height: 40px;
+    }
+    .about-img {
+        height: 300px;
     }
 }
 
@@ -1185,4 +1201,19 @@ logo Slider .logo-slider {
         margin-top: none !important;
         padding-top: none !important;
     }
+}
+
+/* app blade css */
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
 }
