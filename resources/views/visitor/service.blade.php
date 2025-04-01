@@ -22,7 +22,7 @@
         </div> --}}
         <style>
             .parallax-container {
-               
+
                 background-size: cover;
                 background-attachment: fixed;
                 background-position: center;
@@ -85,7 +85,7 @@
                         </div>
                         <div class="col-md-6">
 
-                            <div class="parallax-container parallax-effect w-100 p-5" style="background-image: url('{{ url(asset('img/web.jpg')) }}');"  >
+                            <div class="parallax-container parallax-effect w-100 p-5" style="background-image: url('{{ url(asset('img/web.jpg')) }}');">
                                 {{-- <img src="{{ asset('img/web.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1"> --}}
 
                             </div>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
-                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/ITconsultimg.jpg')) }}');" >
+                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/ITconsultimg.jpg')) }}');">
                                 {{-- <img src="{{ asset('img/ITconsultimg.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                     alt="b1"> --}}
                             </div>
@@ -220,7 +220,7 @@
                                 descriptive, predictive, and prescriptive.</p> --}}
                         </div>
                         <div class="col-md-6">
-                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/data-app.jpg')) }}');" >
+                            <div class="parallax-container w-100 p-5" style="background-image: url('{{ url(asset('img/data-app.jpg')) }}');">
                                 {{-- <img src="{{ asset('img/data-app.jpg') }}" class="img-fluid mt-5 fade-up-image"
                                     alt="b1"> --}}
                             </div>
@@ -228,7 +228,7 @@
                     </div>
                     <div class="row py-2">
                         <div class="col-md-6">
-                           
+
                             <div class="w-100 p-5  parallax-container" style=" background-image: url('{{ url(asset('img/ecom.jpg')) }}');">
                                 {{-- <img src="{{ asset('img/ecom.jpg') }}" class="img-fluid mt-5 fade-up-image" alt="b1"> --}}
                             </div>
@@ -261,8 +261,8 @@
                     </div>
                     {{-- end --}}
 
-                   
-                  
+
+
                     {{-- edn --}}
                 </div>
             </div>
@@ -291,8 +291,7 @@
         if($count%2 == 0){
         ?>
             <div class="col-md-4">
-                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
-                    alt="{{ $service->title }}">
+                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top" alt="{{ $service->title }}">
             </div>
             <div class="col-md-8">
                 <h1>{{ $service->title }} </h1>
@@ -307,8 +306,7 @@
                 <p>{!! $service->detail !!}</p>
             </div>
             <div class="col-md-4">
-                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top"
-                    alt="{{ $service->title }}">
+                <img src="{{ asset('serviceImages') }}/{{ $service->photo }}" class="card-img-top" alt="{{ $service->title }}">
             </div>
             <?php } ?>
         </div>
