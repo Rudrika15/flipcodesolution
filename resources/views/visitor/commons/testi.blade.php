@@ -1,6 +1,6 @@
 <div>
 <div class="section-head col-sm-12">
-        <h4><span>Reviews</span></h4>
+        <h4><span>Testimonials</span></h4>
       </div>
 <div id="caresol1" class="carousel slide mb-5" data-bs-ride="carousel">
   <div class="carousel-indicators">

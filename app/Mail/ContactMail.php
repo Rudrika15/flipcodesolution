@@ -14,18 +14,27 @@ class ContactMail extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
+    public $ccAddresses;
+
     /**
      * Create a new message instance.
      */
-    public function __construct($user)
+    public function __construct($user, $ccAddresses = [])
     {
         $this->user = $user;
+        $this->ccAddresses = $ccAddresses;
     }
 
     public function build()
     {
-        return $this->markdown('visitor.emails.contacts')->subject(config('app.name') . ', 
+        $email =  $this->markdown('visitor.emails.contacts')->subject(config('app.name') . ', 
         Contact us');
+        if (!empty($this->ccAddresses)) {
+            $email->cc($this->ccAddresses);
+        }
+
+        return $email;
+
     }
 
     /**
@@ -34,7 +43,7 @@ class ContactMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Contact Mail',
+            subject: 'Received a new contact message from ' . config('app.name'),
         );
     }
 

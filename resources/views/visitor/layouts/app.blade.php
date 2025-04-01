@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('title')
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{asset('css/slider.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/slider.css') }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('img/faviconImg.png') }}">
     {{-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> --}}
@@ -27,180 +28,117 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" media="screen" href="{{asset('css/hoverableSlider.css')}}">
-<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" media="screen" href="{{ asset('css/header.css') }}">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    {{-- ----------flaticon---------- --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@flaticon/flaticon@latest/css/flaticon.css">
+
+    {{-- custom css for carrer page  --}}
+
+    <link rel="stylesheet" href="{{ asset('css/career.css') }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+
+    <!-- jQuery Validation Plugin CSS (optional, if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg">
+
+
+    <nav class="navbar  navbar-expand-lg fixed-top bg-transparent">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('home') }}"><img src=" {{ asset('img/logo.png') }}"  class="nav-logo"></a>
+            <a class="navbar-brand" href="{{ route('home') }}">
+                <img src="{{ asset('img/logo.png') }}" class="nav-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav ms-auto ">
+
+
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('about') ? 'active' : '' }}"
+                        <a class="nav-link text-warning {{ Route::is('about') ? 'active' : '' }}"
                             href="{{ route('about') }}">About</a>
                     </li>
                     <li class="for-active-colored">
-                        <a class="nav-link  {{ Route::currentRouteNamed('service') ? 'active' : '' }}"
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('service') ? 'active' : '' }}"
                             href="{{ route('service') }}">Services</a>
                     </li>
-
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}"
-                            href="{{ route('portfolio') }}">Clients</a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('portfolio') ? 'active' : '' }}"
+                            href="{{ route('portfolio') }}">Portfolio</a>
                     </li>
-
                     <li class="for-active-colored">
-                        <a class="nav-link {{ Route::currentRouteNamed('career') ? 'active' : '' }}"
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('career') ? 'active' : '' }}"
                             href="{{ route('career') }}">Career</a>
                     </li>
-
                     <li class="nav-item blog-title">
-                        <a class="nav-link {{ Route::currentRouteNamed('blog') ? 'active' : '' }}"
-                            href="{{ route('blog') }}">
-                            Blog
-                        </a>
+                        <a class="nav-link text-warning {{ Route::currentRouteNamed('blog') ? 'active' : '' }}"
+                            href="{{ route('blog') }}">Blog</a>
                     </li>
 
-                    <li class="pill-nav">
-                        <a class=" {{ Route::currentRouteNamed('contact') ? 'active' : '' }}"
-                            href="{{ route('contact') }}">Get In Touch</a>
+                    <li class="pill-nav ms-3">
+                        <a class="{{ Route::currentRouteNamed('contact') ? 'active' : '' }} fs-6"
+                            style="font-weight: 500" href="{{ route('contact') }}">Get In Touch</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
+    <button id="scrollToTop" title="Go to top">↑</button>
+
     @yield('content')
 
     {{-- footer  start ---------------------------------------------------------------------------------------------------------------- --}}
 
-    <footer class=" bg-dark text-center text-white ">
-        <!-- Grid container -->
-        <div class="container p-4">
-            <!-- Section: Social media -->
-            <section class="d-flex justify-content-end mb-4 footer-social-link-icons ">
-                <!-- Instagram -->
-                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/flipcodesolutions/"
-                    target="_blank" role="button">
-                    <i class="bi bi-instagram"></i>
-                </a>
-
-                <!-- Facebook -->
-
-                <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.facebook.com/profile.php?id=61553723550979" target="_blank" role="button">
-                    <i class="bi bi-facebook"></i>
-                </a>
-
-                <!-- Linkedin -->
-                <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.linkedin.com/in/flipcode-solutions-8521252a0/" target="_blank" role="button">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-
-            </section>
-            <!-- Section: Social media -->
+    @include('visitor.layouts.footer')
+    {{-- footer  start ---------------------------------------------------------------------------------------------------------------- --}}
 
 
-            <!-- Section: Links -->
-            <section class="footer-links">
-                <!--Grid row-->
-                <div class="row ">
-                    <!--Grid column-->
-                    {{-- <div class="col-lg-3 col-md-6 mb-4 mb-md-0  ">
-                        <img src="img/fCodeFooter.png"  class="h-100 w-100" alt="logo ">
-                    </div> --}}
-                    <!--Grid column-->
 
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 ps-5">
-                        <h5 class="text-uppercase">Quick links</h5>
 
-                        <ul class="list-unstyled mb-0 for-hover">
-                            <li>
-                                <a class="text-white" aria-current="page" href="{{ route('home') }}">Home</a>
-                            </li>
-                            <li>
-                                <a class="text-white" href="{{ route('about') }}">About</a>
-                            </li>
-                            <li>
-                                <a class="text-white" href="{{ route('service') }}">Services</a>
-                            </li>
-                            <li>
-                                <a class="text-white" href="{{ route('contact') }}">Get in Touch</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--Grid column-->
 
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Address</h5>
-                        <p>
-                            FlipCode Solution Private Limited <br>
-                            Nr. Panama Sales, Dalmill road <br>
-                            Surendranagar ,<br>
-                            Gujrat 363001 India
-                        </p>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
-                        <h5 class="text-uppercase">Email</h5>
-                        <a class="text-white"
-                            href="mailto:contact@flipcodesolutions.com">contact@flipcodesolutions.com</a>
-                        <a class="text-white"
-                            href="mailto:career@flipcodesolutions.com">career@flipcodesolutions.com</a>
-                        {{-- <h5 class="text-uppercase mt-4">Contact No</h5>
-                        <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a> --}}
-                    </div>
-                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0 for-hover">
-                    <h5 class="text-uppercase">Contact No</h5>
-                        <a class="text-white" href="tel:9979404044">+91 99 79 40 40 44</a>
-                    </div>
-                    <!--Grid column-->
-                </div>
-                <!--Grid row-->
-            </section>
-            <!-- Section: Links -->
-        </div>
-
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-
-            <span>&copy;</span><span id="demo"></span><span>Copyright</span>
-            <script>
-                const d = new Date();
-                let year = d.getFullYear();
-                document.getElementById("demo").innerHTML = year;
-            </script>
-            <a class="text-white" href="#">flipcodesolutions</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-
-    {{-- footer  end ---------------------------------------------------------------------------------------------------------------- --}}
 
     {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
-    </script> --}} 
-    
+    </script> --}}
+
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
      --}}
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
     {{-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
     </script>
@@ -208,14 +146,196 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js">
     </script>  --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {{-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> --}}
     <script src="{{ asset('js/counter.js') }}"></script>
     <script src="//cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- jQuery Validation Plugin JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+
     <script>
         // Initialize CKEditor on the textarea element
         CKEDITOR.replace('editor', {
             // Optional configuration options can be added here
         });
     </script>
+    <script>
+        AOS.init();
+    </script>
+
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollToTopButton = document.getElementById("scrollToTop");
+
+            if (!scrollToTopButton) {
+                console.error("Scroll to Top button not found in the DOM!");
+                return;
+            }
+
+            // Function to toggle button visibility
+            function toggleScrollToTopButton() {
+                const viewportWidth = window.innerWidth;
+                const scrollPosition = document.body.scrollTop || document.documentElement.scrollTop;
+
+                console.log("Viewport Width:", viewportWidth);
+                console.log("Scroll Position:", scrollPosition);
+
+                if (viewportWidth >= 769 && scrollPosition > 20) {
+                    scrollToTopButton.style.display = "block";
+                    console.log("Scroll button shown.");
+                } else {
+                    scrollToTopButton.style.display = "none";
+                    console.log("Scroll button hidden.");
+                }
+            }
+
+            // Add scroll and resize event listeners
+            window.onscroll = toggleScrollToTopButton;
+            window.onresize = toggleScrollToTopButton;
+
+            // Smooth scroll to top
+            scrollToTopButton.onclick = function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            };
+
+            // Initial check
+            toggleScrollToTopButton();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.web-apps-slider').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                dots: true,
+                arrows: false,
+                centerMode: false,
+                infinite: true,
+
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+
+                ]
+            });
+        });
+    </script> --}}
+    {{-- <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script> --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const scrollToTopButton = document.getElementById("scrollToTop");
+
+            function toggleScrollToTopButton() {
+                const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                // console.log("Scroll Position:", scrollPosition);
+
+                if (window.innerWidth >= 769 && scrollPosition > 20) {
+                    scrollToTopButton.style.display = "block";
+                } else {
+                    scrollToTopButton.style.display = "none";
+                }
+            }
+
+            // Smooth scroll to top
+            scrollToTopButton.onclick = function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                });
+            };
+
+            // Initialize slider and wait for it to complete
+            $(document).ready(function() {
+                $('.web-apps-slider').on('init', function() {
+                    // console.log("Slick initialized. Rechecking scroll...");
+                    toggleScrollToTopButton(); // Check scroll after slider initialization
+                });
+
+                $('.web-apps-slider').slick({
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 3000,
+                    dots: true,
+                    arrows: false,
+                    centerMode: false,
+                    infinite: true,
+                    responsive: [{
+                            breakpoint: 768,
+                            settings: {
+                                slidesToShow: 1
+                            },
+                        },
+                        {
+                            breakpoint: 1024,
+                            settings: {
+                                slidesToShow: 2
+                            },
+                        },
+                    ],
+                });
+            });
+
+            // Add event listeners for scroll and resize
+            window.addEventListener("scroll", toggleScrollToTopButton);
+            window.addEventListener("resize", toggleScrollToTopButton);
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const applyOverflowRestriction = () => {
+                if (window.innerWidth <= 768 && window.innerWidth <= 1024) {
+                    document.documentElement.style.overflowX = 'hidden';
+                    document.body.style.overflowX = 'hidden';
+                    document.body.style.overflowY = 'auto';
+                    document.documentElement.style.overflowY = 'auto';
+                } else {
+                    document.documentElement.style.overflowX = '';
+                    document.body.style.overflowX = '';
+                    document.body.style.overflowY = '';
+                    document.documentElement.style.overflowY = '';
+                }
+            };
+
+            applyOverflowRestriction();
+            window.addEventListener('resize', applyOverflowRestriction);
+        });
+    </script>
+
 </body>
 
 </html>
@@ -300,18 +420,19 @@
 
 {{-- mobile view footer icons --}}
 <div id="mobile-freez-icon">
-    <a id="free_quote_1" href="{{route('contact')}}"><i class="fa fa-envelope"></i> Get Help
+    <a id="free_quote_1" href="{{ route('contact') }}"><i class="fa fa-envelope"></i> Get Help
         Now</a>
-    <div class="wp-phone">
+    <div class="wp-phone d-flex align-items-center justify-content-center">
         <a href="https://api.whatsapp.com/send?phone=+919979404044" target="_blank"><i
-                class="bi bi-whatsapp ps-3 pt-2"></i></a>
+                class="bi bi-whatsapp pt-2"></i></a>
     </div>
-    <div class="phone">
+    <div class="phone  d-flex align-items-center justify-content-center">
         <a href="tel:+919979404044" rel="nofollow">
-            <i class="bi bi-telephone-fill ps-3 pt-2"></i>
+            <i class="bi bi-telephone-fill pt-2"></i>
         </a>
     </div>
 </div>
+
 {{-- mobile view footer icons --}}
 
 <!-- freeze footer -->
