@@ -3,46 +3,22 @@
     <title>Flipcode solutions | Blog</title>
 @endsection
 @section('meta')
-    <meta name="description"
-        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+    <meta name="description" content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
 @endsection
 @section('content')
-    <div class="bg-image"
-        style="background: url({{ asset('img/banner3.jpg') }}) no-repeat center;
-    padding: 30px 0px 30px;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    position: relative;
-    display: grid;
-    align-items: center;
-    text-align: center;
-    z-index: 0;
-            height: 20vh">
-        <div class="container">
-
-            <div style="display: flex;justify-content: center;">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item" style="color: #606060"><a href="/">Home</a></li>
-                        <li class="breadcrumb-item active" style="color: #606060" aria-current="page">Blog</li>
-                    </ol>
-                </nav>
-
-            </div>
+    <div class="image-fluid header-career">
+        <div class="headercontent">
+            <h1 class="display-4 fw-light">Our Insights</h1>
+            <p class="lead">Stay updated with the latest trends, expert opinions, and in-depth analysis from the world of technology, business, and innovation.
+                Explore our articles to gain valuable insights and stay ahead in the digital landscape.
+                For any inquiries, reach out to us at <span>contact@flipcodesolutions.com</span>.
+            </p>
+            <a href="#blog" class="btn btn-dark btn-lg">Read Our Blogs</a>
         </div>
     </div>
     <!-- breadcrumb end -->
     <div class="container py-5">
-        <div class="row py-5">
-            <div class="col-md-12 py-2">
-                <h1>Our Awesome Blog Page</h1>
 
-
-            </div>
-        </div>
         <?php
         $count = 0;
         ?>
@@ -66,11 +42,23 @@
                     $time = $inputTime->diffForHumans($currentTime);
                     ?>
                     <p>
+
                         <i class="bi bi-calendar3"></i><span class="px-3">{{ $time }}</span>
                         {{-- <i class="bi bi-calendar3"></i><span class="px-3">{{$blog->created_at}}</span> --}}
                     </p>
+                    <?php
+                    // Extract only the first two paragraphs
+                    $paragraphs = explode('</p>', $blog->detail);
+                    $limitedContent = implode('</p>', array_slice($paragraphs, 0, 1)) . '</p>';
+                    ?>
 
-                    <a href="/blog-detail/{{ $blog->slug }}" class="btn btn-primary">Read More</a>
+                    <p>{!! $limitedContent !!}</p>
+
+                    @if (count($paragraphs) > 1)
+                        <div class="pill-nav my-2">
+                            <a href="/blog-detail/{{ $blog->slug }}">Read More</a>
+                        </div>
+                    @endif
 
 
                 </div>
@@ -88,12 +76,22 @@
                         {{-- <i class="bi bi-calendar3"></i><span class="px-3">{{$blog->created_at}}</span> --}}
                     </p>
 
-                    <a href="/blog-detail/{{ $blog->slug }}" class="btn btn-primary">Read More</a>
+                    <?php
+                    // Extract only the first two paragraphs
+                    $paragraphs = explode('</p>', $blog->detail);
+                    $limitedContent = implode('</p>', array_slice($paragraphs, 0, 1)) . '</p>';
+                    ?>
 
+                    <p>{!! $limitedContent !!}</p>
+
+                    @if (count($paragraphs) > 1)
+                        <div class="pill-nav my-2">
+                            <a href="/blog-detail/{{ $blog->slug }}">Read More</a>
+                        </div>
+                    @endif
                 </div>
                 <div class="col-md-4">
-                    <img src="{{ asset('blogImages') }}/{{ $blog->photo }}" class="card-img-top"
-                        alt={{ $blog->title }}>
+                    <img src="{{ asset('blogImages') }}/{{ $blog->photo }}" class="card-img-top" alt={{ $blog->title }}>
                 </div>
                 <?php } ?>
             </div>

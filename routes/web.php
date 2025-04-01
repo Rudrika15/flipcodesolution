@@ -96,7 +96,7 @@ Route::get('/career', [VisitorController::class, 'careerPage'])->name('career');
 Route::post('/career/mailSent', [VisitorController::class, 'career_send_mail'])->name('career_send_mail');
 
 Route::post('/contact_mail', [VisitorController::class, 'contact_mail_send'])->name('contact_mail_send');
-// Auth::routes();
+Auth::routes();
 
 Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.home');
 

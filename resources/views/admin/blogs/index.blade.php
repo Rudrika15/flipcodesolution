@@ -39,7 +39,7 @@
                 <th>Details</th>
 
 
-                <th>Tech ID</th>
+                {{-- <th>Tech ID</th> --}}
 
                 <th width="280px">Action</th>
 
@@ -49,11 +49,10 @@
                 <tr>
 
                     <td>{{ $blog->title }}</td>
-                    <td><img src="{{ asset('blogImages') }}/{{ $blog->photo }}" class="img-thumbnail" height="150px"
-                            width="150px" alt="blogImage"></td>
+                    <td><img src="{{ asset('blogImages') }}/{{ $blog->photo }}" class="img-thumbnail" height="150px" width="150px" alt="blogImage"></td>
                     <td>{!! $blog->detail !!}</td>
 
-                    <td>{{ $blog->tech->techname }}</td>
+                    {{-- <td>{{ $blog->tech->techname }}</td> --}}
 
                     <td>
 

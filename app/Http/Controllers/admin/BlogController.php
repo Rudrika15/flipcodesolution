@@ -37,11 +37,11 @@ class BlogController extends Controller
 
             'title' => 'required',
 
-            'photo' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'photo' => 'required|mimes:jpeg,png,jpg,gif,svg',
 
             'detail' => 'required',
 
-            'techid' => 'required',
+            // 'techid' => 'required',
 
         ]);
 
@@ -93,7 +93,7 @@ class BlogController extends Controller
         $request->validate([
             'title' => 'required',
             'detail' => 'required',
-            'techid' => 'required',
+            // 'techid' => 'required',
 
         ]);
 

@@ -40,8 +40,7 @@
 
                             <strong>Title:</strong>
 
-                            <input type="text" name="title" value="{{ $blogs->title }}" class="form-control"
-                                placeholder="Title">
+                            <input type="text" name="title" value="{{ $blogs->title }}" class="form-control" placeholder="Title">
 
                             @if ($errors->has('title'))
                                 <span class="text-danger">{{ $errors->first('title') }}</span>
@@ -57,8 +56,7 @@
 
                             <strong>Photo:</strong>
 
-                            <input type="file" value="{{ $blogs->photo }}" accept="image/*" name="photo"
-                                class="form-control" placeholder="Photo">
+                            <input type="file" value="{{ $blogs->photo }}" accept="image/*" name="photo" class="form-control" placeholder="Photo">
 
                             @if ($errors->has('photo'))
                                 <span class="text-danger">{{ $errors->first('photo') }}</span>
@@ -101,15 +99,15 @@
 
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    {{-- <div class="col-xs-12 col-sm-12 col-md-12">
 
                         <div class="form-group">
 
-                            <strong>Technology:</strong>
+                            <strong>Technology:</strong> --}}
 
-                            {{-- <input type="text" name="techid" class="form-control" placeholder="Tech ID"> --}}
+                    {{-- <input type="text" name="techid" class="form-control" placeholder="Tech ID"> --}}
 
-                            <select class="form-control" name="techid">
+                    {{-- <select class="form-control" name="techid">
                                 @foreach ($technology as $tec)
                                     <option value="{{ $tec->id }}"> {{ $tec->techname }}</option>
                                 @endforeach
@@ -121,7 +119,7 @@
 
                         </div>
 
-                    </div>
+                    </div> --}}
 
                     <div class="col-md-12 text-center mt-3">
 

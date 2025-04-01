@@ -33,7 +33,7 @@ class VisitorController extends Controller
 
     public function blogPage()
     {
-        $blogs = Blog::all();
+        $blogs = Blog::orderBy('created_at', 'desc')->get();
         $currentTime = Carbon::now()->toTimeString();
         return view('visitor.blog', compact('blogs', 'currentTime'));
     }
@@ -41,7 +41,8 @@ class VisitorController extends Controller
     {
         $currentTime = Carbon::now()->toTimeString();
         $slug = $request->id;
-        $blogs = Blog::where('slug', '=', $slug)->first();
+
+        $blogs = Blog::where('slug', 'Like', '%' . $slug . '%')->first();
 
         if ($blogs) {
             return view('visitor.blog-detail', compact('blogs', 'currentTime'));
@@ -113,15 +114,15 @@ class VisitorController extends Controller
     public function career_send_mail(Request $request)
     {
         set_time_limit(0);
-        
+
         $request->validate([
             'fullname' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'phoneNo' => 'required|digits:10',
             'file' => 'required|file|mimes:pdf,doc,docx|max:2048',
-            'city'=>'required',
-            'position'=>'required'
-            
+            'city' => 'required',
+            'position' => 'required'
+
         ], [
             'fullname.required' => 'Full name is required.',
             'email.required' => 'Email is required.',
@@ -133,7 +134,7 @@ class VisitorController extends Controller
             'city.required' => 'City is required.',
             'position.required' => 'Position is required.',
         ]);
-    
+
         // Save data to the Career model
         $career = new Career();
         $career->fullname = $request->fullname;
@@ -144,10 +145,10 @@ class VisitorController extends Controller
         $career->file = time() . '-' . $request->file->getClientOriginalName();
         $request->file->move(storage_path('uploads'), $career->file);
         $career->save();
-        
+
         $attachmentPath = storage_path('uploads/' . $career->file);
-        
-    
+
+
         // Prepare the data for the user mail
         $userData = [
             'name' => $request->fullname,
@@ -157,19 +158,19 @@ class VisitorController extends Controller
             'city' => $request->city,
             'jobTitle' => $request->position,
         ];
-    
+
         // Queue the user email
         Mail::to($career->email)->queue(new CareerMail($userData));
-    
+
         // Queue the admin email with CC addresses and the attachment
         $ccAddresses = ['ravirajsinh.m.gohil@gmail.com', 'parmarjigardhirajlal@gmail.com'];
         Mail::to('flipcodesolutions@gmail.com')
             ->cc($ccAddresses)
             ->queue(new CareerAdminMail($career, $ccAddresses, $attachmentPath));
-    
+
         return redirect('GreetingPage')->with('success', 'Mail sent successfully! Thank you for contacting us.');
     }
-    
+
 
 
     public function GreetingPage()

@@ -1,80 +1,79 @@
 @extends('admin.layouts.app')
 
 @section('content')
+    <div class="row">
 
-<div class="row">
+        <div class="col-lg-12 margin-tb d-flex justify-content-between align-items-center">
 
-    <div class="col-lg-12 margin-tb d-flex justify-content-between align-items-center">
+            <div>
 
-        <div>
+                <h2>Show Blog</h2>
 
-            <h2>Show Blog</h2>
+            </div>
 
-        </div>
+            <div>
 
-        <div>
+                <a class="btn btn-primary" href="{{ route('blogs.index') }}"> Back</a>
 
-            <a class="btn btn-primary" href="{{ route('blogs.index') }}"> Back</a>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-<div class="row">
-
-    <div class="col-xs-12 col-sm-12 col-md-12">
-
-        <div class="form-group">
-
-            <strong>Title:</strong>
-
-            {{ $blogs->title }}
+            </div>
 
         </div>
 
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
 
-        <div class="form-group">
 
-            <strong>Photo:</strong>
+    <div class="row">
 
-            {{ $blogs->photo }}
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-        </div>
+            <div class="form-group">
 
-    </div>
+                <strong>Title:</strong>
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
+                {{ $blogs->title }}
 
-        <div class="form-group">
-
-            <strong>Detail:</strong>
-
-            {!! $blogs->detail !!}
+            </div>
 
         </div>
 
-    </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
 
-        <div class="form-group">
+                <strong>Photo:</strong>
 
-            <strong>Slug:</strong>
+                {{ $blogs->photo }}
 
-            {{ $blogs->slug }}
+            </div>
 
         </div>
 
-    </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
 
-    <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+
+                <strong>Detail:</strong>
+
+                {!! $blogs->detail !!}
+
+            </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+
+            <div class="form-group">
+
+                <strong>Slug:</strong>
+
+                {{ $blogs->slug }}
+
+            </div>
+
+        </div>
+
+        {{-- <div class="col-xs-12 col-sm-12 col-md-12">
 
         <div class="form-group">
 
@@ -84,8 +83,7 @@
 
         </div>
 
+    </div> --}}
+
     </div>
-
-</div>
-
 @endsection

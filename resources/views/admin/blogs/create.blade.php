@@ -93,15 +93,15 @@
 
                     </div>
 
-                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    {{-- <div class="col-xs-12 col-sm-12 col-md-12">
 
                         <div class="form-group">
 
-                            <strong>Technology:</strong>
+                            <strong>Technology:</strong> --}}
 
-                            {{-- <input type="text" name="techid" class="form-control" placeholder="Tech ID"> --}}
+                    {{-- <input type="text" name="techid" class="form-control" placeholder="Tech ID"> --}}
 
-                            <select class="form-control" name="techid">
+                    {{-- <select class="form-control" name="techid">
                                 @foreach ($technology as $tec)
                                     <option value="{{ $tec->id }}"> {{ $tec->techname }}</option>
                                 @endforeach
@@ -113,7 +113,7 @@
 
                         </div>
 
-                    </div>
+                    </div> --}}
 
                     <div class="col-md-12 text-center mt-3">
 
