@@ -1,20 +1,35 @@
 @extends('visitor.layouts.app')
 @section('title')
-    <title>Flipcode solutions | Home</title>
+<title>Flipcode Solutions | Web & Mobile Development Experts</title>
 @endsection
 @section('meta')
-    <meta name="description"
-        content="Flipcode Solutions is a leading IT company that offers a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+<!-- <meta name="description"
+    content="Flipcode Solutions is a top IT company providing web and software development, e-commerce, digital marketing, and IT consulting services for businesses."> -->
+<link rel="canonical" href="https://flipcodesolutions.com/" />
+
+
+<meta name="description" content="Looking for IT services in Surendranagar? Flipcode Solutions offers web & software development, SEO, digital marketing, & e-commerce solutions in Gujarat." />
+
+<meta name="keywords" content="IT services in Surendranagar, Web development Gujarat, Software development company, Digital marketing Gujarat, SEO services Surendranagar, E-commerce development India">
+<meta name="author" content="Flipcode Solutions">
+
+<!-- Open Graph Tags for Social Media -->
+<meta property="og:title" content="Top IT Services in Surendranagar | Web & Software Development">
+<meta property="og:description" content="Flipcode Solutions offers top IT services in Surendranagar, Gujarat. Web & software development, SEO, and digital marketing solutions tailored for businesses.">
+<!-- <meta property="og:image" content="https://www.flipcodesolutions.com/images/seo-banner.jpg"> -->
+<meta property="og:url" content="https://www.flipcodesolutions.com/">
+<meta name="twitter:card" content="summary_large_image">
+
 @endsection
 @section('content')
-    {{-- slider --}}
-    @include('visitor.commons.homePageSlider')
-    {{-- slider end --}}
+{{-- slider --}}
+@include('visitor.commons.homePageSlider')
+{{-- slider end --}}
 
 
-    <!-- about us -->
+<!-- about us -->
 
-    {{-- <div class="container pt-3">
+{{-- <div class="container pt-3">
         <div class="row pt-2">
             <div data-aos="fade-right" class="col-md-6  h-auto mt-3">
                 <h2 class="text-align pb-1">Our Story</h2>
@@ -34,237 +49,238 @@
                     significant milestone in its journey by transitioning into a private limited company in 2023...
                 </p>
                 <div><a type="button" href="{{ Route('about') }}" class=" btn submit-org-btn">Read More</a></div>
-            </div>
-            <div class="col-md-6" data-aos="fade-left">
-                <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" style="max-height: 440px; width:500px;"
-                    alt="b1">
-            </div>
+</div>
+<div class="col-md-6" data-aos="fade-left">
+    <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4" style="max-height: 440px; width:500px;"
+        alt="b1">
+</div>
+</div>
+</div> --}}
+
+<div class="container main-title-container pt-3">
+
+    <div class="row pt-2 align-items-center">
+        <div data-aos="fade-right" class="col-md-5 h-auto" style="margin-top: 120px;">
+            {{-- <h2 class="text-align pb-1">About Us</h2> --}}
+            <p class="text-align  mt-3" style=" font-size:14px; text-align: justify; line-height: 24px;">
+            <h2 class="main-title mb-3" style="font-size : 45px; font-weight: 900;">Premier Web and Mobile App
+                Development Firm
+                Your Trusted Partner for Digital Solutions</h2>
+            For over two decades, we’ve been offering top-tier web and mobile app development services to businesses
+            globally, achieving consistent success in every project. Get access to talented developers at
+            cost-effective rates. Our design-driven approach and streamlined execution guarantee that you receive
+            optimal solutions tailored to your needs.
+            </p>
+            <div><a type="button" href="{{ Route('service') }}" class=" btn submit-org-btn">What we do</a></div>
         </div>
-    </div> --}}
+        <div class="col-md-7 d-flex justify-content-center" data-aos="fade-left">
+            <picture>
+                <source srcset="{{ asset('img/about.webp') }}" type="image/webp">
+                <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4 about-img" alt="aboutImage" title="About Flipcode Solutions" loading="lazy">
 
-    <div class="container main-title-container pt-3">
-
-        <div class="row pt-2 align-items-center">
-            <div data-aos="fade-right" class="col-md-5 h-auto" style="margin-top: 120px;">
-                {{-- <h2 class="text-align pb-1">About Us</h2> --}}
-                <p class="text-align  mt-3" style=" font-size:14px; text-align: justify; line-height: 24px;">
-                <h2 class="main-title mb-3" style="font-size : 45px; font-weight: 900;">Premier Web and Mobile App
-                    Development Firm
-                    Your Trusted Partner for Digital Solutions</h2>
-                For over two decades, we’ve been offering top-tier web and mobile app development services to businesses
-                globally, achieving consistent success in every project. Get access to talented developers at
-                cost-effective rates. Our design-driven approach and streamlined execution guarantee that you receive
-                optimal solutions tailored to your needs.
-                </p>
-                <div><a type="button" href="{{ Route('service') }}" class=" btn submit-org-btn">What we do</a></div>
-            </div>
-            <div class="col-md-7 d-flex justify-content-center" data-aos="fade-left">
-                <picture>
-                    <source srcset="{{ asset('img/about.webp') }}" type="image/webp">
-                    <img src="{{ asset('img/about.png') }}" class="img-fluid mt-4 about-img" alt="aboutImage">
-                </picture>
-            </div>
-
+            </picture>
         </div>
+
     </div>
+</div>
 
 
-    <!-- end about us -->
+<!-- end about us -->
 
-    <!-- usp Section -->
-    @include('visitor.commons.usp')
+<!-- usp Section -->
+@include('visitor.commons.usp')
 
-    <!-- end usp section -->
+<!-- end usp section -->
 
-    <style>
-        .card {
-            border: none !important;
-        }
-    </style>
-    <!-- Development Process -->
-    <div class="container mt-5 mb-5">
-        <div class="row ">
-            <div class="section-head col-sm-12 mb-5">
-                <h4><span>We Simplify </span> Software Development <span>Process</span> </h4>
-            </div>
+<style>
+    .card {
+        border: none !important;
+    }
+</style>
+<!-- Development Process -->
+<div class="container mt-5 mb-5">
+    <div class="row ">
+        <div class="section-head col-sm-12 mb-5">
+            <h4><span>We Simplify </span> Software Development <span>Process</span> </h4>
+        </div>
 
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-lightbulb text-primary "
-                                style="font-size: 50px; font-weight: bolder"></i></h3>
-                        <h4 class="card-title py-2 text-center">Planning</h4>
-                        <p class="card-text text-center">Define project goals, requirements, and resources; create a
-                            roadmap.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash text-warning"
-                                style="font-size: 50px;"></i></h3>
-                        <h4 class="card-title py-2 text-center">Design</h4>
-                        <p class="card-text text-center">Develop the system architecture, UI/UX, and technical
-                            specifications.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-gear text-info"
-                                style="font-size: 50px;"></i></h3>
-                        <h4 class="card-title py-2 text-center">Development (Build)</h4>
-                        <p class="card-text text-center">Write, integrate, and implement the code to create the software.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-patch-check text-danger"
-                                style="font-size: 50px;"></i></h3>
-                        <h4 class="card-title py-2 text-center">Testing</h4>
-                        <p class="card-text text-center">Validate functionality, performance, and quality through thorough
-                            testing.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title py-2 text-center"><i class="bi bi-hand-thumbs-up text-success"
-                                style="font-size: 50px;"></i></h3>
-                        <h4 class="card-title py-2 text-center">Deliver & Support</h4>
-                        <p class="card-text text-center">Release the software, monitor performance, and provide updates and
-                            fixes</p>
-                    </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title py-2 text-center"><i class="bi bi-lightbulb text-primary "
+                            style="font-size: 50px; font-weight: bolder"></i></h3>
+                    <h4 class="card-title py-2 text-center">Planning</h4>
+                    <p class="card-text text-center">Define project goals, requirements, and resources; create a
+                        roadmap.</p>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- End Development Process -->
-
-    <!-- why choose us -->
-
-    @include('visitor.commons.whychooseus')
-
-    <!-- Enr why choose us -->
-
-
-    <div class="container-fluid bg-light mb-3">
-        <div class="container">
-            <div class="section-head col-sm-12 pt-3">
-                <h4><span>Services</span></h4>
-                <p>Welcome to Flipcode Solutions, where innovation meets expertise. Our IT services and solutions are
-                    designed to empower your business, enhance efficiency, and drive digital transformation. With a
-                    commitment to excellence, we deliver cutting-edge solutions tailored to meet the unique needs of
-                    your
-                    organization.</p>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash text-warning"
+                            style="font-size: 50px;"></i></h3>
+                    <h4 class="card-title py-2 text-center">Design</h4>
+                    <p class="card-text text-center">Develop the system architecture, UI/UX, and technical
+                        specifications.</p>
+                </div>
             </div>
-            <div class="row py-5">
-                <div class="col-md-4 mb-4" data-aos="flip-left">
-                    <div class="card">
-                        <div class="card-body service-cards">
-                            <h3 class="card-title py-2 text-center"><i class=" bi bi-lightbulb"></i></h3>
-                            <h6 class="card-subtitle mb-2 text-body-secondary text-center">Custom Software Development
-                            </h6>
-
-                            <p class="card-text text-center">Leverage our expertise in developing bespoke software
-                                solutions. From concept to deployment, our skilled team ensures that your software
-                                aligns
-                                seamlessly with your business objectives.</p>
-
-                        </div>
-                    </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title py-2 text-center"><i class="bi bi-gear text-info"
+                            style="font-size: 50px;"></i></h3>
+                    <h4 class="card-title py-2 text-center">Development (Build)</h4>
+                    <p class="card-text text-center">Write, integrate, and implement the code to create the software.
+                    </p>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left">
-                    <div class="card">
-                        <div class="card-body service-cards">
-                            <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash"></i></h3>
-                            <h6 class="card-subtitle mb-2 text-body-secondary text-center">Web Application Development
-                            </h6>
-
-                            <p class="card-text text-center">Transform your online presence with dynamic and
-                                user-friendly
-                                web applications. We specialize in creating scalable and responsive solutions that
-                                captivate
-                                your audience.</p>
-
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title py-2 text-center"><i class="bi bi-patch-check text-danger"
+                            style="font-size: 50px;"></i></h3>
+                    <h4 class="card-title py-2 text-center">Testing</h4>
+                    <p class="card-text text-center">Validate functionality, performance, and quality through thorough
+                        testing.</p>
                 </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left">
-                    <div class="card">
-                        <div class="card-body service-cards">
-                            <h3 class="card-title py-2 text-center"><i class="bi bi-phone-flip"></i></h3>
-                            <h6 class="card-subtitle mb-2 text-body-secondary text-center">Mobile App Development</h6>
-
-                            <p class="card-text text-center">Stay ahead in the mobile-first world with our innovative
-                                mobile
-                                app development services. Whether it's iOS, Android, or cross-platform, we bring your
-                                app
-                                ideas to life.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left">
-                    <div class="card">
-                        <div class="card-body service-cards">
-                            <h3 class="card-title py-2 text-center"><i class="bi bi-tv-fill"></i></h3>
-                            <h6 class="card-subtitle mb-2 text-body-secondary text-center">IT Consulting</h6>
-                            <p class="card-text text-center">Rely on our experienced consultants to provide strategic
-                                insights and recommendations. We collaborate with you to optimize your IT
-                                infrastructure,
-                                aligning technology with your business goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4" data-aos="flip-left">
-                    <div class="card">
-                        <div class="card-body service-cards">
-                            <h3 class="card-title py-2 text-center"><i class="bi bi-graph-up-arrow"></i></h3>
-                            <h6 class="card-subtitle mb-2 text-body-secondary text-center">Data Analytics and Business
-                                Intelligence</h6>
-
-                            <p class="card-text text-center">Unlock the potential of your data with our advanced
-                                analytics
-                                and business intelligence solutions. Make informed decisions and gain a competitive edge
-                                in
-                                today's data-driven landscape.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4" data-aos="flip-left">
-                    <div class="card">
-                        <div class="card-body service-cards">
-                            <h3 class="card-title py-2 text-center"><i class="bi bi-gear-wide-connected"></i></h3>
-                            <h6 class="card-subtitle mb-2 text-body-secondary text-center">E-commerce Solutions</h6>
-
-                            <p class="card-text text-center">Boost your online presence and revenue with our tailored
-                                e-commerce solutions. We create secure, user-friendly platforms that enhance the
-                                shopping
-                                experience for your customers. </p>
-
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title py-2 text-center"><i class="bi bi-hand-thumbs-up text-success"
+                            style="font-size: 50px;"></i></h3>
+                    <h4 class="card-title py-2 text-center">Deliver & Support</h4>
+                    <p class="card-text text-center">Release the software, monitor performance, and provide updates and
+                        fixes</p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!-- End Development Process -->
+
+<!-- why choose us -->
+
+@include('visitor.commons.whychooseus')
+
+<!-- Enr why choose us -->
+
+
+<div class="container-fluid bg-light mb-3">
+    <div class="container">
+        <div class="section-head col-sm-12 pt-3">
+            <h4><span>Services</span></h4>
+            <p>Welcome to Flipcode Solutions, where innovation meets expertise. Our IT services and solutions are
+                designed to empower your business, enhance efficiency, and drive digital transformation. With a
+                commitment to excellence, we deliver cutting-edge solutions tailored to meet the unique needs of
+                your
+                organization.</p>
+        </div>
+        <div class="row py-5">
+            <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="card">
+                    <div class="card-body service-cards">
+                        <h3 class="card-title py-2 text-center"><i class=" bi bi-lightbulb"></i></h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-center">Custom Software Development
+                        </h6>
+
+                        <p class="card-text text-center">Leverage our expertise in developing bespoke software
+                            solutions. From concept to deployment, our skilled team ensures that your software
+                            aligns
+                            seamlessly with your business objectives.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="card">
+                    <div class="card-body service-cards">
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-code-slash"></i></h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-center">Web Application Development
+                        </h6>
+
+                        <p class="card-text text-center">Transform your online presence with dynamic and
+                            user-friendly
+                            web applications. We specialize in creating scalable and responsive solutions that
+                            captivate
+                            your audience.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="card">
+                    <div class="card-body service-cards">
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-phone-flip"></i></h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-center">Mobile App Development</h6>
+
+                        <p class="card-text text-center">Stay ahead in the mobile-first world with our innovative
+                            mobile
+                            app development services. Whether it's iOS, Android, or cross-platform, we bring your
+                            app
+                            ideas to life.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="card">
+                    <div class="card-body service-cards">
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-tv-fill"></i></h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-center">IT Consulting</h6>
+                        <p class="card-text text-center">Rely on our experienced consultants to provide strategic
+                            insights and recommendations. We collaborate with you to optimize your IT
+                            infrastructure,
+                            aligning technology with your business goals.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="card">
+                    <div class="card-body service-cards">
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-graph-up-arrow"></i></h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-center">Data Analytics and Business
+                            Intelligence</h6>
+
+                        <p class="card-text text-center">Unlock the potential of your data with our advanced
+                            analytics
+                            and business intelligence solutions. Make informed decisions and gain a competitive edge
+                            in
+                            today's data-driven landscape.</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4" data-aos="flip-left">
+                <div class="card">
+                    <div class="card-body service-cards">
+                        <h3 class="card-title py-2 text-center"><i class="bi bi-gear-wide-connected"></i></h3>
+                        <h6 class="card-subtitle mb-2 text-body-secondary text-center">E-commerce Solutions</h6>
+
+                        <p class="card-text text-center">Boost your online presence and revenue with our tailored
+                            e-commerce solutions. We create secure, user-friendly platforms that enhance the
+                            shopping
+                            experience for your customers. </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
 
-    <!--review form start  -->
-    @include('visitor.commons.testi')
-    <!--reiview form end  -->
+<!--review form start  -->
+@include('visitor.commons.testi')
+<!--reiview form end  -->
 
-    <!-- our technology -->
-    @include('visitor.commons.technology')
-    <!-- End our technology -->
+<!-- our technology -->
+@include('visitor.commons.technology')
+<!-- End our technology -->
 @endsection

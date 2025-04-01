@@ -3,7 +3,7 @@
         <div class="footer-section footer-logo">
             <picture>
                 <source loading="lazy" srcset="{{ asset('img/newLogo.webp') }}" type="image/webp">
-                <img loading="lazy" src="{{ asset('img/newLogo.png') }}" alt="footer-logo"
+                <img loading="lazy" src="{{ asset('img/newLogo.png') }}" alt="flipcode-logo" title ="flipcode-logo" 
                     style="width: 70px; height: 70px;">
             </picture>
             <h2>Flipcode Solutions</h2>
@@ -14,7 +14,7 @@
             <ul>
                 <li><a href="{{ route('home') }}" class="hover-effect">Home</a></li>
                 <li><a href="{{ route('about') }}" class="hover-effect">About Us</a></li>
-                <li><a href="{{ route('service') }}"class="hover-effect">Services</a></li>
+                <li><a href="{{ route('service') }}" class="hover-effect">Services</a></li>
                 <li><a href="{{ route('portfolio') }}" class="hover-effect">Portfolio</a></li>
                 <li><a href="{{ route('contact') }}" class="hover-effect">Contact</a></li>
             </ul>
@@ -22,7 +22,7 @@
         <div class="footer-section footer-contact">
             <h3>Contact Us</h3>
             <p><i class="fas fa-envelope"></i> contact@flipcodesolutions.com</p>
-            <p><i class="fas fa-phone"></i> +91 997 940 4044</p>
+            <p><i class="fas fa-phone"></i> <a href="tel:+919979404044" rel="nofollow">+91 997 940 4044</a></p>
             <div class="d-flex align-items-start">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
@@ -39,7 +39,7 @@
         <div class="footer-section footer-cta">
             <h3>Stay Connected</h3>
             <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61553723550979"target="_blank" class="social-icon"
+                <a href="https://www.facebook.com/flipcodesolutions" target="_blank" class="social-icon"
                     aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/flipcodesolutions/" target="_blank" class="social-icon"
                     aria-label="Instagram"><i class="fab fa-instagram"></i></a>

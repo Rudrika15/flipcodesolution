@@ -6,11 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @yield('title')
     @yield('meta')
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVL7N1TKVE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WVL7N1TKVE');
+</script>
+
+
     <meta name="keywords"
         content="web development company surendranagar,web development company, software development company,
          software development company, e-commerce solutions, digital marketing, IT consulting, software development, 
          web application development, mobile app development, IT services, web design, web development, software solutions,
          IT solutions, e-commerce solutions, digital marketing, IT consulting,IT company surendranagar">
+
+    <meta name="robots" content="index, follow">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Flipcode Solutions",
+    "url": "https://flipcodesolutions.com/",
+    "logo": "https://flipcodesolutions.com/img/logo.png",
+    "sameAs": [
+        "https://www.facebook.com/flipcodesolutions",
+        "https://www.instagram.com/flipcodesolutions",
+        "https://www.linkedin.com/company/flipcodesolutions"
+    ],
+    "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+919979404044", 
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": "English"
+    }
+}
+</script>
+
 
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content="Flipcode Solutions - Leading IT Company">
@@ -68,6 +104,9 @@
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.css"> --}}
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+
+
 </head>
 
 <body>
@@ -77,8 +116,8 @@
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <picture>
-                    <source srcset="{{ asset('img/logo.webp') }}" type="image/webp">
-                    <img src="{{ asset('img/logo.png') }}" alt="logo" class="nav-logo">
+                    <source srcset="{{ asset('img/logo.webp') }}" type="image/webp" >
+                    <img src="{{ asset('img/logo.png') }}" alt="flipcode-logo" title ="flipcode-logo" class="nav-logo">
                 </picture>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

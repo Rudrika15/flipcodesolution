@@ -15,7 +15,7 @@
                 <picture>
                     <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
                     <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
-                        style="height:300px;width:100%" alt="backgroundImage">
+                        style="height:300px;width:100%" alt="client review" title ="client review">
                 </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
@@ -33,7 +33,7 @@
                 <picture>
                     <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
                     <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
-                        style="height:300px;width:100%" alt ="backgroundImage">
+                        style="height:300px;width:100%" alt ="client review" title="client review">
                 </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
@@ -52,7 +52,7 @@
                 <picture>
                     <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
                     <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
-                        style="height:300px;width:100%" alt="backgroundImage">
+                        style="height:300px;width:100%" alt ="client review" title="client review">
                 </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>
@@ -71,7 +71,7 @@
                 <picture>
                     <source srcset="{{ asset('img/testi-bg.webp') }}" loading="lazy" type="image/webp">
                     <img src="{{ asset('img/testi-bg.jpg') }}" loading="lazy" class="d-block testi-p"
-                        style="height:300px;width:100%" alt="backgroundImage">
+                        style="height:300px;width:100%" alt ="client review" title="client review">
                 </picture>
                 <div class="carousel-caption d-md-block mb-5">
                     <p>

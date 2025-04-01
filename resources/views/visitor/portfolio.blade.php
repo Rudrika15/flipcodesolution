@@ -1,10 +1,13 @@
 @extends('visitor.layouts.app')
+
 @section('title')
-    <title>Flipcode solutions | Portfolio</title>
+<title>Flipcode Solutions | Our Work & Project Portfolio</title>
 @endsection
+
 @section('meta')
-    <meta name="description"
-        content="At Flipcode Solutions, we provide a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting. We are a leading IT company that offers a wide range of services such as web development, software development, e-commerce solutions, digital marketing, and IT consulting.">
+<meta name="description" content="At Flipcode Solutions, we offer web & software development, e-commerce, digital marketing, and IT consulting, providing innovative and tailored solutions.">
+
+<link rel="canonical" href="https://flipcodesolutions.com/Clients">
 @endsection
 <style>
     .web-apps-slider .portfolio-item {
@@ -73,126 +76,126 @@
 </style>
 
 @section('content')
-    @php
-        $jsonData = [
-            [
-                'image' => asset('client-logo/argilgraygrp.jpg'),
-                'title' => 'Argil Gray Group',
-                'technology' => 'React js',
-                'industry' => 'Manufacturing Industry',
-                'type' => 'web',
-            ],
+@php
+$jsonData = [
+[
+'image' => asset('client-logo/argilgraygrp.jpg'),
+'title' => 'Argil Gray Group',
+'technology' => 'React js',
+'industry' => 'Manufacturing Industry',
+'type' => 'web',
+],
 
-            [
-                'image' => asset('client-logo/brand-beans-logo.jpg'),
-                'title' => 'Brand Beans',
-                'technology' => 'Laravel',
-                'industry' => 'Marketing & advertising Industry',
-                'type' => 'web',
-            ],
-            [
-                'image' => asset('client-logo/cu-shah-logo.jpg'),
-                'title' => 'C.U.SHAH Mahila College',
-                'technology' => 'Laravel',
-                'industry' => 'Education Industry',
-            ],
-            [
-                'image' => asset('client-logo/alkaviva-logo.jpg'),
-                'title' => 'Alkaviva',
-                'technology' => 'PHP',
-                'industry' => 'Manufacturing Industry',
-                'type' => 'web',
-            ],
-            [
-                'image' => asset('client-logo/jd-infra-logo.jpg'),
-                'title' => 'JD Infra',
-                'technology' => 'Laravel',
-                'industry' => 'Construction',
-                'type' => 'web',
-            ],
-            [
-                'image' => asset('client-logo/smvs.jpg'),
-                'title' => 'SMVS Swaminarayan Sanstha',
-                'technology' => 'Laravel',
-                'industry' => 'Religious and Spiritual Industry',
-            ],
-            [
-                'image' => asset('client-logo/ConsultantLogo.jpg'),
-                'title' => 'Consultant',
-                'technology' => 'Laravel',
-                'industry' => 'Consultancy',
-                'type' => 'web',
-            ],
-            [
-                'image' => asset('client-logo/click-to-care.jpg'),
-                'title' => 'Click To Care',
-                'technology' => 'Laravel',
-                'industry' => 'HealthCare Industry',
-                'type' => 'web',
-            ],
-            [
-                'image' => asset('client-logo/micro.png'),
-                'title' => 'Micro Dimonds & CBN Wheels',
-                'technology' => 'Laravel',
-                'industry' => ' Abrasives Industry',
-                'type' => 'web',
-            ],
-            [
-                'image' => asset('client-logo/smvs.jpg'),
-                'title' => 'SMVS Swaminarayan Sanstha mobile app',
-                'technology' => 'Native',
-                'industry' => 'Religious and Spiritual Industry',
-                'type' => 'app',
-            ],
-            [
-                'image' => url(
-                    'https://play-lh.googleusercontent.com/4SbefFJmjELAPQRLzR-_2omzfV3GKiZaIEMZ7-a9sA1AdkmsuX1OMY0vcLesmpxKkg=w240-h480-rw',
-                ),
-                'title' => 'Brandbeans - Festival Poster',
-                'technology' => 'Flutter',
-                'industry' => 'Brandbeans - Festival Poster',
-                'type' => 'app',
-            ],
-            [
-                'image' => url(
-                    'https://play-lh.googleusercontent.com/oBvaKAm3ZqDFEaw-lXni_ZrSqihb3W5UXHPLKXgNnvnLk8gE7o51m3BGwgE3WOkGqlA=w240-h480-rw',
-                ),
-                'title' => 'Consultant Cube',
-                'technology' => 'Flutter',
-                'industry' => 'Consultant Cube',
-                'type' => 'app',
-            ],
-            [
-                'image' => url(
-                    'https://play-lh.googleusercontent.com/_mLsznL4LTsY7hadP5pXZfNWtZBDEKSizlODmFEEDtUYFDI2ypT9DoIRCfBQZepXT84=w240-h480-rw',
-                ),
-                'title' => 'BB - Influencer Marketing',
-                'technology' => 'Flutter',
-                'industry' => 'BB - Influencer Marketing',
-                'type' => 'app',
-            ],
+[
+'image' => asset('client-logo/brand-beans-logo.jpg'),
+'title' => 'Brand Beans',
+'technology' => 'Laravel',
+'industry' => 'Marketing & advertising Industry',
+'type' => 'web',
+],
+[
+'image' => asset('client-logo/cu-shah-logo.jpg'),
+'title' => 'C.U.SHAH Mahila College',
+'technology' => 'Laravel',
+'industry' => 'Education Industry',
+],
+[
+'image' => asset('client-logo/alkaviva-logo.jpg'),
+'title' => 'Alkaviva',
+'technology' => 'PHP',
+'industry' => 'Manufacturing Industry',
+'type' => 'web',
+],
+[
+'image' => asset('client-logo/jd-infra-logo.jpg'),
+'title' => 'JD Infra',
+'technology' => 'Laravel',
+'industry' => 'Construction',
+'type' => 'web',
+],
+[
+'image' => asset('client-logo/smvs.jpg'),
+'title' => 'SMVS Swaminarayan Sanstha',
+'technology' => 'Laravel',
+'industry' => 'Religious and Spiritual Industry',
+],
+[
+'image' => asset('client-logo/ConsultantLogo.jpg'),
+'title' => 'Consultant',
+'technology' => 'Laravel',
+'industry' => 'Consultancy',
+'type' => 'web',
+],
+[
+'image' => asset('client-logo/click-to-care.jpg'),
+'title' => 'Click To Care',
+'technology' => 'Laravel',
+'industry' => 'HealthCare Industry',
+'type' => 'web',
+],
+[
+'image' => asset('client-logo/micro.png'),
+'title' => 'Micro Dimonds & CBN Wheels',
+'technology' => 'Laravel',
+'industry' => ' Abrasives Industry',
+'type' => 'web',
+],
+[
+'image' => asset('client-logo/smvs.jpg'),
+'title' => 'SMVS Swaminarayan Sanstha mobile app',
+'technology' => 'Native',
+'industry' => 'Religious and Spiritual Industry',
+'type' => 'app',
+],
+[
+'image' => url(
+'https://play-lh.googleusercontent.com/4SbefFJmjELAPQRLzR-_2omzfV3GKiZaIEMZ7-a9sA1AdkmsuX1OMY0vcLesmpxKkg=w240-h480-rw',
+),
+'title' => 'Brandbeans - Festival Poster',
+'technology' => 'Flutter',
+'industry' => 'Brandbeans - Festival Poster',
+'type' => 'app',
+],
+[
+'image' => url(
+'https://play-lh.googleusercontent.com/oBvaKAm3ZqDFEaw-lXni_ZrSqihb3W5UXHPLKXgNnvnLk8gE7o51m3BGwgE3WOkGqlA=w240-h480-rw',
+),
+'title' => 'Consultant Cube',
+'technology' => 'Flutter',
+'industry' => 'Consultant Cube',
+'type' => 'app',
+],
+[
+'image' => url(
+'https://play-lh.googleusercontent.com/_mLsznL4LTsY7hadP5pXZfNWtZBDEKSizlODmFEEDtUYFDI2ypT9DoIRCfBQZepXT84=w240-h480-rw',
+),
+'title' => 'BB - Influencer Marketing',
+'technology' => 'Flutter',
+'industry' => 'BB - Influencer Marketing',
+'type' => 'app',
+],
 
-            [
-                'image' => url(
-                    'https://play-lh.googleusercontent.com/pORULxwQsuyiQLnqe063_sbpqe3lg_WAJHWcN3EleMtP-zjMTQEr4jjkqdq-Oj8n7hj0=w240-h480-rw',
-                ),
-                'title' => 'UBN Community',
-                'technology' => 'Flutter',
-                'industry' => 'UBN Community',
-                'type' => 'app',
-            ],
-        ];
-    @endphp
-    <div class="container-fluid">
-        <div class="image-fluid header-career">
-            <div class="headercontent">
-                <h1 class="display-4 fw-light">Distinguished Clientele</h1>
-                <p class="lead">We take pride in delivering a full spectrum of bespoke IT services...</p>
-                <a href="#portfolio" class="btn btn-dark btn-lg">Portfolio</a>
-            </div>
+[
+'image' => url(
+'https://play-lh.googleusercontent.com/pORULxwQsuyiQLnqe063_sbpqe3lg_WAJHWcN3EleMtP-zjMTQEr4jjkqdq-Oj8n7hj0=w240-h480-rw',
+),
+'title' => 'UBN Community',
+'technology' => 'Flutter',
+'industry' => 'UBN Community',
+'type' => 'app',
+],
+];
+@endphp
+<div class="container-fluid">
+    <div class="image-fluid header-career">
+        <div class="headercontent">
+            <h1 class="display-4 fw-light">Distinguished Clientele</h1>
+            <p class="lead">We take pride in delivering a full spectrum of bespoke IT services...</p>
+            <a href="#portfolio" class="btn btn-dark btn-lg">Portfolio</a>
         </div>
+    </div>
 
-        {{-- <div class="container-fluid pt-3 bg-light">
+    {{-- <div class="container-fluid pt-3 bg-light">
             <div class="container pt-3" id="clients">
                 <div class="section-head col-sm-12" id="portfolio">
                     <h4><span>Portfolio</span></h4>
@@ -222,97 +225,97 @@
                                             <div class="col-md-4 mb-3 ">
                                                 <div class="portfolio-item">
                                                     <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
-                                                        class="img-fluid">
-                                                    <p class="text-muted">{{ $item['industry'] }}</p>
-                                                    <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                                    <p>{{ $item['technology'] }}</p>
+    class="img-fluid">
+    <p class="text-muted">{{ $item['industry'] }}</p>
+    <h5 class="pt-3">{{ $item['title'] }}</h5>
+    <p>{{ $item['technology'] }}</p>
 
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-profile" role="tabpanel"
-                                    aria-labelledby="nav-profile-tab">
-                                    <div class="row">
-                                        @foreach ($jsonData as $item)
-                                            @if (isset($item['type']) && $item['type'] === 'web')
-                                                <div class="col-md-4 mb-3">
-                                                    <div class="portfolio-item">
-                                                        <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
-                                                            class="img-fluid">
-                                                        <p class="text-muted">{{ $item['industry'] }}</p>
-                                                        <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                                        <p>{{ $item['technology'] }}</p>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade" id="nav-contact" role="tabpanel"
-                                    aria-labelledby="nav-contact-tab">
-                                    <div class="row">
-                                        @foreach ($jsonData as $item)
-                                            @if (isset($item['type']) && $item['type'] === 'app')
-                                                <div class="col-md-4 mb-3">
-                                                    <div class="portfolio-item">
-                                                        <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
-                                                            class="img-fluid">
-                                                        <p class="text-muted">{{ $item['industry'] }}</p>
-                                                        <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                                        <p>{{ $item['technology'] }}</p>
-                                                    </div>
-                                                </div>
-                                            @endif
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> --}}
-        <div class="container-fluid overflow-x-hidden">
-            <div class="row mb-5 p-5 ">
-                <h2 class="text-center mb-5">Web Apps</h2>
-                <div class="web-apps-slider">
-                    @foreach ($jsonData as $item)
-                        @if (isset($item['type']) && $item['type'] === 'web')
-                            <div class="portfolio-item">
-                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" alt="{{ $item['title'] }}"
-                                    class="img-fluid">
-                                <p class="text-muted">{{ $item['industry'] }}</p>
-                                <h5 class="pt-3 ">{{ $item['title'] }}</h5>
-                                <p>{{ $item['technology'] }}</p>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
+</div>
+</div>
+@endforeach
+</div>
+</div>
+<div class="tab-pane fade" id="nav-profile" role="tabpanel"
+    aria-labelledby="nav-profile-tab">
+    <div class="row">
+        @foreach ($jsonData as $item)
+        @if (isset($item['type']) && $item['type'] === 'web')
+        <div class="col-md-4 mb-3">
+            <div class="portfolio-item">
+                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
+                    class="img-fluid">
+                <p class="text-muted">{{ $item['industry'] }}</p>
+                <h5 class="pt-3">{{ $item['title'] }}</h5>
+                <p>{{ $item['technology'] }}</p>
             </div>
         </div>
-
-        <div class="container-fluid overflow-x-hidden">
-            <div class="row mb-5 p-5">
-                <h2 class="text-center mb-5">Mobile Apps</h2>
-                <div class="web-apps-slider">
-                    @foreach ($jsonData as $item)
-                        @if (isset($item['type']) && $item['type'] === 'app')
-                            <div class="portfolio-item">
-                                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" alt="{{ $item['title'] }}"
-                                    class="img-fluid">
-                                <p class="text-muted">{{ $item['industry'] }}</p>
-                                <h5 class="pt-3">{{ $item['title'] }}</h5>
-                                <p>{{ $item['technology'] }}</p>
-                            </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-        </div>
-
+        @endif
+        @endforeach
     </div>
+</div>
+<div class="tab-pane fade" id="nav-contact" role="tabpanel"
+    aria-labelledby="nav-contact-tab">
+    <div class="row">
+        @foreach ($jsonData as $item)
+        @if (isset($item['type']) && $item['type'] === 'app')
+        <div class="col-md-4 mb-3">
+            <div class="portfolio-item">
+                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}"
+                    class="img-fluid">
+                <p class="text-muted">{{ $item['industry'] }}</p>
+                <h5 class="pt-3">{{ $item['title'] }}</h5>
+                <p>{{ $item['technology'] }}</p>
+            </div>
+        </div>
+        @endif
+        @endforeach
+    </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div> --}}
+<div class="container-fluid overflow-x-hidden">
+    <div class="row mb-5 p-5 ">
+        <h2 class="text-center mb-5">Web Apps</h2>
+        <div class="web-apps-slider">
+            @foreach ($jsonData as $item)
+            @if (isset($item['type']) && $item['type'] === 'web')
+            <div class="portfolio-item">
+                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" alt="{{ $item['title'] }}"
+                    class="img-fluid">
+                <p class="text-muted">{{ $item['industry'] }}</p>
+                <h5 class="pt-3 ">{{ $item['title'] }}</h5>
+                <p>{{ $item['technology'] }}</p>
+            </div>
+            @endif
+            @endforeach
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid overflow-x-hidden">
+    <div class="row mb-5 p-5">
+        <h2 class="text-center mb-5">Mobile Apps</h2>
+        <div class="web-apps-slider">
+            @foreach ($jsonData as $item)
+            @if (isset($item['type']) && $item['type'] === 'app')
+            <div class="portfolio-item">
+                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" alt="{{ $item['title'] }}"
+                    class="img-fluid">
+                <p class="text-muted">{{ $item['industry'] }}</p>
+                <h5 class="pt-3">{{ $item['title'] }}</h5>
+                <p>{{ $item['technology'] }}</p>
+            </div>
+            @endif
+            @endforeach
+        </div>
+    </div>
+</div>
+
+</div>
 @endsection
